@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integracja Mapy Kursu - BrainVenture Academy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .tab {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .tab:hover {
+            background: #e9ecef;
+        }
+        .tab.active {
+            background: white;
+            border-bottom-color: #6C5CE7;
+            font-weight: bold;
+            color: #6C5CE7;
+        }
+        .tab-content {
+            padding: 40px;
+            min-height: 500px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #6C5CE7;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            margin: 0 0 15px 0;
+            color: #6C5CE7;
+            font-size: 1.3em;
+        }
+        .feature-card p {
+            margin: 0;
+            line-height: 1.6;
+            color: #666;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin: 5px 0 0 0;
+        }
+        .implementation {
+            background: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .implementation h4 {
+            color: #28a745;
+            margin: 0 0 15px 0;
+        }
+        .code-snippet {
+            background: #f1f3f4;
+            border: 1px solid #dadce0;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .pending {
+            color: #ffc107;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗺️ Integracja Mapy Kursu</h1>
+            <p>Interaktywna mapa struktury kursu BrainVenture Academy</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('overview')">🏠 Przegląd</button>
+            <button class="tab" onclick="showTab('features')">✨ Funkcje</button>
+            <button class="tab" onclick="showTab('implementation')">⚙️ Implementacja</button>
+            <button class="tab" onclick="showTab('demo')">🎮 Demo</button>
+        </div>
+        
+        <div id="overview" class="tab-content">
+            <h2>Przegląd Integracji</h2>
+            <p>Pomyślnie zintegrowałem interaktywną mapę struktury kursu z aplikacją BrainVenture Academy. Mapa kursu została dodana jako nowa zakładka w sekcji <strong>Umiejętności</strong>.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Modułów</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Kategorii</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Lekcji</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Typy Wizualizacji</div>
+                </div>
+            </div>
+            
+            <div class="implementation">
+                <h4>✅ Status: Gotowe do użycia</h4>
+                <p>Wszystkie komponenty zostały pomyślnie zintegrowane:</p>
+                <ul>
+                    <li><span class="success">✅</span> Moduł <code>utils/course_map.py</code> utworzony</li>
+                    <li><span class="success">✅</span> Zakładki dodane do <code>views/skills_new.py</code></li>
+                    <li><span class="success">✅</span> Zależności streamlit-agraph skonfigurowane</li>
+                    <li><span class="success">✅</span> Integracja z istniejącymi danymi kursu</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="features" class="tab-content" style="display: none;">
+            <h2>Funkcje Mapy Kursu</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🗺️ Mapa Kursu</h3>
+                    <p>Wizualna reprezentacja hierarchii: Kurs → Moduły → Kategorie → Lekcje. Interaktywne węzły z kolorami charakterystycznymi dla każdego modułu.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📊 Statystyki</h3>
+                    <p>Przegląd liczby modułów, kategorii i lekcji. Informacje o postępie użytkownika i estymowanym czasie ukończenia.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎯 Umiejętności</h3>
+                    <p>Istniejący system umiejętności z opcjami filtrowania i sortowania według różnych kryteriów.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎮 Interaktywność</h3>
+                    <p>Możliwość poruszania węzłów, zbliżania/oddalania, animacje fizyczne i responsywny design.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎨 Personalizacja</h3>
+                    <p>Kolorowanie węzłów według postępu, różne rozmiary węzłów według ważności, opcje uproszczonego widoku.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📱 Responsywność</h3>
+                    <p>Dostosowanie do różnych rozmiarów ekranów, optymalizacja dla urządzeń mobilnych i tabletów.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="implementation" class="tab-content" style="display: none;">
+            <h2>Szczegóły Implementacji</h2>
+            
+            <h3>Struktura Zakładek</h3>
+            <div class="code-snippet">
+tab1, tab2, tab3 = st.tabs(["🗺️ Mapa Kursu", "📊 Statystyki", "🎯 Umiejętności"])
+
+with tab1:  # Mapa Kursu
+    create_course_structure_map()  # lub create_simplified_course_map()
+
+with tab2:  # Statystyki
+    show_course_statistics()
+    show_progress_dashboard(...)
+
+with tab3:  # Umiejętności
+    show_skills_content(...)
+            </div>
+            
+            <h3>Funkcje Mapy Kursu</h3>
+            <div class="code-snippet">
+# utils/course_map.py
+def create_course_structure_map():
+    """Pełna mapa: Kurs → Moduły → Kategorie → Lekcje"""
+    
+def create_simplified_course_map():
+    """Uproszczona mapa: Kurs → Moduły → Kategorie"""
+    
+def show_course_statistics():
+    """Statystyki i metryki kursu"""
+            </div>
+            
+            <h3>Konfiguracja Streamlit-Agraph</h3>
+            <div class="code-snippet">
+config = Config(
+    width=800,
+    height=600,
+    directed=True,
+    physics=True,
+    hierarchical=True
+)
+            </div>
+            
+            <div class="implementation">
+                <h4>📁 Zmodyfikowane Pliki</h4>
+                <ul>
+                    <li><strong>views/skills_new.py</strong> - Dodano system zakładek i integrację</li>
+                    <li><strong>utils/course_map.py</strong> - Nowy moduł z funkcjami mapy</li>
+                    <li><strong>requirements.txt</strong> - Dodano streamlit-agraph i zależności</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="demo" class="tab-content" style="display: none;">
+            <h2>Jak Używać</h2>
+            
+            <h3>1. Uruchomienie Aplikacji</h3>
+            <div class="code-snippet">
+streamlit run main.py
+            </div>
+            
+            <h3>2. Nawigacja</h3>
+            <ol>
+                <li>Zaloguj się do aplikacji BrainVenture Academy</li>
+                <li>Przejdź do sekcji <strong>"Umiejętności"</strong> w menu głównym</li>
+                <li>Wybierz zakładkę <strong>"🗺️ Mapa Kursu"</strong></li>
+                <li>Eksploruj interaktywną mapę struktury kursu</li>
+            </ol>
+            
+            <h3>3. Opcje Wizualizacji</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Pełna Struktura</h3>
+                    <p>Pokazuje wszystkie poziomy: Kurs → Moduły → Kategorie → Lekcje (150+ węzłów)</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Uproszczona Mapa</h3>
+                    <p>Fokus na główną strukturę: Kurs → Moduły → Kategorie (20 węzłów)</p>
+                </div>
+            </div>
+            
+            <h3>4. Interakcje</h3>
+            <ul>
+                <li><strong>Przeciąganie</strong> - Przesuń węzły aby zmienić układ</li>
+                <li><strong>Zoom</strong> - Scrolluj aby przybliżyć/oddalić mapę</li>
+                <li><strong>Kliknięcie</strong> - Wybierz węzeł aby go wyróżnić</li>
+                <li><strong>Animacje</strong> - Obserwuj dynamiczne układy fizyczne</li>
+            </ul>
+            
+            <div class="implementation">
+                <h4>🎯 Następne Kroki</h4>
+                <p>Po uruchomieniu aplikacji, mapa kursu będzie dostępna w zakładce Umiejętności. 
+                   Użytkownicy mogą eksplorować pełną strukturę kursu w sposób wizualny i interaktywny.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabName) {
+            // Ukryj wszystkie zawartości zakładek
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.style.display = 'none');
+            
+            // Usuń klasę active z wszystkich zakładek
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Pokaż wybraną zawartość
+            document.getElementById(tabName).style.display = 'block';
+            
+            // Dodaj klasę active do klikniętej zakładki
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
