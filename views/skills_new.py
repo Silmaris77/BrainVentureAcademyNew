@@ -44,24 +44,23 @@ def show_skill_tree():
     categories_data = get_categories()
       # Budowanie kategorii z danych JSON
     categories = {}
-    
-    # Mapowanie ID kategorii na ID umiejętności (dla kompatybilności z istniejącymi danymi użytkownika)
+      # Mapowanie ID kategorii na ID umiejętności (dla kompatybilności z istniejącymi danymi użytkownika)
     skill_id_mapping = {
-        1: 'emotions_investing',
-        2: 'neurobiology', 
-        3: 'cognitive_biases',
-        4: 'cognitive_filters',
-        5: 'self_management',
-        6: 'personal_growth',
-        7: 'decision_making',
-        8: 'metacognition',
-        9: 'investor_style',
-        10: 'resilience',
-        11: 'social_interactions',
-        12: 'strategy_testing',
-        13: 'flexibility',
-        14: 'motivation',
-        15: 'psychological_mastery'
+        1: 'neuro_leadership_intro',
+        2: 'brain_emotions_decisions', 
+        3: 'brain_social_interactions',
+        4: 'decision_models',
+        5: 'cognitive_biases_decisions',
+        6: 'neurological_change_innovation',
+        7: 'motivating_others',
+        8: 'stress_neurobiology',
+        9: 'emotions_leadership',
+        10: 'leader_resilience',
+        11: 'leadership_effectiveness',
+        12: 'global_neuro_leadership',
+        13: 'future_challenges',
+        14: 'leader_mind_work',
+        15: 'leader_transformation'
     }
     
     # Buduj kategorie z danych JSON
@@ -81,16 +80,15 @@ def show_skill_tree():
             'cost': 50 + (category_id * 10),  # Progresywny koszt
             'difficulty': category_info.get('difficulty', 'Beginner'),
             'estimated_time': category_info.get('estimated_time', '2-3 tygodnie')
-        }
-      # Header i nowy tytuł
-    st.markdown("<h1 class='skills-header'>Mapa Rozwoju Inwestora 🌿</h1>", unsafe_allow_html=True)
+        }      # Header i nowy tytuł
+    st.markdown("<h1 class='skills-header'>Akademia Neuroprzywództwa 🧠</h1>", unsafe_allow_html=True)
     
     # System zakładek
-    tab1, tab2, tab3 = st.tabs(["🗺️ Mapa Kursu", "📊 Statystyki", "🎯 Umiejętności"])
+    tab1, tab2, tab3 = st.tabs(["🗺️ Mapa Kursu", "📊 Statystyki", "🎯 Moduły"])
     
     with tab1:
         st.markdown("### Interaktywna Mapa Struktury Kursu")
-        st.markdown("Eksploruj pełną strukturę kursu BrainVenture Academy - od modułów po poszczególne lekcje.")
+        st.markdown("Eksploruj pełną strukturę kursu Neuroprzywództwa - od bloków tematycznych po poszczególne lekcje.")
         
         # Opcje wyświetlania mapy
         col1, col2 = st.columns(2)
@@ -103,8 +101,7 @@ def show_skill_tree():
         
         with col2:
             st.write("")  # Puste miejsce dla zachowania układu
-        
-        # Wyświetl odpowiednią mapę
+          # Wyświetl odpowiednią mapę
         if map_type == "Pełna struktura":
             create_course_structure_map()
         else:
@@ -119,12 +116,12 @@ def show_skill_tree():
         show_progress_dashboard(user_skills, user_xp, user_completed_lessons, categories)
     
     with tab3:
-        st.markdown("### Twoje Umiejętności")
+        st.markdown("### Moduły Neuroprzywództwa")
         show_skills_content(user_skills, user_xp, user_completed_lessons, categories, blocks, categories_data, users_data, user_data, device_type)
 
 
 def show_skills_content(user_skills, user_xp, user_completed_lessons, categories, blocks, categories_data, users_data, user_data, device_type):
-    """Wyświetla zawartość zakładki Umiejętności"""
+    """Wyświetla zawartość zakładki Moduły"""
     
     # Opcje filtrowania
     st.markdown("<h3 class='section-header'>Filtrowanie modułów</h3>", unsafe_allow_html=True)
@@ -295,13 +292,13 @@ def show_progress_dashboard(user_skills, user_xp, user_completed_lessons, catego
         )
         
         st.altair_chart(chart, use_container_width=True)
-    
-    # Krótka informacja o mechanice zdobywania poziomów
+      # Krótka informacja o mechanice zdobywania poziomów
     st.markdown("""
         <div class="info-box">
-            <h4>📋 Jak rozwijać swoje umiejętności?</h4>
-            <p>Przeglądaj zawartość interesujących Cię bloków i zawartych w nich modułów. Każdy moduł będzie mieć docelowo 10 lekcji.
-            które będą sukcesywnie dodawane do kursu. </p>
+            <h4>📋 Jak rozwijać swoje umiejętności neuroprzywództwa?</h4>
+            <p>Przeglądaj zawartość bloków tematycznych i zawartych w nich modułów. Każdy moduł ma 10 lekcji
+            poświęconych konkretnym aspektom neuroprzywództwa. Rozwijaj się systematycznie, przechodząc
+            od podstaw neurobiologii po zaawansowane techniki transformacji przywódczej.</p>
         </div>
     """, unsafe_allow_html=True)
 
