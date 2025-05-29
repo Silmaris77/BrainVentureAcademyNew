@@ -1,13 +1,14 @@
 {
   "id": "B1C1L1",
   "xp_reward": 100,
-  "tag": "Psychologia inwestowania",
-  "description": "Ta lekcja wprowadza podstawy teorii perspektywy, efektu dyspozycji oraz zarządzania emocjami w inwestowaniu.",
-  "title": "Strach przed stratą",
-  "difficulty": "expert",
+  "tag": "Neuroprzywództwo",
+  "description": "Ta lekcja wprowadza podstawy neuroprzywództwa, model SCARF oraz neurobiologiczne mechanizmy decyzji i emocji w przywództwie.",
+  "title": "Wprowadzenie do neuroprzywództwa",
+  "difficulty": "beginner",
+  "estimated_time": "25 min",
   "intro": {
-    "main": "<p><strong>Intro do lekcji: Strach przed stratą 🎢💸</strong></p><p>Inwestowanie – to nie tylko matematyka, wykresy i Excel, to także emocjonalna gra na najwyższych obrotach. Kiedy przychodzi czas decyzji, czujesz ten dreszczyk emocji, prawda? Czasami to ekscytacja, a innym razem – strach. Ale co, jeśli ten strach, a dokładniej strach przed stratą, jest tym, co blokuje cię przed podejmowaniem najlepszych decyzji inwestycyjnych? 🧠💭</p><p>W tej lekcji zgłębimy to zjawisko i zrozumiemy, dlaczego strata – nawet niewielka – boli nas o wiele bardziej niż zysk tej samej wartości. Dla wielu z nas to właśnie strach przed utratą pieniędzy powstrzymuje nas od podejmowania mądrych decyzji.</p><p>Zanim zaczniemy, warto zadać sobie pytanie: Dlaczego inwestowanie jest tak emocjonalne? Jak strach przed stratą wpływa na nasze decyzje i jak można nad nim zapanować?</p><p>Oto, o czym będziemy mówić:</p><ul><li>Teorię perspektywy – dowiesz się, jak nasze umysły podchodzą do zysków i strat.</li><li>Efekt dyspozycji – dlaczego trzymasz przegrywające akcje, zamiast spróbować od nich odejść.</li><li>Jak emocje rządzą twoim portfelem i jak je przejąć pod kontrolę, by nie reagować impulsywnie, kiedy coś idzie nie tak.</li></ul><p>Chciałbym, żebyś po tej lekcji nie tylko lepiej rozumiał mechanizm strachu przed stratą, ale również nauczył się, jak go opanować, żeby Twoje decyzje inwestycyjne stały się bardziej świadome, mniej impulsywne i oparte na długoterminowej strategii. 🚀</p><p>Jesteś gotowy, by nauczyć się, jak zarządzać swoimi emocjami na rynku, a nie odwrotnie? Przygotuj się na jazdę bez trzymanki i odkryj, jak strach przed stratą może stać się Twoim sprzymierzeńcem, a nie wrogiem! 🌟</p>",
-    "case_study": "<p><strong>Degen w tarapatach</strong> 📱💸</p><p>Kuba, 26-letni początkujący inwestor, swoją wiedzę o kryptowalutach czerpie głównie z TikToka i Discorda. Niedawno \"wszamał\" kilka shortów na shitcoinach i miał niezły run – w zaledwie dwa tygodnie zarobił 1500 zł. 💰</p><p>Zmotywowany tym sukcesem, postanowił wrzucić całe swoje oszczędności (10 000 zł) w token $MOONZ, bo \"wszyscy na grupie pisali, że będzie 10x\". Kuba nie sprawdził fundamentów projektu – po prostu zaufał, że hype = pewniak. 🚀</p><p>Po dwóch dniach cena spadła o 20%. Kuba wpadł w panikę. Otwierał apkę co 3 minuty, scrollował komentarze, desperacko szukając potwierdzenia, że \"to tylko korekta\". Z jednej strony bał się sprzedać, bo oznaczałoby to realną stratę, z drugiej strony panicznie bał się trzymać, bo \"może spaść jeszcze bardziej\". 😰</p><p><strong>Pytania do refleksji:</strong></p><ul><li>Co mogło wywołać tak silny strach u Kuby mimo wcześniejszych sukcesów?</li><li>Jak działa tu awersja do strat? A jak efekt dyspozycji?</li><li>Jakie degenowe schematy pojawiają się w tej sytuacji?</li><li>Co Kuba mógłby zrobić, żeby zmienić sposób podejmowania decyzji?</li></ul><p>W trakcie tej lekcji zrozumiesz, jakie psychologiczne pułapki wpędziły Kubę w taki stan i jak Ty możesz ich uniknąć w swoich inwestycjach! 🧠💡</p>"
+    "main": "<p><strong>🎬 Intro: Co ma mózg do przywództwa? Spoiler: wszystko.</strong></p><p>Wyobraź sobie, że Twoje miejsce pracy to nie biuro, tylko… mózg. Tak, serio. Szefem jest kora przedczołowa – logiczna, planująca i dość ogarnięta. Ale tuż za drzwiami siedzi ciało migdałowate – panikujące jak kot, który usłyszał odkurzacz. I teraz pytanie: kto w Twoim zespole siedzi za sterami, gdy coś idzie nie tak? No właśnie. 🧠💥</p><p>W tej lekcji przyjrzymy się neuroprzywództwu, czyli sztuce zarządzania sobą i innymi z poziomu zrozumienia, jak działa ludzki mózg. Nie – nie będziemy rysować neuronów ani uczyć się łacińskich nazw (uff!). Ale pokażemy Ci, dlaczego ludzie się buntują, czemu premia nie zawsze działa, i dlaczego \"ogarniacz\" to za mało, żeby być liderem z prawdziwego zdarzenia.</p><p><strong>💥 W skrócie: o czym będzie ta lekcja?</strong></p><ul><li>Jak emocje i reakcje mózgu wpływają na Twoje decyzje (i zespół)?</li><li>Co to jest model SCARF i dlaczego Twoi ludzie nie chcą się go uczyć – ale podświadomie działają według niego codziennie?</li><li>Dlaczego w stresie mówisz rzeczy, których potem żałujesz (ciało migdałowate pozdrawia 👋)?</li><li>Jak motywować bez marchewki i kija, a z dopaminą i oksytocyną w roli głównej?</li><li>No i co z tym wszystkim zrobić, żeby nie zajechać siebie i zespołu jak starego laptopa na Zoomie?</li></ul><p><strong>🧭 Po co Ci to?</strong></p><p>Bo chcesz być liderem, którego ludzie nie tylko słuchają, ale też rozumieją. Bo chcesz umieć zarządzać nie tylko taskami, ale też emocjami – swoimi i innych. Bo jeśli nie ogarniasz, co dzieje się w głowie człowieka (w tym Twojej), to nie zarządzasz zespołem. Tylko projektem. A ludzi się nie \"zarządza\" – ludzi się czyta, słucha, aktywuje.</p><p>Przygotuj się. Będzie o mózgu, ale nie będzie nudno. 🚀 Lecimy w neuro. Ty sterujesz.</p>",
+    "case_study": "<p><strong>🧠 Case Study: Marta i zespół, który przestał oddychać</strong></p><p>Marta niedawno uzyskała awans. Nie z polecenia, nie z układu – po prostu ktoś zauważył, że \"ogarnia\", że się nie boi, że mówi rzeczy, które mają sens. Kiedy więc pojawił się wakat na stanowisko lidera zespołu kreatywnego, wybór padł właśnie na nią. Przez pierwsze tygodnie wszystko szło dobrze – była konkretna, zorientowana na cel, racjonalna. Nie trzeba było jej tłumaczyć, że \"deadline to deadline\". Wiedziała, jak cisnąć. I cisnęła. 💼</p><p>Ale coś się zmieniło.</p><p>Zarząd zdecydował, że od przyszłego tygodnia cała firma wraca do pracy stacjonarnej. Marta dostała maila rano, przed pierwszą kawą. Spotkanie zespołu miała za pół godziny. Weszła do salki, rzuciła krótkie: \"Od poniedziałku pracujemy z biura. Bez wyjątków. To odgórna decyzja.\" Zapadła cisza. Ktoś spojrzał w ekran laptopa, ktoś inny w okno. Marta tego nie zauważyła – już klikała w kalendarz. 😶</p><p>Kilka dni później, w piątek, przyszła do pracy z napięciem w karku i cichym przekleństwem w głowie. Jeden z klientów wysłał o 7:30 maila z tytułem \"To nie jest to, czego oczekiwałem\". Marta czuła, jak w niej wrze. Przed południem miała spotkanie z zespołem. Kiedy Agnieszka – spokojna, dobra dusza teamu – zapytała o szczegóły nowego briefu, Marta przerwała jej w pół zdania: \"Nie wiem, co jest niezrozumiałego. Naprawdę trzeba to wszystko rozrysować jak dzieciom?\" 😤</p><p>Agnieszka się nie odezwała. Zresztą nikt więcej już nie zapytał.</p><p>Tydzień później Marta usłyszała od dyrektora klienta, że opóźnienie kampanii będzie mieć poważne konsekwencje. Poczuła uścisk w żołądku, jak zawsze, gdy ktoś mówił do niej \"z góry\". Następnego dnia zebrała zespół i powiedziała: \"Nie mam czasu na tłumaczenia. Jeśli nie domkniemy tego projektu do środy, możecie zapomnieć o jakichkolwiek premiach.\"</p><p>Nikt nic nie powiedział. Ale w poniedziałek dwóch członków zespołu wysłało maile o L4. Trzecia osoba – nowa, młoda – zaczęła się dziwnie wycofywać. 😔</p><p>Marta nie rozumiała, co się dzieje. Przecież wszystko miało sens: firma stawia wymagania, ludzie mają pracować, nie ma co się pieścić. Przecież sama tak została wychowana zawodowo. Nikt się nad nią nie pochylał. A jednak teraz coś się waliło. Zespół przestał być zespołem. Milczą, unikają jej wzroku, nie ma żadnych spontanicznych rozmów przy ekspresie. Nawet te cotygodniowe statusy stały się jakimś rytuałem martwej ciszy.</p><p><strong>🪞 Pytania do refleksji:</strong></p><ul><li>Co Marta zrobiła \"zgodnie z logiką korporacyjną\", ale niezgodnie z logiką ludzkiego mózgu?</li><li>Jakie emocje mogły się pojawić w zespole po jej komunikatach i reakcjach?</li><li>Które potrzeby społeczne opisane w modelu SCARF mogły zostać naruszone?</li><li>Z jakiego poziomu reaguje Marta – kory przedczołowej czy ciała migdałowatego? Uzasadnij.</li><li>Czy doświadczyłeś/-aś kiedyś podobnej sytuacji – jako lider lub członek zespołu? Jak się wtedy czułeś/-aś?</li></ul>"
   },
   "sections": {
     "opening_quiz": {
@@ -15,138 +16,195 @@
       "description": "Sprawdź swoją wiedzę przed rozpoczęciem lekcji",
       "questions": [
         {
-          "question": "Co to jest efekt dyspozycji?",
+          "question": "Która część mózgu odpowiada za impulsywne, emocjonalne reakcje na stres?",
           "options": [
-            "Sposób organizacji naszego portfela inwestycyjnego",
-            "Tendencja do zbyt szybkiego sprzedawania zyskownych aktywów i zbyt długiego trzymania stratnych",
-            "Nawyk sprawdzania notowań co godzinę",
-            "Skłonność do inwestowania tylko w znane marki"
+            "Kora czołowa",
+            "Ciało migdałowate",
+            "Móżdżek",
+            "Hipokamp"
           ],
           "correct_answer": 1,
-          "explanation": "Efekt dyspozycji to psychologiczna tendencja inwestorów do przedwczesnego sprzedawania zyskownych inwestycji i zbyt długiego trzymania stratnych."
+          "explanation": "Ciało migdałowate to struktura odpowiedzialna za przetwarzanie emocji, szczególnie lęku i reakcji obronnych."
         },
         {
-          "question": "Ile razy silniej odczuwamy stratę niż równowartościowy zysk według teorii perspektywy?",
+          "question": "Które elementy wchodzą w skład modelu SCARF?",
           "options": [
-            "Tak samo",
-            "1,5 raza",
-            "2-2,5 raza",
-            "5 razy"
+            "Status, Sukces, Autonomia, Pokrewieństwo",
+            "Status, Pewność, Autonomia, Pokrewieństwo, Sprawiedliwość",
+            "Siła, Pewność, Adaptacja, Relacje, Flexibility",
+            "Strategia, Cel, Analiza, Ryzyko, Feedback"
+          ],
+          "correct_answer": 1,
+          "explanation": "SCARF to model obejmujący: Status, Certainty (Pewność), Autonomy, Relatedness (Pokrewieństwo) i Fairness (Sprawiedliwość)."
+        },
+        {
+          "question": "Co pomaga zredukować reakcję stresową u członka zespołu podczas wprowadzania zmian?",
+          "options": [
+            "Zwiększenie niepewności",
+            "Szybka zmiana bez uprzedzenia",
+            "Komunikacja oparta na modelu SCARF",
+            "Zignorowanie emocji zespołu"
           ],
           "correct_answer": 2,
-          "explanation": "Według teorii perspektywy Kahnemana i Tversky'ego, ból straty jest około 2-2,5 raza silniejszy niż radość z równowartościowego zysku."
+          "explanation": "Komunikacja uwzględniająca potrzeby społeczne (status, pewność, autonomia itd.) pomaga obniżyć stres i opór wobec zmian."
+        },
+        {
+          "question": "Jakie działania lidera mogą aktywować dopaminę i zwiększać motywację w zespole?",
+          "options": [
+            "Publiczna krytyka i ciągłe zmienianie celów",
+            "Pochwała za osiągnięcie małego celu i dawanie poczucia postępu",
+            "Ignorowanie postępów zespołu",
+            "Skupienie się tylko na błędach"
+          ],
+          "correct_answer": 1,
+          "explanation": "Dopamina odpowiada za odczuwanie przyjemności z osiągania celów. Nagrody, uznanie i poczucie postępu ją wzmacniają."
+        },
+        {
+          "question": "Które zdanie najlepiej odzwierciedla podejście neuroprzywództwa?",
+          "options": [
+            "Lider ma zawsze rację",
+            "Emocje w pracy trzeba ignorować",
+            "Zrozumienie działania mózgu pomaga być skuteczniejszym liderem",
+            "Motywacja pracownika nie zależy od lidera"
+          ],
+          "correct_answer": 2,
+          "explanation": "Neuroprzywództwo opiera się na wiedzy o mózgu i emocjach, by poprawić skuteczność decyzji, motywacji i relacji w pracy."
         }
       ]
     },
     "learning": {
-      "sections": [
-        {
-          "title": "📈🤯 Inwestowanie to nie tylko tabelki, wykresy i Excel na sterydach!",
-          "content": "<p>To przede <strong> wszystkim </strong> jazda na emocjonalnym rollercoasterze 🎢. To nasze wewnętrzne dramaty rodem z Netflixa, które decydują o tym, czy po każdej transakcji przybijamy piątkę 🙌 czy scrollujemy z miną smutnego kotka. 😿 Niby mamy wszystko policzone, ale potem przychodzi impuls, chwila zwątpienia, albo przypływ euforii i… no właśnie – robimy coś, czego później możemy żałować.</p> <p>🤷‍♂️ Dlatego przygotowałem dla Ciebie cztery turbo istotne mechanizmy psychologiczne, które wpływają na Twoje decyzje inwestycyjne. 🧠✨ Pokażę Ci, jak te triki działają w realnym świecie – krok po kroku, przykład po przykładzie – oraz zdradzę proste patenty, jak je ujarzmić, zanim znów klikniesz \"kup\" albo \"sprzedaj\". 🚦 Uwierz mi, że ogarnięcie tych mentalnych pułapek to game changer – dzięki temu zamiast stresować się każdym ruchem na giełdzie, zaczniesz podejmować decyzje na chilloucie i z głową. 💆‍♀️💰</p>"
+      "sections": [        {
+          "title": "🧠 Wprowadzenie: Czym Jest Neuroprzywództwo?",
+          "content": "<p>Neuroprzywództwo? Brzmi poważnie, ale spokojnie, nie musisz być neurobiologiem, żeby to ogarnąć! 😎 Neuroprzywództwo to połączenie neuronauki (czyli nauki o mózgu) z praktyką przywództwa, które pomaga liderom być lepszymi, podejmować lepsze decyzje i zrozumieć, jak działa ich zespół. Proste, prawda? 👏</p><p>W skrócie – to superpower dla liderów i menedżerów, bo daje im narzędzia, dzięki którym lepiej zarządzają stresem, podejmują decyzje i motywują swoje zespoły. Zamiast zgadywać, jak działają ludzie w twoim zespole, neuroprzywództwo pomaga Ci zrozumieć to na poziomie mózgu. No, bo kto nie chciałby mieć przewagi, wiedząc, jak działa ludzki mózg w kontekście pracy? 🤯</p><p><strong>Definicja i Interdyscyplinarność Neuroprzywództwa 🔬🚀</strong></p><p>Neuroprzywództwo to w skrócie połączenie neuronauki i przywództwa. Nie tylko mówimy tu o miękkich umiejętnościach i zarządzaniu, ale także o tym, jak mózg działa w kontekście zarządzania zespołem. Jak reaguje na stres, jak podejmuje decyzje, jak przetwarza emocje – wszystkie te rzeczy mają ogromny wpływ na Twoje działania jako lidera. 🧠💥</p><p>Ale to nie koniec! Neuroprzywództwo to także interdyscyplinarność – łączy ze sobą wiele dziedzin, jak psychologia, neuronauka, ekonomia behawioralna i teoria zarządzania. Tego nie nauczy Cię żaden podręcznik o zarządzaniu! 👀 Neuroprzywództwo bierze najnowsze odkrycia z neuronauki i stosuje je do tworzenia lepszych liderów i skuteczniejszego zarządzania. To jak personalizowany system operacyjny do Twojego mózgu, który pozwala na bardziej inteligentne zarządzanie emocjami i decyzjami. 😏</p><p><strong>Przykład:</strong> Neuroprzywództwo to jak hackowanie mózgu lidera. Zamiast zgadywać, co się dzieje w głowie twoich pracowników, wiesz dokładnie, jak ich mózg reaguje na różne bodźce – stres, nagrody, zmiany w organizacji… A to daje Ci ogromną przewagę w zarządzaniu! 🧑‍💼🚀</p>"
+        },{
+          "title": "🧠💡 1. Neurobiologiczne podstawy przywództwa",
+          "content": "<p>Wyobraź sobie sytuację: prowadzisz spotkanie zespołu, a jeden z członków nieoczekiwanie rozpoczyna ostrą krytykę waszego projektu 🎯. W tej sekundzie twój mózg aktywuje system alarmowy - migdałowaty, który przygotowuje cię do \"walki lub ucieczki\". To ewolucyjny mechanizm, który tysiące lat temu pomagał naszym przodkom przetrwać spotkanie z dzikimi zwierzętami 🦁, ale dziś może sabotować nasze przywództwo.</p><p>W momencie stresu lub konfliktu nasz mózg działa następująco:</p><ul><li>🚨 **Migdałowaty (amygdala)**: Uruchamia tryb alarmowy, uwalnia kortyzol i adrenalinę</li><li>🧠 **Kora przedczołowa**: Odpowiedzialna za racjonalne myślenie, zostaje \"wyłączona\"</li><li>⚡ **System nerwowy**: Przygotowuje organizm do natychmiastowej reakcji</li></ul><p>Jako lider, kiedy twój migdałowaty przejmuje kontrolę, możesz:</p><ul><li>Reagować agresywnie lub defensywnie 😤</li><li>Podejmować pochopne decyzje 🏃‍♂️</li><li>Tracić zdolność słuchania zespołu 🙉</li><li>Blokować kreatywne rozwiązania 🚫</li></ul><p>🎯 **Jak świadomie zarządzać swoim mózgiem?**</p><ul><li>**Technika STOP**: Zatrzymaj się, weź głęboki oddech, zanim zareagujesz 🛑</li><li>**Nazywanie emocji**: \"Czuję frustrację\" - to aktywuje korę przedczołową 🏷️</li><li>**Pauza strategiczna**: \"Potrzebuję 5 minut na przemyślenie\" ⏸️</li><li>**Świadome oddychanie**: 4 sekundy wdech, 6 sekund wydech 🌬️</li></ul><p>Pamiętaj - najlepsi liderzy to ci, którzy potrafią zarządzać swoim mózgiem w krytycznych momentach! 🌟</p>"
+        },        {
+          "title": "🔥⚡ 2. Model SCARF - kluczowe potrzeby mózgu w zespole",
+          "content": "<p>David Rock, neurolider i badacz, odkrył, że nasz mózg traktuje środowisko społeczne jak fizyczne zagrożenie lub nagrodę. Stworzył model SCARF, który wyjaśnia 5 kluczowych potrzeb, które nasz mózg monitoruje w każdej interakcji z innymi ludźmi 🧠✨.</p><p>**🥇 S - Status (Pozycja społeczna)**</p><p>Mózg każdego członka zespołu nieustannie sprawdza: \"Czy jestem szanowany? Czy moje kompetencje są doceniane?\" Kiedy czujemy zagrożenie statusu, uruchamia się reakcja walki lub ucieczki.</p><ul><li>**Zagrożenie**: Publiczna krytyka, pomijanie w decyzjach, bagatelizowanie pomysłów 😔</li><li>**Wzmocnienie**: Docenienie ekspertyzy, zapytanie o opinię, uznanie osiągnięć 🌟</li></ul><p>**🎯 C - Certainty (Pewność)**</p><p>Nasz mózg zużywa ogromną energię na przewidywanie przyszłości. Niepewność jest postrzegana jako zagrożenie.</p><ul><li>**Zagrożenie**: Brak jasnych celów, ciągłe zmiany planów, niejasne komunikaty 🌪️</li><li>**Wzmocnienie**: Przejrzyste procesy, regularne update'y, jasne oczekiwania 📋</li></ul><p>**🗽 A - Autonomy (Autonomia)**</p><p>Potrzeba kontroli nad własnym środowiskiem i decyzjami jest fundamentalna dla naszego dobrostanu.</p><ul><li>**Zagrożenie**: Mikromanagement, brak wyboru, narzucane rozwiązania 🔒</li><li>**Wzmocnienie**: Delegowanie zadań, możliwość wyboru metod pracy, empowerment 🔓</li></ul><p>**👥 R - Relatedness (Relacje)**</p><p>Mózg sprawdza: \"Czy jestem częścią tej grupy? Czy mogę liczyć na wsparcie?\"</p><ul><li>**Zagrożenie**: Izolacja, konflikty, brak współpracy, atmosfera rywalizacji ❄️</li><li>**Wzmocnienie**: Team building, wspólne cele, wsparcie, zaufanie 🤝</li></ul><p>**⚖️ F - Fairness (Sprawiedliwość)**</p><p>Poczucie niesprawiedliwości aktywuje te same obszary mózgu co fizyczny ból!</p><ul><li>**Zagrożenie**: Nierówne traktowanie, brak transparentności, faworyzowanie 🚫</li><li>**Wzmocnienie**: Jasne zasady, równe szanse, przejrzyste procesy decyzyjne ✅</li></ul><p>🎯 **Praktyczne zastosowanie SCARF:**</p><ul><li>Przed każdą trudną rozmową zastanów się: który element SCARF może być zagrożony? 🤔</li><li>Zacznij od wzmocnienia pozytywnych elementów, zanim poruszysz trudne tematy 💪</li><li>Obserwuj reakcje zespołu przez pryzmat SCARF 👀</li></ul>"
+        },        {
+          "title": "🎯🧭 3. Neuroleadership w praktyce - zarządzanie uwagą zespołu",
+          "content": "<p>Jako lider, jednym z twoich najważniejszych zadań jest kierowanie uwagą zespołu 🎯. Badania neuronaukowe pokazują, że nasz mózg może skupić się maksymalnie na 7±2 elementach jednocześnie, a okres koncentracji wynosi około 20 minut.</p><p>**🧠 Jak działa uwaga w mózgu?**</p><ul><li>**Sieć uwagi wykonawczej**: Kontroluje świadome skupienie na zadaniach</li><li>**Sieć uwagi domyślnej**: Aktywna gdy \"nic nie robimy\" - tu rodzą się kreatywne pomysły! 💡</li><li>**Filtry uwagi**: Mózg automatycznie odrzuca 99% informacji, koncentrując się na tym, co uznaje za ważne</li></ul><p>**🎪 Wyzwania w zarządzaniu uwagą zespołu:**</p><ul><li>**Overload informacyjny**: Zbyt dużo danych prowadzi do paraliża decyzyjnego 📊</li><li>**Multitasking**: Mit! Mózg nie potrafi robić kilku rzeczy jednocześnie efektywnie 🤹‍♂️</li><li>**Ciągłe przełączanie**: Każde przejście między zadaniami kosztuje 23 minuty powrotu do pełnej koncentracji ⏰</li><li>**Zmęczenie decyzyjne**: Im więcej decyzji podejmujemy, tym gorsza ich jakość 😵</li></ul><p>**🎯 Praktyczne techniki neuroleadership:**</p><p>**1. Technika \"Jednego celu\" na spotkania** 🎯</p><ul><li>Każde spotkanie = 1 główny cel</li><li>Maksymalnie 3 punkty agendy</li><li>Jasne oczekiwania od początku</li></ul><p>**2. Cykle koncentracji zespołu** ⏳</p><ul><li>25-minutowe bloki pracy (technika Pomodoro)</li><li>5-minutowe przerwy na reset mózgu</li><li>Dłuższa przerwa co 2 godziny</li></ul><p>**3. Zarządzanie przeciążeniem kognitywnym** 🧠</p><ul><li>Limit 3 priorytetów dziennie dla zespołu</li><li>\"Parking\" dla pomysłów - zapisuj, ale nie realizuj od razu</li><li>Delegowanie decyzji tam, gdzie to możliwe</li></ul><p>**4. Wspieranie sieci domyślnej mózgu** 🌱</p><ul><li>Zaplanowane \"przestoje\" dla kreatywności</li><li>Spacery bez telefonów podczas burzy mózgów</li><li>Czas na refleksję po intensywnych sesjach</li></ul><p>**💡 Ćwiczenie praktyczne**: Na najbliższym spotkaniu zespołu zastosuj regułę \"20-5-20\": 20 minut intensywnej pracy, 5 minut przerwy, 20 minut kolejnej sesji. Obserwuj, jak zmienia się energia i zaangażowanie grupy!</p>"
+        },        {
+          "title": "🚀💪 4. Budowanie odporności zespołu przez neuroplastyczność",          "content": "<p>Neuroplastyczność to zdolność mózgu do tworzenia nowych połączeń neuronowych przez całe życie 🧠✨. Jako lider możesz świadomie wykorzystać tę właściwość, aby budować odporność (resilience) swojego zespołu na stres i zmiany.</p><p>**🔬 Nauka o neuroplastyczności:**</p><ul><li>**Nowe doświadczenia = nowe ścieżki neuronowe** 🛤️</li><li>**Powtarzanie = wzmacnianie połączeń** 💪</li><li>**Pozytywne myślenie zmienia strukturę mózgu** 🌈</li><li>**Stres chroniczny niszczy neurony, stres krótkotrwały je wzmacnia** ⚡</li></ul><p>**🛡️ Budowanie odporności zespołu:**</p><p>**1. Technika \"Po-Po-Po\" (Po problemie - Pozytyw - Możliwości)** 📈</p><ul><li>**Po problemie**: Najpierw uznaj trudność i emocje zespołu</li><li>**Pozytyw**: Znajdź jeden element, który działa dobrze</li><li>**Możliwości**: Skoncentruj się na opcjach rozwiązania</li></ul><p>**2. Ćwiczenia mindfulness dla zespołu** 🧘‍♀️</p><ul><li>2-minutowe sesje oddychania na początku spotkań</li><li>\"Mindful meetings\" - pełna uwaga, bez multitaskingu</li><li>Praktyka wdzięczności - co idzie dobrze w projekcie?</li></ul><p>**3. Reframing negatywnych doświadczeń** 🔄</p><ul><li>\"To nie porażka, to dane do analizy\" 📊</li><li>\"To nie problem, to wyzwanie do rozwiązania\" 🧩</li><li>\"To nie kryzys, to okazja do innowacji\" 💡</li></ul><p>**4. Budowanie \"mięśni\" neuronalnych** 💪</p><ul><li>**Małe codzienne wyzwania**: Wyjście ze strefy komfortu w bezpieczny sposób</li><li>**Uczenie się nowych umiejętności**: Stymuluje neurogenezę</li><li>**Różnorodność zadań**: Buduje elastyczność umysłu</li></ul><p>**🎯 Praktyczne zastosowanie w zespole:**</p><p>**Tygodniowe \"Challenges neuroplastyczne\"**: 🏆</p><ul><li>Poniedziałek: Nowy sposób na rozwiązanie rutynowego zadania</li><li>Środa: 10-minutowa wymiana ról w zespole</li><li>Piątek: Burza mózgów w nietypowym miejscu</li></ul><p>**\"After Action Review\" z perspektywą neuroplastyczności**: 📝</p><ul><li>Co nauczył nas ten projekt o sobie? (autorefleksja)</li><li>Jakie nowe ścieżki myślenia odkryliśmy? (metakognicja)</li><li>Jak możemy zastosować tę wiedzę w przyszłości? (transfer wiedzy)</li></ul><p>**💡 Pamiętaj**: Neuroplastyczność działa obustronne - możemy budować pozytywne nawyki myślenia, ale też negatywne wzorce. Jako lider masz wpływ na to, które ścieżki neuronowe wzmacniasz w swoim zespole! 🌟</p>"
         },
         {
-          "title": "🥑📉 1. Teoria perspektywy, czyli dlaczego tracenie boli bardziej niż cieszy zarabianie",
-          "content": "<p>Wyobraź sobie, że zgubiłeś stówę 💸. No dramat, prawda? A teraz wyobraź sobie, że znalazłeś stówę na chodniku – fajnie, ale… to zgubienie jakoś bolało bardziej, prawda? 🤔 Dokładnie o tym mówi teoria perspektywy Kahnemana i Tversky'ego. Naukowcy zauważyli, że ból po utracie pieniędzy jest około 2–2,5 raza mocniejszy niż radość z ich zarobienia. To taki psychologiczny trik, który powoduje, że częściej działamy, żeby unikać strat, niż żeby maksymalizować zyski.</p> <p>📌 Przykład z życia (wzięty prosto z twojej apki inwestycyjnej):</p> <ul><li>Opcja A: 100% szans na pewne 500 zł. Safe, zero emocji, czysty spokój. 😌</li><li>Opcja B: Rzut monetą – 50% szans na 1000 zł, ale też 50% szans, że dostaniesz okrągłe 0 zł. 🚀🤞 lub 🤦‍♂️</li></ul><p>Z matematyką się nie dyskutuje – obie opcje średnio dają to samo (500 zł). Ale większość ludzi wybierze pewne 500 zł. Czemu? Bo niepewność i ryzyko utraty boli bardziej niż perspektywa dodatkowej kasy.</p><p>To jak z oglądaniem seriali – wolimy obejrzeć coś, co polecił nam znajomy (pewny hit 🎬), zamiast ryzykować dwie godziny na randomowym filmie, który może być genialny albo katastrofalny. W inwestowaniu działa to identycznie. Częściej wybieramy obligacje, które obiecują pewne 2%, zamiast ryzykować z akcjami, które mogą dać 8%, ale mogą też przynieść nerwy i stres. A gdy rynek zaczyna lecieć w dół, większość ludzi reaguje paniką i wycofuje się, zamiast przeczekać i dać sobie szansę na odbicie 📈.</p><p>🎯 Co zrobić, żeby emocje nie rządziły twoim portfelem?</p><ul><li>Zoom out, czyli szeroka perspektywa 📸</li><li>Wyznacz sobie limit strat 🚧</li><li>Przestań codziennie sprawdzać apki inwestycyjne 📵</li><li>Zmień sposób myślenia o stratach 💡</li></ul><p>Pamiętaj – małe straty są naturalne i potrzebne, by w długiej perspektywie móc naprawdę zarabiać. 🤗✨</p>"
+          "title": "🎭🤝 5. Empatia i neurony lustrzane w przywództwie",
+          "content": "<p>Neurony lustrzane to prawdziwa supermoc lidera! 🪞✨ Odkryte przez przypadek w latach 90., te specjalne komórki nerwowe aktywują się nie tylko gdy wykonujemy jakąś czynność, ale także gdy obserwujemy, jak robi to ktoś inny. To neurobiologiczna podstawa empatii i kluczowe narzędzie w arsenale każdego skutecznego lidera.</p><p>**🧠 Jak działają neurony lustrzane?**</p><ul><li>**Automatyczne odbijanie**: Mózg \"kopiuje\" emocje i zachowania innych 🔄</li><li>**Nieświadomy proces**: Dzieje się to bez naszej świadomej kontroli ⚡</li><li>**Podstawa zrozumienia**: Pozwala nam \"wczuć się\" w innych 💝</li><li>**Zaraźliwość emocji**: Emocje rozprzestrzeniają się jak wirus w zespole 🦠</li></ul><p>**🎯 Wykorzystanie neuronów lustrzanych w przywództwie:**</p><p>**1. Modelowanie pozytywnych zachowań** 🌟</p><ul><li>Twoja postawa automatycznie \"zaraża\" zespół</li><li>Spokój lidera = spokój zespołu</li><li>Entuzjazm lidera = zmotywowany zespół</li><li>Stres lidera = zestresowany zespół</li></ul><p>**2. Świadome zarządzanie energią zespołu** ⚡</p><ul><li>**Rano**: Rozpocznij dzień z pozytywną energią</li><li>**Podczas kryzysu**: Zachowaj spokój - zespół to skopiuje</li><li>**Na spotkaniach**: Twoja postawa określa atmosferę</li></ul><p>**3. Budowanie głębszego połączenia** 🤝</p><ul><li>**Active mirroring**: Świadome dopasowanie mowy ciała</li><li>**Emotional matching**: Dostrojenie do emocji rozmówcy</li><li>**Validation**: Potwierdzenie, że rozumiesz uczucia drugiej osoby</li></ul><p>**💡 Praktyczne ćwiczenia:**</p><p>**\"Mirror Check\" - sprawdzanie swojego odbicia**: 🪞</p><ul><li>Przed każdym spotkaniem zastanów się: \"Jaką energię chcę przekazać?\"</li><li>Świadomie dostosuj swoją postawę do tego, co chcesz osiągnąć</li><li>Obserwuj, jak zespół reaguje na Twoje zmiany</li></ul><p>**\"Empathy Mapping\"**: 🗺️</p><ul><li>Przed trudną rozmową wyobraź sobie, co czuje druga osoba</li><li>Zastanów się, jakie neurony lustrzane możesz aktywować</li><li>Zaplanuj swoją komunikację tak, by wzmocnić pozytywne odbicie</li></ul><p>**⚠️ Uwaga na pułapki neuronów lustrzanych:**</p><ul><li>**Negatywna spirala**: Stres i frustracja też są zaraźliwe</li><li>**Unconscious bias**: Możemy nieświadomie faworyzować podobnych do nas</li><li>**Emotional overwhelm**: Zbyt silne odbijanie może prowadzić do wypalenia</li></ul>"
         },
         {
-          "title": "🚀💸 2. Efekt dyspozycji, czyli dlaczego trzymasz przegrywów i za szybko odpuszczasz zwycięzców",
-          "content": "<p>Znasz ten vibe, kiedy wrzucasz story na Instagrama i masz 100 lajków w 5 minut – od razu masz ochotę się tym pochwalić, prawda? 🥳 A kiedy coś nie pójdzie, np. nikt nie reaguje na twoje najlepsze selfie, jakoś mniej chętnie się tym dzielisz i wolisz to usunąć? 🤦‍♀️ To samo dzieje się w świecie inwestowania – tylko zamiast lajków są zyski i straty.</p> <p>To właśnie jest efekt dyspozycji – kiedy zbyt szybko sprzedajesz akcje, które zarabiają (żeby szybko ogłosić sukces 🎉), a jednocześnie upierasz się przy trzymaniu tych, które lecą w dół (bo przyznanie się do błędu boli 🤕). Ekonomista Hersh Shefrin nazwał to \"get-evenitis\", czyli syndrom \"wyjdę na zero za wszelką cenę\".</p><p>📌 Zobacz, jak to działa w praktyce:</p><ul><li>Załóżmy, że wrzuciłeś 50 zł w akcje dwóch spółek: X i Y.</li><li>Akcje X poszły w górę do 60 zł (+20% 😍)</li><li>Akcje Y spadły do 40 zł (-20% 😢)</li></ul><p>Pewnie już czujesz pokusę, żeby sprzedać akcje X – \"lepiej szybko zgarnąć te +20% i mieć pewny sukces, zanim się rozpłyną\". Jednocześnie kompletnie nie masz ochoty pozbywać się spółki Y, bo wtedy oficjalnie zaliczysz wtopę. Więc trzymasz je uparcie, licząc na odbicie się w górę.</p><p>A co się dzieje dalej? 🚨 Bardzo często akcje X dalej rosną, ale ty już ich nie masz. Akcje Y lecą dalej w dół, a twoja strata rośnie – bo liczyłeś na cud.</p><p>🎯 Co możesz zrobić, żeby ten efekt przestał sabotować twój portfel?</p><ul><li>Ustal jasne reguły gry 🗒️</li><li>Zacznij regularnie przeglądać portfel z chłodną głową 🥶</li><li>Zapomnij o cenie zakupu 🧹</li><li>Ucz się na własnych błędach 📝</li></ul><p>Pamiętaj – prawdziwy inwestor to nie ten, który nigdy nie przegrywa, tylko ten, który uczy się na błędach i nie daje się im ponieść. 🌟💪</p>"
+          "title": "🔄🎯 6. Zarządzanie zmianą przez pryzmat neuronaukowy",
+          "content": "<p>Zmiana to największy wróg ludzkiego mózgu! 😱 Nasz mózg ewoluował w środowisku, gdzie przewidywalność oznaczała przetrwanie, a nowość mogła znaczyć śmierć. Dlatego każda zmiana w organizacji uruchamia w mózgu reakcję \\\"zagrożenie wykryte!\\\". Ale spokojnie - neuroprzywództwo ma na to sposób! 🧠🔧</p><p>**🚨 Dlaczego mózg opiera się zmianom?**</p><ul><li>**Efekt negatywności**: Mózg 5x silniej reaguje na zagrożenia niż nagrody</li><li>**Koszt energetyczny**: Nowe ścieżki neuronowe wymagają więcej energii</li><li>**Status quo bias**: Preferujemy to, co znamy</li><li>**Cognitive load**: Zmiana przeciąża nasz \\\"procesor\\\" mentalny</li></ul><p>**🧠 Model STEP dla zarządzania zmianą:**</p><p>**S - Stabilize (Stabilizuj)** 🛡️</p><ul><li>Zanim wprowadzisz zmianę, daj zespołowi poczucie bezpieczeństwa</li><li>Podkreśl, co pozostaje bez zmian</li><li>Wzmocnij elementy SCARF (szczególnie Status i Certainty)</li></ul><p>**T - Tell the Story (Opowiedz historię)** 📖</p><ul><li>Mózg uwielbia narracje - stwórz przekonującą historię zmiany</li><li>Wyjaśnij \\\"dlaczego\\\" przed \\\"jak\\\" i \\\"co\\\"</li><li>Pokaż wizję przyszłości, która aktywuje system nagrody</li></ul><p>**E - Engage (Zaangażuj)** 🎯</p><ul><li>Daj ludziom poczucie kontroli nad procesem zmiany</li><li>Włącz zespół w projektowanie rozwiązań</li><li>Wykorzystaj siłę współtworzenia</li></ul><p>**P - Practice (Ćwicz)** 💪</p><ul><li>Małe kroki zamiast wielkich skoków</li><li>Powtarzanie buduje nowe ścieżki neuronowe</li><li>Celebruj każdy mały sukces</li></ul><p>**🎯 Praktyczne techniki neuroliderskie:**</p><p>**1. \\\"Change Story Canvas\\\"** 📋</p><ul><li>**Current State**: Gdzie jesteśmy teraz?</li><li>**Future Vision**: Dokąd zmierzamy i dlaczego?</li><li>**Bridge**: Jak tam dotrzemy?</li><li>**Benefits**: Co każdy z tego zyska?</li></ul><p>**2. \\\"Neurosafe Change Process\\\"** 🔒</p><ul><li>**Week 1**: Komunikacja \\\"dlaczego\\\" i korzyści</li><li>**Week 2**: Małe piloty i eksperymenty</li><li>**Week 3**: Feedback i dostosowania</li><li>**Week 4**: Rozszerzenie na całą organizację</li></ul><p>**3. \\\"Resistance to Excitement Conversion\\\"** 🔄</p><ul><li>Wysłuchaj obaw zespołu (walidacja emocji)</li><li>Znajdź w każdej obawie ukryty pozytyw</li><li>Przekształć \\\"ale co jeśli...\\\" w \\\"a co jeśli by się udało...\\\"</li></ul><p>**💡 Pamiętaj**: Opór wobec zmiany to nie zły charakter - to neurobiologia! Zamiast walczyć z mózgiem, współpracuj z nim. 🤝</p>"
         },
         {
-          "title": "🧠🔥 3. Dopamina, czyli dlaczego zarabianie hajsu tak uzależnia?",
-          "content": "<p>Kojarzysz to uczucie, kiedy dostajesz powiadomienie, że twój nowy post na Insta zgarnął mega dużo serduszek? 💖 Albo jak zobaczysz, że twój filmik na TikToku nagle wystrzelił w trendy? 🚀 To nie przypadek – to dopamina, królowa naszego mózgu, która daje ci ten słodki strzał przyjemności. 🍭</p><p>No więc, surprise-surprise – inwestowanie działa dokładnie tak samo. Gdy trafiasz świetną transakcję, twój mózg nagradza cię właśnie dopaminą – dokładnie tą samą substancją, którą uwalnia, kiedy jesz pyszną pizzę 🍕, wygrywasz w Fortnite'a 🎮, czy dostajesz setki lajków na swoje selfie 🤳.</p><p>🤷‍♂️ Co w tym złego?</p><p>Niby nic, ale to właśnie ten mechanizm sprawia, że czasem zachowujemy się jak hazardziści w kasynie. 🎰 Każda udana transakcja daje ci poczucie nieśmiertelności – \"skoro raz się udało, czemu nie spróbować jeszcze raz, i jeszcze raz?\". I nagle zaczynasz podejmować ryzykowne decyzje, zwiększasz stawki, bo po prostu chcesz poczuć ten dreszcz jeszcze raz. 🥳</p><p>Niestety, gdy sprawy nie idą po twojej myśli i zaliczasz porażkę – twój mózg reaguje tak, jakbyś dostał kosza przed całym klubem. Dosłownie boli – to nie żart! Badania mówią jasno: twój mózg przeżywa stratę kasy podobnie jak fizyczny ból.</p><p>⚠️ Co może pójść nie tak?</p><p>Wyobraź sobie, że udało ci się kilka razy dobrze zainwestować – może jakaś kryptowaluta albo akcje poszły mega w górę. Czujesz euforię, zaczynasz ryzykować więcej, bo dopamina podpowiada ci, że jesteś inwestycyjnym geniuszem 🤑.</p><p>Potem nadchodzi dzień, kiedy wszystko zaczyna się sypać. Stracisz trochę kasy i nagle odczuwasz panikę lub desperację, żeby odzyskać swoje pieniądze. Zaczynasz jeszcze bardziej ryzykować, angażujesz coraz więcej środków w nadziei, że szybko się odegrasz.</p><p>💡 Jak więc ogarnąć ten mózgowy rollercoaster?</p><ul><li>Znaj swoje słabości 🙇‍♀️</li><li>Take a break 🛑</li><li>Stick to the plan 📓</li><li>Pamiętaj, że inwestowanie to nie kasyno 🎲</li><li>Relaksuj się świadomie 🧘‍♂️</li><li>Bądź świadomy tego, jak działa twój mózg 🧠✨</li></ul><p>Pamiętaj – inwestowanie to gra długoterminowa, więc trzymaj emocje w ryzach, a hajsy w kieszeni. 😉🚀</p>"
-        },
-        {
-          "title": "🎬🖼️ 4. Efekt obramowania, czyli jak sprytnie podana informacja potrafi nami manipulować",
-          "content": "<p>Wyobraź sobie, że umawiasz się ze znajomymi na imprezę 🍹. Kumpel pisze ci, że \"prawdopodobnie będzie mega ekipa i świetny vibe\", a drugi znajomy ostrzega, że \"jest ryzyko, że nikt fajny się nie pojawi\". To samo wydarzenie, dwie zupełnie różne historie, prawda? 🤷‍♂️ No właśnie – to jest framing w czystej postaci!</p> <p>O co chodzi z tym framingiem? 🤔 Framing to po prostu sposób, w jaki przedstawiasz daną informację. To, jak ją zapakujesz, wpływa na to, jak inni (i ty sam!) ją odbierają. Niby banał, ale nasz mózg łapie się na to za każdym razem – nawet kiedy chodzi o pieniądze 💸. Daniel Kahneman i Amos Tversky przeprowadzili kultowy eksperyment, pokazując, że ludzie podejmują zupełnie inne decyzje, kiedy ta sama sytuacja jest przedstawiana jako potencjalny zysk (\"masz szansę wygrać\") albo jako możliwa strata (\"możesz stracić\"). Kiedy widzimy okazję, jesteśmy ostrożniejsi, ale kiedy grozi nam strata, zaczynamy panikować i częściej ryzykujemy, żeby jej uniknąć. Trochę jak ze związkami: gdy widzisz szansę na coś fajnego, raczej spokojnie się zastanawiasz, ale kiedy myślisz, że ktoś cię zaraz rzuci, robisz dziwne rzeczy, by temu zapobiec. 😅</p><p>📌 Jak to działa na giełdzie?</p><ul><li>Negatywnie: 😱 \"Fundusz X zanotował stratę aż -15% w ciągu ostatnich 12 miesięcy!\"</li><li>Pozytywnie: 🤩 \"Jednostki funduszu X są teraz tańsze o 15%, więc możesz je kupić po super promocyjnej cenie!\"</li></ul><p>Niby mówimy o dokładnie tym samym, ale czytasz to zupełnie inaczej, prawda? Pierwszy komunikat każe ci się zastanawiać, czy nie uciekać z kasą gdzie indziej, a drugi podpowiada, że to idealny moment, by wejść z nowym zakupem.</p><p>🚦 Jak się nie dać zmanipulować framingowi?</p><ul><li>Patrz z dwóch stron 👀</li><li>Konkrety zamiast storytellingu 📊</li><li>Porównuj jabłka z jabłkami 🍎🍏</li><li>Bądź wyczulony na marketingowe chwyty 🎯</li><li>Trenuj umysł na chłodno 🥶</li></ul><p>I pamiętaj – lepiej, gdy to ty decydujesz, a nie sprytnie sformułowane hasło reklamowe 😉✨.</p>"
+          "title": "🌟💡 7. Przywództwo w erze cyfrowej - wpływ technologii na mózg",
+          "content": "<p>Żyjemy w czasach, gdy nasz kamienny mózg musi radzić sobie z cyfrowym światem! 🧠📱 Ewolucja dała nam mózg zaprojektowany na życie w małych grupach myśliwych-zbieraczy, a teraz musimy zarządzać zespołami przez Zoom'a, odpowiadać na setki emaili i podejmować decyzje w tempie algorytmów. To neurologiczny rollercoaster! 🎢</p><p>**📱 Jak technologia wpływa na nasz mózg?**</p><ul><li>**Digital overwhelm**: Przeciążenie informacyjne paraliżuje korę przedczołową 🧠💥</li><li>**Attention fragmentation**: Średnio sprawdzamy telefon 96 razy dziennie! 📱⚡</li><li>**Dopamine hijacking**: Notyfikacje uzależniają jak narkotyki 🎰</li><li>**Social comparison**: Media społecznościowe uruchamiają niepokój i FOMO 😰</li><li>**Decision fatigue**: Zbyt wiele opcji wyczerpuje \\\"baterię\\\" decyzyjną 🔋</li></ul><p>**🎯 Neuroleadership w świecie cyfrowym:**</p><p>**1. Digital Wellness dla zespołu** 🌱</p><ul><li>**Email detox**: Wyznacz \\\"strefy bez emaili\\\" (np. 9-11 rano)</li><li>**Meeting hygiene**: Maksymalnie 50 minut, co 25 minut przerwa</li><li>**Notification diet**: Wyłącz wszystkie nieistotne powiadomienia</li><li>**Deep work blocks**: 2-godzinne bloki bez przeszkód</li></ul><p>**2. Virtual Presence Mastery** 📹</p><ul><li>**Camera psychology**: Jak wykorzystać neurony lustrzane przez ekran?</li><li>**Digital body language**: 90% komunikacji online to energia i ton głosu</li><li>**Zoom fatigue prevention**: Aktywne przerwy, zmiana pozycji, kontakt wzrokowy</li></ul><p>**3. Hybrid Leadership Skills** 🔄</p><ul><li>**Asynchronous empathy**: Jak budować relacje bez fizycznej obecności?</li><li>**Digital SCARF**: Adaptacja modelu SCARF do świata online</li><li>**Remote motivation**: Nowe sposoby aktywacji dopaminy w zespole</li></ul><p>**🧠 Neurotricks dla cyfrowego lidera:**</p><p>**\\\"Analog Anchors\\\" (Kotwice analogowe)** ⚓</p><ul><li>Zacznij dzień od 10 minut bez ekranów</li><li>Używaj papierowego notatnika na spotkaniach</li><li>Spaceruj podczas trudnych telefonów</li></ul><p>**\\\"Cognitive Load Management\\\"** 🧠⚖️</p><ul><li>Jedna aplikacja = jeden cel</li><li>Batch similar tasks (grupuj podobne zadania)</li><li>Use templates for repetitive decisions</li></ul><p>**\\\"Digital Minimalism for Leaders\\\"** 📵</p><ul><li>Smartwatch tylko na powiadomienia ważne</li><li>Phone in airplane mode podczas deep work</li><li>One screen rule - jeden ekran na raz</li></ul><p>**🚀 Przyszłość neuroprzywództwa:**</p><ul><li>**AI-assisted leadership**: Sztuczna inteligencja jako partner lidera</li><li>**Biometric feedback**: Real-time monitoring stresu zespołu</li><li>**VR empathy training**: Wirtualna rzeczywistość do rozwijania empatii</li><li>**Neurofeedback**: Bezpośredni trening mózgu lidera</li></ul><p>**💡 Kluczowa zasada**: Technology should enhance human connection, not replace it. Technologia ma wzmacniać ludzkie połączenia, nie je zastępować! 🤝✨</p>"
         }
       ]
-    },
-    "reflection": {
-      "sections": [
-        {
-          "title": "Zadanie 1: Inwestycyjny Flashback",
-          "content": "<p>Przypomnij sobie sytuację, w której podjąłeś decyzję inwestycyjną pod wpływem emocji. Jakie emocje Ci towarzyszyły? Jakie były skutki tej decyzji?</p>"
-        },
-        {
-          "title": "Zadanie 2: Twoje ramy inwestycyjne",
-          "content": "<p>Przemyśl, jak różne podejścia do przedstawiania informacji o inwestycjach mogą wpływać na Twoje decyzje. Jakie ramy wykorzystujesz, by zminimalizować wpływ emocji?</p>"
-        }
+    },    "reflection": {
+      "title": "Refleksja",
+      "questions": [
+        "Zastanów się nad ostatnią sytuacją stresową w Twojej pracy. Jak reagowały kora przedczołowa i ciało migdałowate? Co mogłeś zrobić inaczej, znając zasady neuroprzywództwa?",
+        "Przeanalizuj swój styl komunikacji z zespołem przez pryzmat modelu SCARF. Które elementy wzmacniasz, a które mogą być zagrożone?",
+        "Pomyśl o ostatniej zmianie wprowadzonej w Twojej organizacji. Jak można było ją wprowadzić lepiej, uwzględniając neurobiologiczne reakcje na zmianę?",
+        "W jaki sposób możesz wykorzystać wiedzę o dopaminie i oksytocynie do lepszego motywowania swojego zespołu?",
+        "Jakie konkretne działania planujesz wdrożyć w najbliższym tygodniu, aby zastosować zasady neuroprzywództwa w praktyce?"
       ]
-    },
-    "application": {
-      "sections": [
-        {
-          "title": "Zadanie 1: Plan działania",
-          "content": "<p>Napisz konkretny, 3-punktowy plan działania, jak zastosujesz wiedzę z tej lekcji przy swojej następnej decyzji inwestycyjnej. Określ jasne kryteria, według których będziesz podejmować decyzje, zamiast kierować się emocjami.</p>"
-        },
-        {
-          "title": "Zadanie 2: Twój osobisty reframing",
-          "content": "<p>Wybierz jedną z trudnych sytuacji inwestycyjnych (np. spadek wartości akcji o 10%) i przeformułuj ją na trzy różne sposoby - neutralny, negatywny i pozytywny. Zastanów się, która perspektywa jest najbardziej racjonalna i dlaczego.</p>"
-        }
+    },    "application": {
+      "title": "Zastosowanie w praktyce",
+      "tasks": [
+        "Przez następny tydzień obserwuj swoje reakcje stresowe i zapisuj, kiedy dominuje kora przedczołowa, a kiedy ciało migdałowate. Eksperymentuj z technikami uspokajania ciała migdałowatego.",
+        "Przeanalizuj komunikację w swoim zespole przez pryzmat modelu SCARF. Zidentyfikuj 3 konkretne obszary do poprawy i zaplanuj działania.",
+        "Zaprojektuj system małych nagród i uznań dla swojego zespołu, wykorzystując wiedzę o dopaminie. Wdróż go i obserwuj reakcje.",
+        "Przy następnej zmianie w organizacji zastosuj stopniowe wprowadzanie z wykorzystaniem zasad SCARF. Dokumentuj reakcje zespołu.",
+        "Przeprowadź eksperyment z budowaniem zaufania – wprowadź jedno działanie wspierające oksytocynę (np. regularne check-iny, wspólne cele) i monitoruj zmiany w dynamice zespołu."
       ]
-    },
-    "closing_quiz": {
+    },    "closing_quiz": {
       "title": "Quiz końcowy",
-      "description": "Sprawdź, ile zapamiętałeś z tej lekcji",
+      "description": "Sprawdź, ile zapamiętałeś z tej lekcji o neuroleadership",
       "questions": [
         {
-          "question": "Czym jest framing (efekt obramowania)?",
+          "question": "Co oznacza akronim SCARF w modelu neuroleadership?",
           "options": [
-            "Techniką zarządzania portfelem inwestycyjnym",
-            "Sposobem przedstawiania informacji, który wpływa na jej odbiór",
-            "Strategią dywersyfikacji inwestycji",
-            "Metodą analizy technicznej wykresów"
+            "Status, Certainty, Autonomy, Relatedness, Fairness",
+            "Strategy, Control, Authority, Results, Focus",
+            "Safety, Confidence, Attention, Responsibility, Flexibility",
+            "Structure, Communication, Accountability, Recognition, Feedback"
           ],
-          "correct_answer": 1,
-          "explanation": "Framing to sposób przedstawiania tej samej informacji w różny sposób, co może znacząco wpłynąć na decyzje inwestora."
+          "correct_answer": 0,
+          "explanation": "Model SCARF to Status, Certainty, Autonomy, Relatedness i Fairness - pięć kluczowych obszarów społecznych, które aktywują w mózgu reakcje nagrody lub zagrożenia."
         },
         {
-          "question": "Która z poniższych metod pomaga radzić sobie z wpływem dopaminy na decyzje inwestycyjne?",
+          "question": "Jakie jest główne zastosowanie neuroplastyczności w kontekście przywództwa?",
           "options": [
-            "Zwiększanie częstotliwości tradingu",
-            "Stawianie małych kwot na ryzykowne aktywa",
-            "Trzymanie się ustalonego wcześniej planu inwestycyjnego",
-            "Podążanie za trendami w mediach społecznościowych"
+            "Zwiększanie wydajności finansowej organizacji",
+            "Rozwijanie umiejętności przywódczych przez treningi mózgu",
+            "Kontrolowanie emocji podwładnych",
+            "Automatyzowanie procesów decyzyjnych"
           ],
-          "correct_answer": 2,
-          "explanation": "Trzymanie się ustalonego planu (stick to the plan) to jeden z kluczowych sposobów na ograniczenie emocjonalnego wpływu dopaminy na decyzje inwestycyjne."
-        }      ]
+          "correct_answer": 1,
+          "explanation": "Neuroplastyczność pozwala na ciągłe rozwijanie umiejętności przywódczych poprzez świadome treningi i praktyki, które zmieniają strukturę i funkcjonowanie mózgu."
+        },
+        {
+          "question": "Które z poniższych działań najlepiej wspiera redukcję obciążenia poznawczego w zespole?",
+          "options": [
+            "Zwiększanie liczby spotkań i raportów",
+            "Upraszczanie procesów i jasne komunikowanie priorytetów",
+            "Dodawanie więcej poziomów hierarchii",
+            "Wprowadzanie skomplikowanych systemów motywacyjnych"
+          ],
+          "correct_answer": 1,
+          "explanation": "Upraszczanie procesów i jasne komunikowanie priorytetów pomaga zespołowi skupić się na najważniejszych zadaniach, redukując niepotrzebne obciążenie poznawcze."
+        }
+      ]
     }
-  },
-  "mind_map": {
+  },  "mind_map": {
     "central_node": {
       "id": "main_topic",
-      "label": "💸 STRACH PRZED STRATĄ",
+      "label": "🧠 NEUROPRZYWÓDZTWO",
       "size": 30,
       "color": "#FF6B6B",
       "font_size": 16
     },
     "categories": [
       {
-        "id": "teoria_perspektywy",
-        "label": "📊 Teoria perspektywy",
+        "id": "scarf_model",
+        "label": "🧭 Model SCARF",
         "size": 20,
         "color": "#4ECDC4",
         "font_size": 12,
         "details": [
           {
-            "id": "bol_straty",
-            "label": "😢 Ból straty 2-2,5x silniejszy",
+            "id": "status",
+            "label": "👑 Status - pozycja w hierarchii",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "pewnosc",
-            "label": "🛡️ Preferujemy pewność",
+            "id": "certainty",
+            "label": "🔮 Pewność - przewidywalność",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "awersja_ryzyko",
-            "label": "⚠️ Awersja do ryzyka",
+            "id": "autonomy",
+            "label": "🎯 Autonomia - poczucie kontroli",
+            "size": 12,
+            "color": "#DDA0DD",
+            "font_size": 10
+          },
+          {
+            "id": "relatedness",
+            "label": "🤝 Relacje - przynależność",
+            "size": 12,
+            "color": "#DDA0DD",
+            "font_size": 10
+          },
+          {
+            "id": "fairness",
+            "label": "⚖️ Sprawiedliwość - fair play",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
@@ -154,29 +212,29 @@
         ]
       },
       {
-        "id": "efekt_dyspozycji",
-        "label": "🔄 Efekt dyspozycji",
+        "id": "neurobiologia",
+        "label": "🧬 Neurobiologia",
         "size": 20,
         "color": "#45B7D1",
         "font_size": 12,
         "details": [
           {
-            "id": "sprzedaj_zyski",
-            "label": "💰 Za szybko sprzedajemy zyski",
+            "id": "kora_przedczolowa",
+            "label": "🎭 Kora przedczołowa - logika",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "trzymaj_straty",
-            "label": "📉 Za długo trzymamy straty",
+            "id": "cialo_migdalowate",
+            "label": "⚡ Ciało migdałowate - emocje",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "get_even",
-            "label": "🎯 Syndrom 'wyjdę na zero'",
+            "id": "neuroplastycznosc",
+            "label": "🔄 Neuroplastyczność - zmiany",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
@@ -184,29 +242,29 @@
         ]
       },
       {
-        "id": "dopamina",
-        "label": "🧠 Dopamina",
+        "id": "hormony",
+        "label": "⚗️ Neuromedytory",
         "size": 20,
         "color": "#96CEB4",
         "font_size": 12,
         "details": [
           {
-            "id": "system_nagrody",
-            "label": "🎉 System nagrody w mózgu",
+            "id": "dopamina",
+            "label": "🎉 Dopamina - motywacja",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "uzaleznienie",
-            "label": "🎰 Uzależnienie od transakcji",
+            "id": "oksytocyna",
+            "label": "💙 Oksytocyna - zaufanie",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "euforia",
-            "label": "🚀 Euforia po zyskach",
+            "id": "kortyzol",
+            "label": "😰 Kortyzol - stres",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
@@ -214,29 +272,29 @@
         ]
       },
       {
-        "id": "framing",
-        "label": "🖼️ Efekt obramowania",
+        "id": "praktyka",
+        "label": "🎯 Praktyka",
         "size": 20,
         "color": "#FECA57",
         "font_size": 12,
         "details": [
           {
-            "id": "prezentacja_info",
-            "label": "📝 Sposób prezentacji wpływa na decyzje",
+            "id": "zarzadzanie_uwaga",
+            "label": "👁️ Zarządzanie uwagą",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "pozytywne_negatywne",
-            "label": "😊😞 Pozytywne vs negatywne ujęcie",
+            "id": "inteligencja_emocjonalna",
+            "label": "❤️ Inteligencja emocjonalna",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
           },
           {
-            "id": "manipulacja",
-            "label": "🎭 Podatność na manipulację",
+            "id": "zarzadzanie_zmiany",
+            "label": "🔄 Zarządzanie zmianą",
             "size": 12,
             "color": "#DDA0DD",
             "font_size": 10
@@ -246,58 +304,58 @@
     ],
     "solutions": [
       {
-        "id": "zoom_out",
-        "label": "🔍 Zoom out - szeroka perspektywa",
+        "id": "pauza_oddech",
+        "label": "🧘 Pauza i oddech",
         "size": 15,
         "color": "#90EE90",
         "font_size": 11
       },
       {
-        "id": "limit_strat",
-        "label": "🚧 Wyznacz limit strat",
+        "id": "pytania_otwarte",
+        "label": "❓ Pytania otwarte",
         "size": 15,
         "color": "#98FB98",
         "font_size": 11
       },
       {
-        "id": "stop_checking",
-        "label": "📵 Przestań sprawdzać apki",
+        "id": "komunikacja_scarf",
+        "label": "📢 Komunikacja przez SCARF",
         "size": 15,
         "color": "#90EE90",
         "font_size": 11
       },
       {
-        "id": "plan_strategii",
-        "label": "📋 Trzymaj się planu",
+        "id": "mikronagrody",
+        "label": "🎁 Mikronagrody",
         "size": 15,
         "color": "#98FB98",
         "font_size": 11
       }
     ],
     "case_study": {
-      "id": "kuba_case",
-      "label": "👨‍💻 Case Study: Kuba i $MOONZ",
+      "id": "marta_case",
+      "label": "👩‍💼 Case Study: Marta i zespół",
       "size": 18,
       "color": "#FF8C42",
       "font_size": 12,
       "details": [
         {
-          "id": "fomo_moonz",
-          "label": "😱 FOMO na $MOONZ",
+          "id": "reakcja_migdalowa",
+          "label": "⚡ Reakcja ciała migdałowatego",
           "size": 10,
           "color": "#FFB347",
           "font_size": 9
         },
         {
-          "id": "spadek_20",
-          "label": "📉 -20% w 2 dni",
+          "id": "naruszenie_scarf",
+          "label": "🚨 Naruszenie potrzeb SCARF",
           "size": 10,
           "color": "#FFB347",
           "font_size": 9
         },
         {
-          "id": "panika_checking",
-          "label": "😰 Panika i sprawdzanie co 3 min",
+          "id": "zmiana_podejscia",
+          "label": "🔄 Zmiana podejścia",
           "size": 10,
           "color": "#FFB347",
           "font_size": 9
@@ -307,39 +365,39 @@
     "connections": [
       {
         "from": "main_topic",
-        "to": "teoria_perspektywy"
+        "to": "scarf_model"
       },
       {
         "from": "main_topic",
-        "to": "efekt_dyspozycji"
+        "to": "neurobiologia"
       },
       {
         "from": "main_topic",
-        "to": "dopamina"
+        "to": "hormony"
       },
       {
         "from": "main_topic",
-        "to": "framing"
+        "to": "praktyka"
       },
       {
         "from": "main_topic",
-        "to": "zoom_out"
+        "to": "pauza_oddech"
       },
       {
         "from": "main_topic",
-        "to": "limit_strat"
+        "to": "pytania_otwarte"
       },
       {
         "from": "main_topic",
-        "to": "stop_checking"
+        "to": "komunikacja_scarf"
       },
       {
         "from": "main_topic",
-        "to": "plan_strategii"
+        "to": "mikronagrody"
       },
       {
         "from": "main_topic",
-        "to": "kuba_case"
+        "to": "marta_case"
       }
     ],
     "config": {
@@ -349,9 +407,8 @@
       "directed": false,
       "hierarchical": false
     }
-  },
-  "outro": {
-    "main": "<p><strong>Podsumowanie:</strong> W tej lekcji poznaliśmy cztery kluczowe mechanizmy psychologiczne wpływające na decyzje inwestycyjne:</p><ul><li><strong>Teoria perspektywy</strong> – ból straty jest około 2-2,5 razy silniejszy niż radość z zysku, co prowadzi nas do unikania ryzyka i szukania pewnych opcji</li><li><strong>Efekt dyspozycji</strong> – tendencja do zbyt szybkiego sprzedawania zyskownych inwestycji i trzymania stratnych zbyt długo</li><li><strong>Wpływ dopaminy</strong> – uzależniające działanie systemu nagrody w mózgu, które może prowadzić do ryzkownych decyzji</li><li><strong>Efekt obramowania</strong> – sposób, w jaki przedstawiana jest informacja, znacząco wpływa na nasze decyzje</li></ul><p>Świadomość tych mechanizmów pozwala nam lepiej kontrolować emocje i podejmować bardziej racjonalne decyzje inwestycyjne.</p>",
-    "case_study": "<p><strong>Zakończenie studium przypadku:</strong> Pamiętasz historię Tomasza, który sprzedał akcje w panice, tracąc na tym 15%?</p><p>Patrząc na jego decyzję przez pryzmat poznanych mechanizmów psychologicznych, możemy zauważyć kilka błędów:</p><ul><li>Teoria perspektywy – Tomasz mocniej odczuwał ból związany z utratą swoich wcześniejszych zysków (40%) niż potencjalne korzyści z pozostawienia inwestycji</li><li>Efekt dyspozycji – W przeciwieństwie do typowego wzorca, Tomasz nie trzymał stratnej inwestycji, ale panika i lęk były silniejsze niż chęć wyjścia na zero</li><li>Dopamina – Po wcześniejszych sukcesach (wzrost o 40%) nagły spadek wywołał silną reakcję stresową i paniczne działania</li><li>Framing – Tomasz skupił się na ujęciu \"straciłem 15%\" zamiast na perspektywie \"to może być tylko tymczasowy spadek\"</li></ul><p>Gdyby Tomasz zastosował poznane techniki – trzymał się długoterminowego planu, zachował szerszą perspektywę czasową i nie sprawdzał notowań codziennie – prawdopodobnie przeczekałby trudny okres i ostatecznie zwiększył zysk o dodatkowe 25%.</p><p>Pamiętaj, że każdy inwestor popełnia błędy. Kluczowe jest wyciąganie z nich wniosków i systematyczne doskonalenie swojego podejścia emocjonalnego do inwestowania.</p>"
+  },  "outro": {
+    "main": "<p><strong>🎬 Outro: Gratulacje, Twój mózg właśnie awansował! 🧠💼</strong></p><p>No i proszę – zrobiłeś(-aś) to. Przeszedłeś(-aś) przez lekcję, która mogła mieć tytuł: \"Co każdy lider powinien wiedzieć o swoim mózgu, zanim krzyknie na zespół.\"</p><p>I choć nie wszczepiliśmy Ci elektrody do głowy, to i tak zrobiłeś(-aś) coś bardzo ważnego: zacząłeś(-aś) rozumieć, co siedzi pod maską codziennych decyzji, emocji i reakcji – Twoich i Twoich ludzi.</p><p><strong>🧩 Co było w tej lekcji?</strong></p><ul><li>Twój mózg ma swoje tryby: logiczny (kora przedczołowa) i panikujący (ciało migdałowate). Naucz się przełączać je świadomie.</li><li>Ludzie nie są robotami – działają według psychologicznego systemu SCARF, nawet jeśli nigdy o nim nie słyszeli.</li><li>Motywacja to nie magiczny e-mail z premią, tylko chemia mózgu: dopamina, oksytocyna i poczucie sensu.</li><li>Emocje to nie wróg lidera – to jego radar, jeśli umie je czytać.</li><li>Praca nad sobą zaczyna się od… pauzy. I pytania: \"Dlaczego ja właściwie tak zareagowałem?\"</li></ul><p><strong>🚀 I co teraz? Kilka mikro-wskazówek rozwojowych:</strong></p><ul><li>✔️ Zatrzymuj się na 3 sekundy, zanim odpowiesz zespołowi w stresie. To mała rzecz. Dla mózgu – ogromna.</li><li>✔️ Zacznij spotkanie od pytania, nie od agendy. Relacja najpierw, potem projekt.</li><li>✔️ Obserwuj, co w Tobie odpala ciało migdałowate. Jak to nazwiesz – możesz tym zarządzać.</li><li>✔️ Nie ignoruj ciszy w zespole. Cisza to komunikat. Brak feedbacku to też feedback.</li><li>✔️ Dawaj uznanie. Nawet za drobne rzeczy. Dopamina się nie robi sama.</li></ul><p><strong>💬 Na koniec? Słowo od Twojej kory przedczołowej:</strong></p><p>\"Zacznij od siebie. Nie musisz być idealny(-a). Wystarczy, że będziesz świadomy(-a).\"</p><p>Bo neuroprzywództwo to nie teoria – to praktyka codziennych wyborów. Twoje słowa, Twoja postawa, Twój ton – to wszystko robi chemię. A od chemii zaczyna się zaufanie, motywacja i efekty, których nie da się \"wycisnąć\".</p><p>Do zobaczenia w kolejnej lekcji. Twój mózg już się cieszy. 🧠✨💬</p>",
+    "case_study": "<p><strong>🧠 Closing Case Study: Marta oddycha razem z zespołem</strong></p><p>Minęły dwa miesiące od chwili, gdy Marta kliknęła w link do lekcji o neuroprzywództwie. Na początku była sceptyczna. \"Nie mam czasu na te wszystkie miękkie rzeczy\" – pomyślała. Ale coś ją tknęło. Może dlatego, że zespół się sypał. Może dlatego, że sama czuła się wypalona. A może po prostu nie miała już nic do stracenia.</p><p>W trakcie lekcji zrozumiała rzeczy, których nikt jej wcześniej nie powiedział:</p><ul><li>że ludzie nie reagują na polecenia, tylko na emocje i poczucie bezpieczeństwa.</li><li>że mózg nie lubi niespodzianek, za to kocha jasność, wpływ i relacje.</li><li>że stres wyłącza dostęp do logiki – nie tylko u niej, ale też u zespołu.</li></ul><p>Pierwszym krokiem było... nic. A raczej pauza. Marta zaczęła dzień od 3 oddechów. Nie miała pojęcia, że to aż tyle zmienia. Weszła na spotkanie z zespołem spokojniejsza. I nie zaczęła od kalendarza. Zaczęła od słów: \"Chcę się z Wami podzielić, czego ostatnio się uczę – i zapytać, jak Wy się czujecie z tą zmianą, która nas czeka.\"</p><p>To było pierwsze spotkanie od dawna, podczas którego ludzie mówili bez napięcia. Marta nie przerywała. Pytała. Robiła notatki. A potem powiedziała: \"Nie obiecam Wam wszystkiego. Ale mogę Wam obiecać, że będę z Wami rozmawiać.\"</p><p>Zaczęła stosować model SCARF jak swój wewnętrzny GPS. Kiedy planowała komunikację, zastanawiała się:</p><ul><li>Czy daję im poczucie statusu?</li><li>Czy wiedzą, co ich czeka?</li><li>Czy mogą coś współdecydować?</li><li>Czy czują się częścią grupy?</li><li>Czy to, co proponuję, jest fair?</li></ul><p>Przestała wysyłać lakoniczne maile. Zamiast \"Zróbcie to szybciej\" pisała: \"Potrzebujemy przyspieszyć, ale chcę usłyszeć, co jest dla Was największym wyzwaniem – wtedy mogę pomóc.\"</p><p>Zamieniła nagrody za wyniki na docenienie za wysiłek. Raz w tygodniu pytała każdego: \"Co w tym tygodniu zrobiłeś, z czego jesteś najbardziej zadowolony?\" I mówiła: \"Dziękuję, że to wniosłeś do zespołu.\"</p><p>Nie stała się innym człowiekiem. Wciąż była konkretna, zadaniowa, szybka w działaniu. Ale coś się zmieniło. Przestała traktować zespół jak projekt. Zaczęła widzieć mózgi i emocje – a nie tylko taski i terminy.</p><p>Po dwóch miesiącach… nie wydarzył się cud. Ale:</p><ul><li>nikt nie był na L4,</li><li>ludzie zaczęli się śmiać na spotkaniach,</li><li>Agnieszka wróciła z propozycją nowego systemu pracy,</li><li>a Marta – po raz pierwszy od wielu tygodni – wróciła do domu bez bólu głowy.</li></ul><p>I jeszcze coś: \"Od kiedy zaczęłam rozumieć, jak działa mózg – mniej się boję. Bo wiem, że mogę coś zmieniać. W sobie i wokół siebie.\"</p><p><strong>🪞 Pytania do refleksji:</strong></p><ul><li>Jakie konkretne zmiany w podejściu Marty zauważyłeś/aś?</li><li>Jak Marta wykorzystała wiedzę o SCARF w praktyce?</li><li>Co z jej zachowań wpłynęło na obniżenie stresu w zespole?</li><li>Które z działań Marty możesz przetestować u siebie – nawet jutro?</li><li>Jak zmieniłby się Twój styl przywództwa, gdybyś spojrzał/-a na swój zespół \"oczami neuroprzywódcy\"?</li></ul>"
   }
 }
