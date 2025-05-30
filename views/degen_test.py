@@ -10,6 +10,7 @@ from data.neuroleader_details import degen_details
 from utils.components import zen_header, zen_button, progress_bar, notification, content_section, tip_block
 from utils.material3_components import apply_material3_theme
 from utils.layout import get_device_type, responsive_grid, responsive_container, toggle_device_view, apply_responsive_styles, get_responsive_figure_size
+from utils.achievements import check_achievements
 
 def calculate_test_results(scores):
     """Calculate the dominant neuroleader type based on test scores"""
@@ -280,13 +281,20 @@ def show_degen_test():
         dominant_type = calculate_test_results(st.session_state.test_scores)
           # Update user data - unified format
         users_data = load_user_data()
-        # Maintain compatibility with both field names
-        users_data[st.session_state.username]["neuroleader_type"] = dominant_type
+        # Maintain compatibility with both field names        users_data[st.session_state.username]["neuroleader_type"] = dominant_type
         users_data[st.session_state.username]["degen_type"] = dominant_type  # For backward compatibility
         users_data[st.session_state.username]["test_taken"] = True
         users_data[st.session_state.username]["test_scores"] = st.session_state.test_scores
         users_data[st.session_state.username]["xp"] = users_data[st.session_state.username].get("xp", 0) + 50  # Bonus XP for completing the test
         save_user_data(users_data)
+        
+        # Check for new achievements after test completion
+        try:
+            new_badges = check_achievements(st.session_state.username)
+            if new_badges:
+                st.success(f"🎉 Gratulacje! Otrzymałeś nowe odznaki: {', '.join(new_badges)}")
+        except Exception as e:
+            st.warning(f"Błąd podczas sprawdzania odznak: {e}")
         
         st.markdown("<div class='st-bx'>", unsafe_allow_html=True)
         st.subheader("Wyniki testu")

@@ -12,6 +12,7 @@ from data.lessons import load_lessons
 from utils.goals import get_user_goals, calculate_goal_metrics
 from utils.daily_missions import get_daily_missions_progress
 from views.degen_explorer import plot_radar_chart
+from data.neuroleader_details import degen_details
 from utils.material3_components import apply_material3_theme
 from utils.layout import get_device_type, responsive_grid, responsive_container, toggle_device_view
 from utils.components import (
@@ -279,17 +280,133 @@ def show_stats_section(user_data, device_type):
 def show_main_content(user_data, device_type):
     """Główna zawartość dashboardu"""
     
+    # Sekcja wyników testu neuroleadera - tylko jeśli użytkownik wykonał test
+    show_neuroleader_results_section(user_data, device_type)
         
     # Sekcja dostępnych lekcji - teraz używa lesson_card
     show_available_lessons(device_type)
 
     # Sekcja misji dziennych
-    show_daily_missions_section()
-
-    # Sekcja ostatnich aktywności
+    show_daily_missions_section()    # Sekcja ostatnich aktywności
     show_recent_activities(user_data)
 
     
+
+def show_neuroleader_results_section(user_data, device_type):
+    """Sekcja wyników testu neuroleadera w głównej zawartości dashboardu"""
+    
+    # Sprawdź czy użytkownik ma wyniki testu neuroleadera
+    neuroleader_type = user_data.get('neuroleader_type') or user_data.get('degen_type')
+    test_taken = user_data.get('test_taken', False)
+    test_scores = user_data.get('test_scores')
+    
+    if neuroleader_type and (test_taken or test_scores):
+        st.markdown("""
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h3 class="section-title">🧠 Twój profil neuroleaderski</h3>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        # Get neuroleader color for styling
+        neuroleader_color = NEUROLEADER_TYPES.get(neuroleader_type, {}).get('color', '#3498db')
+        
+        # Header with prominent display of result
+        st.markdown(f"""
+        <div style='text-align: center; padding: 20px; border-radius: 15px; 
+                    background: linear-gradient(135deg, {neuroleader_color}20, {neuroleader_color}10);
+                    border: 2px solid {neuroleader_color}40; margin-bottom: 20px;'>
+            <h3 style='color: {neuroleader_color}; margin-bottom: 10px; font-size: 1.2em;'>
+                🧬 Twój dominujący typ neuroleadera
+            </h3>
+            <h2 style='color: {neuroleader_color}; margin: 10px 0; font-size: 1.8em; font-weight: bold;'>
+                {neuroleader_type}
+            </h2>
+            <p style='color: #666; margin: 0; font-size: 1em;'>
+                {NEUROLEADER_TYPES.get(neuroleader_type, {}).get('description', 'Opis niedostępny')}
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+          # Show radar chart if test scores are available
+        if test_scores:
+            try:
+                radar_fig = plot_radar_chart(test_scores, device_type=device_type)
+                
+                # Display radar chart based on device type
+                if device_type == 'mobile':
+                    st.markdown("#### 📊 Twój profil w szczegółach")
+                    st.pyplot(radar_fig)
+                else:
+                    col1, col2 = st.columns([2, 1])
+                    with col1:
+                        st.markdown("#### 📊 Twój profil w szczegółach")
+                        st.pyplot(radar_fig)
+                        
+                    with col2:
+                        # Show key characteristics in sidebar format
+                        st.markdown("##### 💪 Mocne strony:")
+                        strengths = NEUROLEADER_TYPES.get(neuroleader_type, {}).get('strengths', [])
+                        for strength in strengths[:3]:  # Show only first 3 for space
+                            st.markdown(f"• {strength}")
+                        
+                        st.markdown("##### 🚧 Wyzwania:")
+                        challenges = NEUROLEADER_TYPES.get(neuroleader_type, {}).get('challenges', [])
+                        for challenge in challenges[:3]:  # Show only first 3 for space
+                            st.markdown(f"• {challenge}")
+                            
+            except Exception as e:
+                st.warning("Nie udało się wygenerować wykresu radarowego.")
+        
+        # Action buttons
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            if zen_button("🔍 Szczegółowy opis", key="dashboard_detailed_description"):
+                st.session_state.page = 'neuroleader_explorer'
+                st.rerun()
+                
+        with col2:
+            if zen_button("🔄 Wykonaj test ponownie", key="dashboard_retake_test"):
+                st.session_state.page = 'neuroleader_explorer'
+                st.rerun()
+                
+        with col3:
+            if zen_button("📈 Zobacz profil", key="dashboard_view_profile"):
+                st.session_state.page = 'profile'
+                st.rerun()
+        
+        st.markdown("</div>", unsafe_allow_html=True)
+    
+    elif not neuroleader_type:
+        # Encourage user to take the test if they haven't yet
+        st.markdown("""
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h3 class="section-title">🧠 Odkryj swój typ neuroleadera</h3>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style='text-align: center; padding: 20px; border-radius: 15px; 
+                    background: linear-gradient(135deg, #3498db20, #3498db10);
+                    border: 2px solid #3498db40; margin-bottom: 20px;'>
+            <h3 style='color: #3498db; margin-bottom: 15px;'>
+                🎯 Jeszcze nie poznałeś swojego typu neuroleadera!
+            </h3>
+            <p style='color: #666; margin-bottom: 20px; line-height: 1.6;'>
+                Wykonaj nasz test psychologiczny i odkryj swój unikalny profil przywódczy. 
+                Test zajmie tylko kilka minut i pomoże Ci lepiej zrozumieć swoje mocne strony jako lider.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            if zen_button("🚀 Wykonaj test neuroleadera", key="dashboard_take_test", use_container_width=True):
+                st.session_state.page = 'neuroleader_explorer'
+                st.rerun()
+        
+        st.markdown("</div>", unsafe_allow_html=True)
 
 
 def show_dashboard_sidebar(user_data, device_type):
@@ -314,12 +431,81 @@ def show_recent_activities(user_data):
         </div>
         <div class="activity-list">
     """, unsafe_allow_html=True)
-      # Przykładowe aktywności na podstawie danych użytkownika
+      # Import badge configuration
+    try:
+        from config.badges import BADGES
+    except ImportError:
+        from config.settings import BADGES
+    
+    # Pobierz dane użytkownika
     completed_lessons = user_data.get('completed_lessons', [])
     neuroleader_type = user_data.get('neuroleader_type', None)
+    user_badges = user_data.get('badges', [])
+    badge_timestamps = user_data.get('badge_timestamps', {})
     
     activities = []
     
+    def get_time_ago(timestamp_str):
+        """Oblicza ile czasu temu wydarzyło się coś na podstawie timestampu"""
+        try:
+            from datetime import datetime
+            timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
+            now = datetime.now()
+            diff = now - timestamp
+            
+            if diff.days > 0:
+                return f"{diff.days} {'dzień' if diff.days == 1 else 'dni'} temu"
+            elif diff.seconds > 3600:
+                hours = diff.seconds // 3600
+                return f"{hours} {'godzinę' if hours == 1 else 'godzin'} temu"
+            elif diff.seconds > 60:
+                minutes = diff.seconds // 60
+                return f"{minutes} {'minutę' if minutes == 1 else 'minut'} temu"
+            else:
+                return "przed chwilą"
+        except:
+            return "niedawno"
+    
+    # Dodaj informacje o zdobytych odznakach z timestampami
+    if user_badges and badge_timestamps:
+        # Sortuj odznaki według czasu zdobycia (najnowsze pierwsze)
+        badges_with_time = []
+        for badge_id in user_badges:
+            if badge_id in badge_timestamps:
+                badges_with_time.append((badge_id, badge_timestamps[badge_id]))
+        
+        # Sortuj według timestampu (najnowsze pierwsze) i weź ostatnie 2
+        badges_with_time.sort(key=lambda x: x[1], reverse=True)
+        recent_badges = badges_with_time[:2]
+        
+        for badge_id, timestamp in recent_badges:
+            badge_info = BADGES.get(badge_id, {})
+            badge_name = badge_info.get('name', badge_id)
+            badge_icon = badge_info.get('icon', '🏆')
+            time_ago = get_time_ago(timestamp)
+            
+            activities.append({
+                'icon': badge_icon,
+                'color': '#f39c12',
+                'title': f'Zdobyto odznakę: {badge_name}',
+                'time': time_ago
+            })
+    elif user_badges:
+        # Fallback dla starych danych bez timestampów
+        recent_badges = user_badges[-2:] if len(user_badges) >= 2 else user_badges
+        for badge_id in reversed(recent_badges):
+            badge_info = BADGES.get(badge_id, {})
+            badge_name = badge_info.get('name', badge_id)
+            badge_icon = badge_info.get('icon', '🏆')
+            
+            activities.append({
+                'icon': badge_icon,
+                'color': '#f39c12',
+                'title': f'Zdobyto odznakę: {badge_name}',
+                'time': 'niedawno'
+            })
+    
+    # Dodaj informacje o ukończonych lekcjach
     if completed_lessons:
         activities.append({
             'icon': '✓',
@@ -328,6 +514,7 @@ def show_recent_activities(user_data):
             'time': '2 godziny temu'
         })
     
+    # Dodaj informacje o odkrytym typie neuroleadera
     if neuroleader_type:
         activities.append({
             'icon': '🧠',
@@ -336,12 +523,14 @@ def show_recent_activities(user_data):
             'time': '1 dzień temu'
         })
     
-    activities.append({
-        'icon': '🔥',
-        'color': '#e67e22',
-        'title': 'Rozpoczęto nową passę dzienną',
-        'time': '3 godziny temu'
-    })
+    # Dodaj standardową aktywność jeśli brak innych
+    if not activities:
+        activities.append({
+            'icon': '🔥',
+            'color': '#e67e22',
+            'title': 'Rozpoczęto nową passę dzienną',
+            'time': '3 godziny temu'
+        })
     
     for activity in activities:
         st.markdown(f"""
@@ -609,11 +798,9 @@ def show_dashboard():
     live_xp_indicator()
     
     # Dodajemy animacje CSS
-    add_animations_css()
-
-    # Use real-time user stats instead of cached data
-    live_stats = get_live_user_stats(st.session_state.username)
-    user_data = live_stats
+    add_animations_css()    # Use complete user data instead of limited live stats to access neuroleader test data
+    users_data = load_user_data()
+    user_data = users_data.get(st.session_state.username, {})
     
     # Główny kontener dashboard
     st.markdown('<div class="dashboard-container">', unsafe_allow_html=True)

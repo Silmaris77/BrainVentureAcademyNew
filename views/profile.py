@@ -5,15 +5,10 @@ import re
 import os
 import numpy as np
 import json
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, RegularPolygon
-from matplotlib.path import Path
-from matplotlib.projections.polar import PolarAxes
-from matplotlib.projections import register_projection
-from matplotlib.spines import Spine
-from matplotlib.transforms import Affine2D
 from data.test_questions import NEUROLEADER_TYPES
 from data.users import load_user_data, save_user_data, update_single_user_field
+from data.neuroleader_details import degen_details
+from views.degen_test import plot_radar_chart
 from PIL import Image
 from utils.components import zen_header, zen_button, notification, content_section, tip_block
 from utils.material3_components import apply_material3_theme
@@ -61,12 +56,12 @@ def show_profile():
       # Pobierz aktualny typ urządzenia
     device_type = get_device_type()
     zen_header("Profil użytkownika")
-    
-    # Add live XP indicator
+      # Add live XP indicator
     live_xp_indicator()
     
-    # Use real-time user stats instead of cached data
-    user_data = get_live_user_stats(st.session_state.username)
+    # Load full user data instead of limited live stats for profile display
+    users_data = load_user_data()
+    user_data = users_data.get(st.session_state.username, {})
     style = get_user_style(st.session_state.username)
     
     # Wyświetl personalizowane style
@@ -78,7 +73,7 @@ def show_profile():
     # User Statistics Section - z wykorzystaniem nowych komponentów Material 3
     st.markdown("<div class='st-bx fadeIn'>", unsafe_allow_html=True)    # Setup data for user stats panel
     avatar = style['avatar']
-    neuroleader_type = user_data.get('degen_type', 'Typ nie określony')
+    neuroleader_type = user_data.get('neuroleader_type') or user_data.get('degen_type', 'Typ nie określony')
     level = user_data.get('level', 1)
     xp = user_data.get('xp', 0)
     completed = len(user_data.get('completed_lessons', []))
@@ -352,74 +347,51 @@ def show_profile():
                     st.rerun()
         
         st.markdown("</div>", unsafe_allow_html=True)
-    
-    # Tab 3: Badges
+      # Tab 3: Badges - Use the new categorized badge system
     with tab3:
         st.markdown("<div class='profile-tab-content'>", unsafe_allow_html=True)
         st.markdown("<div class='st-bx'>", unsafe_allow_html=True)
         
-        badges = user_data.get('badges', [])
-        
-        if badges:
-            st.subheader("Twoje odznaki")
-            
-            # Create grid for badges
-            badge_cols = st.columns(4)
-            
-            for i, badge_id in enumerate(badges):
-                if badge_id in BADGES:
-                    badge = BADGES[badge_id]
-                    with badge_cols[i % 4]:
-                        badge_card(
-                            icon=badge['icon'],
-                            title=badge['name'],
-                            description=badge['description'],
-                            earned=True
-                        )
-        else:
-            # Display available badges in muted colors
-            st.subheader("Dostępne odznaki")
-            st.info("Nie masz jeszcze żadnych odznak. Ukończ lekcje i wykonuj misje aby je zdobyć!")
-            
-            # Create grid for available badges
-            badge_cols = st.columns(4)
-            
-            for i, (badge_id, badge) in enumerate(BADGES.items()):
-                with badge_cols[i % 4]:
-                    badge_card(
-                        icon=badge['icon'],
-                        title=badge['name'],
-                        description=badge['description'],
-                        earned=False
-                    )
+        # Call the new badge section with 9 thematic categories
+        show_badges_section()
         
         st.markdown("</div>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
-    
-    # Tab 4: Neuroleader Type
+      # Tab 4: Neuroleader Type - Test Results
     with tab4:
         st.markdown("<div class='profile-tab-content'>", unsafe_allow_html=True)
         st.markdown("<div class='st-bx'>", unsafe_allow_html=True)
         
-        if user_data.get('degen_type'):
-            degen_type = user_data['degen_type']
+        # Check for test results - support both old and new field names
+        neuroleader_type = user_data.get('neuroleader_type') or user_data.get('degen_type')
+        test_taken = user_data.get('test_taken', False)
+        has_test_scores = 'test_scores' in user_data
+        
+        if neuroleader_type and (test_taken or has_test_scores):
+            # User has completed the test - show results
+            st.markdown("### 🧠 Twoje wyniki testu neuroleadera")
             
-            # Header with degen type
-            st.markdown(f"<h2 style='text-align: center;'>{degen_type}</h2>", unsafe_allow_html=True)
-            tagline = NEUROLEADER_TYPES.get(degen_type, {}).get("tagline", "Twój unikalny styl przywództwa")
-            st.markdown(f"<div style='text-align: center; color: #666; margin-bottom: 20px;'>{tagline}</div>", unsafe_allow_html=True)
+            # Get neuroleader color for styling
+            neuroleader_color = NEUROLEADER_TYPES.get(neuroleader_type, {}).get('color', '#3498db')
             
-            if degen_type in NEUROLEADER_TYPES:
-                # Description
-                content_section(
-                    "Opis",
-                    NEUROLEADER_TYPES[degen_type]["description"],
-                    icon="📖",
-                    border_color="#3498db",
-                    collapsed=False
-                )                  # Radar chart if available
-                if 'test_scores' in user_data:
-                    st.subheader("Twój profil neuroleaderski")
+            # Header with prominent display of result
+            st.markdown(f"""
+            <div style='text-align: center; padding: 20px; border-radius: 10px; 
+                        background: linear-gradient(135deg, {neuroleader_color}20, {neuroleader_color}10);
+                        border: 2px solid {neuroleader_color}40; margin-bottom: 20px;'>
+                <h3 style='color: {neuroleader_color}; margin-bottom: 10px;'>
+                    🧬 Twój dominujący typ neuroleadera
+                </h3>
+                <h2 style='color: {neuroleader_color}; margin: 10px 0;'>{neuroleader_type}</h2>
+                <p style='color: #666; margin: 0;'>
+                    {NEUROLEADER_TYPES.get(neuroleader_type, {}).get('description', '')}
+                </p>
+            </div>
+            """, unsafe_allow_html=True)            
+            if neuroleader_type in NEUROLEADER_TYPES:
+                # Radar chart if test scores are available
+                if has_test_scores:
+                    st.subheader("📊 Twój szczegółowy profil")
                     
                     # Ensure the radar chart is responsive by passing device_type
                     radar_fig = plot_radar_chart(user_data['test_scores'], device_type=device_type)
@@ -441,51 +413,111 @@ def show_profile():
                     if device_type == 'mobile':
                         st.markdown("</div>", unsafe_allow_html=True)
                 
-                # Strengths and challenges in two columns
-                col1, col2 = st.columns(2)
-                
-                with col1:
+                # Strengths and challenges - responsive layout
+                if device_type == 'mobile':
+                    # Na telefonach wyświetl sekcje jedna pod drugą
                     content_section(
-                        "Mocne strony", 
-                        "\n".join([f"- ✅ {strength}" for strength in NEUROLEADER_TYPES[degen_type]["strengths"]]),
+                        "💪 Twoje mocne strony", 
+                        "\n".join([f"- ✅ {strength}" for strength in NEUROLEADER_TYPES[neuroleader_type]["strengths"]]),
                         icon="💪",
                         border_color="#27ae60",
                         collapsed=False
                     )
-                
-                with col2:
+                    
                     content_section(
-                        "Wyzwania", 
-                        "\n".join([f"- ⚠️ {challenge}" for challenge in NEUROLEADER_TYPES[degen_type]["challenges"]]),
+                        "🚧 Obszary do rozwoju", 
+                        "\n".join([f"- ⚠️ {challenge}" for challenge in NEUROLEADER_TYPES[neuroleader_type]["challenges"]]),
                         icon="🔍",
                         border_color="#e74c3c",
                         collapsed=False
                     )
+                else:
+                    # Na tabletach i desktopach użyj dwóch kolumn
+                    col1, col2 = st.columns(2)
+                    
+                    with col1:
+                        content_section(
+                            "💪 Twoje mocne strony", 
+                            "\n".join([f"- ✅ {strength}" for strength in NEUROLEADER_TYPES[neuroleader_type]["strengths"]]),
+                            icon="💪",
+                            border_color="#27ae60",
+                            collapsed=False
+                        )
+                    
+                    with col2:
+                        content_section(
+                            "🚧 Obszary do rozwoju", 
+                            "\n".join([f"- ⚠️ {challenge}" for challenge in NEUROLEADER_TYPES[neuroleader_type]["challenges"]]),
+                            icon="🔍",
+                            border_color="#e74c3c",
+                            collapsed=False
+                        )
                 
-                # Strategy
-                tip_block(
-                    NEUROLEADER_TYPES[degen_type]["strategy"],
-                    title="Rekomendowana strategia",
-                    icon="🎯"
-                )
-                  # Detailed description
-                if degen_type in degen_details:
+                # Rekomendowana strategia
+                strategy = NEUROLEADER_TYPES.get(neuroleader_type, {}).get('strategy', '')
+                if strategy:
+                    st.markdown(f"""
+                    <div style='padding: 15px; background-color: #f0f8ff; border-left: 4px solid {neuroleader_color}; 
+                                border-radius: 5px; margin: 20px 0;'>
+                        <h4 style='color: {neuroleader_color}; margin-top: 0;'>🎯 Rekomendowana strategia:</h4>
+                        <p style='margin-bottom: 0;'>{strategy}</p>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                # Detailed description
+                if neuroleader_type in degen_details:
                     content_section(
-                        "Szczegółowy opis twojego typu neuroleadera", 
-                        degen_details[degen_type],
+                        "📚 Szczegółowy opis twojego typu neuroleadera", 
+                        degen_details[neuroleader_type],
                         icon="📚",
                         collapsed=True
                     )
+                
+                # Option to retake the test
+                st.markdown("---")
+                if zen_button("🔄 Wykonaj test ponownie", key="retake_neuroleader_test"):
+                    # Reset test data
+                    users_data = load_user_data()
+                    if 'test_scores' in users_data[st.session_state.username]:
+                        del users_data[st.session_state.username]['test_scores']
+                    if 'neuroleader_type' in users_data[st.session_state.username]:
+                        del users_data[st.session_state.username]['neuroleader_type']
+                    if 'degen_type' in users_data[st.session_state.username]:
+                        del users_data[st.session_state.username]['degen_type']
+                    users_data[st.session_state.username]['test_taken'] = False
+                    save_user_data(users_data)
+                    
+                    # Redirect to test
+                    st.session_state.page = 'degen_test'
+                    st.session_state.test_step = 0
+                    st.session_state.show_test_info = True
+                    st.rerun()
             else:
                 st.warning("Szczegółowy opis dla tego typu neuroleadera nie jest jeszcze dostępny.")
         else:
-            notification(
-                "Nie określono jeszcze twojego typu neuroleadera. Wykonaj test neuroleadera, aby odkryć swój unikalny styl przywództwa i dostosowane rekomendacje.",
-                type="info"
-            )
+            # User hasn't taken the test - encourage them to take it
+            st.markdown("### 🧠 Test neuroleadera")
+            st.markdown("""
+            <div style='text-align: center; padding: 30px; border-radius: 10px; 
+                        background: linear-gradient(135deg, #667eea20, #764ba240);
+                        border: 2px dashed #667eea; margin-bottom: 20px;'>
+                <h3 style='color: #667eea; margin-bottom: 15px;'>
+                    🎯 Odkryj swój typ neuroleadera!
+                </h3>
+                <p style='color: #666; margin-bottom: 20px;'>
+                    Jeszcze nie wykonałeś testu neuroleadera. Poznaj swój styl przywództwa 
+                    i otrzymaj spersonalizowane rekomendacje rozwoju.
+                </p>
+                <p style='color: #888; font-size: 0.9em;'>
+                    Test składa się z kilku pytań i zajmuje około 5 minut. 
+                    Po zakończeniu zobaczysz szczegółowy profil ze swoimi mocnymi stronami i obszarami do rozwoju.
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
             
-            if zen_button("Wykonaj test Neuroleadera", key="take_test"):
-                st.session_state.page = 'degen_explorer'
+            if zen_button("🚀 Rozpocznij test neuroleadera", key="start_neuroleader_test"):
+                st.session_state.page = 'degen_test'
+                st.session_state.show_test_info = True
                 st.rerun()
         
         st.markdown("</div>", unsafe_allow_html=True)
@@ -493,7 +525,59 @@ def show_profile():
 
 def show_badges_section():
     """Wyświetla odznaki użytkownika"""
-    st.header("Twoje odznaki")
+    # Add CSS for badge containers
+    st.markdown("""
+    <style>
+    .badge-container {
+        text-align: center;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .badge-container.unlocked {
+        background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+        border: 2px solid #27ae60;
+    }
+    
+    .badge-container.locked {
+        background: linear-gradient(135deg, #f5f5f5, #eeeeee);
+        border: 2px solid #bdc3c7;
+        opacity: 0.6;
+    }
+    
+    .badge-container:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .badge-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .badge-name {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+    
+    .badge-description {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        line-height: 1.3;
+    }
+    
+    .locked .badge-name,
+    .locked .badge-description {
+        color: #95a5a6;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     
     # Pobierz dane użytkownika
     users_data = load_user_data()
@@ -501,32 +585,76 @@ def show_badges_section():
     user_badges = user_data.get("badges", [])
     
     if not user_badges:
+        st.subheader("Dostępne odznaki")
         st.info("Jeszcze nie masz żadnych odznak. Rozpocznij naukę i wykonuj zadania, aby je zdobyć!")
-        return
-    
-    # Pogrupuj odznaki według kategorii
+    else:
+        st.subheader("Twoje odznaki")
+      # Pogrupuj odznaki według kategorii neuroleaderstwa z opisami
     badge_categories = {
-        "Podstawowe": ["starter", "tester", "learner", "consistent"],
-        "Aktywność": ["streak_master", "daily_hero", "weekend_warrior"],
-        "Nauka": ["knowledge_addict", "quick_learner", "night_owl", "early_bird", "zen_master", 
-                  "market_pro", "strategy_guru"],
-        "Społeczność": ["social", "mentor", "networker", "influencer"],
-        "Specjalne": ["first_achievement", "collector", "perfectionist", "degen_master", 
-                      "self_aware", "identity_shift"],
-        "Ekonomia": ["saver", "big_spender", "collector_premium"],
-        "Wyzwania": ["challenge_accepted", "challenge_master", "seasonal_champion"]
+        "📚 Podstawowe": {
+            "description": "Start w neuroleaderstwie",
+            "badges": ["starter", "tester", "learner", "consistent", "social"]
+        },
+        "🧠 Kompetencje Przywódcze": {
+            "description": "EQ, decyzje, zespoły, zmiany, komunikacja",
+            "badges": ["emotional_intelligence", "decision_maker", "team_builder", 
+                      "change_leader", "communication_expert"]
+        },
+        "📈 Rozwój Osobisty": {
+            "description": "Systematyczność i efektywność nauki",
+            "badges": ["streak_master", "daily_hero", "weekend_warrior", "knowledge_seeker", 
+                      "quick_learner", "night_owl", "early_bird"]
+        },
+        "👨‍🏫 Mentoring i Coaching": {
+            "description": "Rozwój innych liderów",
+            "badges": ["mentor", "coach", "team_developer", "culture_builder"]
+        },
+        "🏆 Osiągnięcia": {
+            "description": "Sukcesy i ekspertyza",
+            "badges": ["first_achievement", "collector", "perfectionist", "innovator"]
+        },
+        "🔍 Typy Neuroleaderów": {
+            "description": "Samoświadomość i adaptacyjność",
+            "badges": ["neuroleader_master", "self_aware", "adaptive_leader", "authentic_leader"]
+        },
+        "💼 Praktyka Biznesowa": {
+            "description": "Zastosowanie w rzeczywistości",
+            "badges": ["practitioner", "results_driven", "feedback_master"]
+        },
+        "🚀 Wyzwania Przywódcze": {
+            "description": "Transformacja i innowacje",
+            "badges": ["challenge_accepted", "challenge_master", "transformation_leader"]
+        },
+        "⭐ Specjalne": {
+            "description": "Wizjonerstwo, empatia, resilience, mindfulness",
+            "badges": ["visionary", "empathy_champion", "resilient_leader", "mindful_leader"]
+        }
     }
     
-    # Pokaż odznaki w kategoriach
-    tabs = st.tabs(list(badge_categories.keys()))
+    # Pokaż odznaki w kategoriach z opisami
+    tab_names = list(badge_categories.keys())
+    tabs = st.tabs(tab_names)
     
-    for i, (category, badge_ids) in enumerate(badge_categories.items()):
+    for i, (category, category_data) in enumerate(badge_categories.items()):
         with tabs[i]:
+            # Wyświetl opis kategorii
+            st.markdown(f"**{category_data['description']}**")
+            st.markdown("---")
+            
+            badge_ids = category_data['badges']
+            
+            # Check if any badges from this category exist in the BADGES config
+            valid_badge_ids = [badge_id for badge_id in badge_ids if badge_id in BADGES]
+            
+            if not valid_badge_ids:
+                st.warning(f"Brak odznak w kategorii {category}")
+                continue
+                
             cols = st.columns(3)
             badges_displayed = 0
             
             # Najpierw pokaż odblokowane odznaki
-            for badge_id in badge_ids:
+            for badge_id in valid_badge_ids:
                 if badge_id in user_badges:
                     badge_info = BADGES[badge_id]
                     with cols[badges_displayed % 3]:
@@ -540,7 +668,7 @@ def show_badges_section():
                     badges_displayed += 1
             
             # Potem pokaż zablokowane odznaki
-            for badge_id in badge_ids:
+            for badge_id in valid_badge_ids:
                 if badge_id not in user_badges:
                     badge_info = BADGES[badge_id]
                     with cols[badges_displayed % 3]:

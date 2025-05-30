@@ -15,6 +15,7 @@ from data.test_questions import NEUROLEADER_TYPES, TEST_QUESTIONS
 from utils.components import zen_header, zen_button, notification
 from utils.material3_components import apply_material3_theme
 from data.users import load_user_data, save_user_data
+from utils.achievements import check_achievements
 
 def show_degen_types():
     """Wyświetla nową zakładkę Typy Neuroleaderów, zawierającą test i eksplorator typów neuroleaderów"""
@@ -145,10 +146,17 @@ def calculate_results():
         "degen_type": dominant_type,
         "scores": st.session_state.scores,
         "timestamp": pd.Timestamp.now().isoformat()
-    }
-    users_data[st.session_state.username]["degen_test"] = test_results
+    }    users_data[st.session_state.username]["degen_test"] = test_results
     
     save_user_data(users_data)
+    
+    # Check for new achievements after test completion
+    try:
+        new_badges = check_achievements(st.session_state.username)
+        if new_badges:
+            st.success(f"🎉 Gratulacje! Otrzymałeś nowe odznaki: {', '.join(new_badges)}")
+    except Exception as e:
+        st.warning(f"Błąd podczas sprawdzania odznak: {e}")
       # Pokaż wyniki
     st.balloons()
     st.success(f"Test zakończony! Twój typ neuroleadera to: {dominant_type}")
