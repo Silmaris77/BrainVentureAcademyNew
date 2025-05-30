@@ -34,7 +34,8 @@ def check_achievements(username):
                 user_badges.append(badge_id)
                 new_badges.append(badge_id)
                 
-            # Dodaj warunki dla nowych odznak neuroleaderskich            elif badge_id == "streak_master" and user_data.get("login_streak", 0) >= 10:
+            # Dodaj warunki dla nowych odznak neuroleaderskich           
+            elif badge_id == "streak_master" and user_data.get("login_streak", 0) >= 10:
                 user_badges.append(badge_id)
                 new_badges.append(badge_id)
                 
