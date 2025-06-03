@@ -6,7 +6,7 @@ DEGEN_TYPES = NEUROLEADER_TYPES
 
 # Page configuration
 PAGE_CONFIG = {
-    "page_title": "DegApp",  # zakładam, że to są aktualne ustawienia
+    "page_title": "BrainVenture",  # zakładam, że to są aktualne ustawienia
     "page_icon": "🧠",
     "layout": "wide",
     "initial_sidebar_state": "expanded",
