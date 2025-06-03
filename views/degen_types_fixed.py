@@ -172,10 +172,8 @@ def calculate_results():
     
     # Resetuj stan testu
     st.session_state.reset_test = False
-    if 'current_question' in st.session_state:
-        del st.session_state.current_question
-    if 'answers' in st.session_state:
-        del st.session_state.answers
+    del st.session_state.current_question
+    del st.session_state.answers
     
     # Dodaj przycisk do powrotu do głównej strony
     if st.button("Wróć do dashboard"):
