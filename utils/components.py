@@ -481,54 +481,23 @@ def content_section(title, content, collapsed=True, icon=None, border_color=None
     icon (str): Opcjonalna ikona do wyświetlenia obok tytułu
     border_color (str): Opcjonalny kolor obramowania sekcji (np. "#3498db")
     """
-    # Generuj unikalny ID dla tej sekcji
-    section_id = f"section_{title.replace(' ', '_').lower()}"
-    
     # Ikonka, jeśli została podana
     icon_html = f"{icon} " if icon else ""
     
-    # Strzałka rozwijania/zwijania
-    arrow = "▼" if not collapsed else "▶"
+    # Pełny tytuł z ikoną
+    full_title = f"{icon_html}{title}"
     
-    # Style obramowania, jeśli podano kolor
-    border_style = f"border-left: 4px solid {border_color}; padding-left: 12px;" if border_color else ""
-    
-    # Wyświetl nagłówek jako przycisk rozwijania/zwijania
-    header_html = f"""
-    <div class="collapsible-header" onclick="toggleSection('{section_id}')" style="{border_style}">
-        <span class="toggle-arrow" id="arrow_{section_id}">{arrow}</span>
-        <h3>{icon_html}{title}</h3>
-    </div>
-    """
-    
-    # Kontener na treść
-    content_style = "display:none;" if collapsed else "display:block;"
-    content_style += border_style  # Dodaj obramowanie również do treści
-    content_html = f"""
-    <div class="section-content" id="{section_id}" style="{content_style}">
-        {content}
-    </div>
-    """
-    
-    # Skrypt JS do obsługi rozwijania/zwijania
-    script = """
-    <script>
-    function toggleSection(sectionId) {
-        var content = document.getElementById(sectionId);
-        var arrow = document.getElementById('arrow_' + sectionId);
-        if (content.style.display === 'none' || content.style.display === '') {
-            content.style.display = 'block';
-            arrow.textContent = '▼';
-        } else {
-            content.style.display = 'none';
-            arrow.textContent = '▶';
-        }
-    }
-    </script>
-    """
-    
-    # Łączymy wszystkie elementy
-    st.markdown(header_html + content_html + script, unsafe_allow_html=True)
+    # Użyj st.expander zamiast JavaScript
+    with st.expander(full_title, expanded=not collapsed):
+        # Style obramowania, jeśli podano kolor
+        if border_color:
+            st.markdown(f"""
+            <div style="border-left: 4px solid {border_color}; padding-left: 12px; margin-left: -12px;">
+                {content}
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown(content, unsafe_allow_html=True)
 
 def quote_block(text, author=None):
     """

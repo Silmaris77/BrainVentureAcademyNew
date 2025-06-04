@@ -395,8 +395,7 @@ def show_profile():
                     
                     # Ensure the radar chart is responsive by passing device_type
                     radar_fig = plot_radar_chart(user_data['test_scores'], device_type=device_type)
-                    
-                    # Add mobile-specific styles for the chart container
+                      # Add mobile-specific styles for the chart container
                     if device_type == 'mobile':
                         st.markdown("""
                         <style>
@@ -407,11 +406,10 @@ def show_profile():
                         </style>
                         <div class="radar-chart-container">
                         """, unsafe_allow_html=True)
-                        
-                    st.pyplot(radar_fig)
-                    
-                    if device_type == 'mobile':
+                        st.pyplot(radar_fig)
                         st.markdown("</div>", unsafe_allow_html=True)
+                    else:
+                        st.pyplot(radar_fig)
                 
                 # Strengths and challenges - responsive layout
                 if device_type == 'mobile':
@@ -511,17 +509,13 @@ def show_profile():
                 <p style='color: #888; font-size: 0.9em;'>
                     Test składa się z kilku pytań i zajmuje około 5 minut. 
                     Po zakończeniu zobaczysz szczegółowy profil ze swoimi mocnymi stronami i obszarami do rozwoju.
-                </p>
-            </div>
+                </p>            </div>
             """, unsafe_allow_html=True)
             
             if zen_button("🚀 Rozpocznij test neuroleadera", key="start_neuroleader_test"):
                 st.session_state.page = 'degen_test'
                 st.session_state.show_test_info = True
                 st.rerun()
-        
-        st.markdown("</div>", unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
 
 def show_badges_section():
     """Wyświetla odznaki użytkownika"""

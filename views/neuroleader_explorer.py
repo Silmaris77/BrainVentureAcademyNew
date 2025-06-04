@@ -511,10 +511,11 @@ def show_test_results():
         icon="🔍",
         collapsed=True
     )
-    
-    # Additional options
+      # Additional options
     if zen_button("Wykonaj test ponownie"):
         st.session_state.test_step = 0
         st.session_state.test_scores = {neuroleader_type: 0 for neuroleader_type in NEUROLEADER_TYPES}
         st.session_state.show_test_info = True
         st.rerun()
+    
+    st.markdown("</div>", unsafe_allow_html=True)
