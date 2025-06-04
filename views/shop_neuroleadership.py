@@ -5,9 +5,6 @@ from datetime import timedelta
 from utils.components import zen_header
 from utils.material3_components import apply_material3_theme
 
-# Check if this module is being used to avoid duplicate rendering
-_IS_SHOP_NEW_LOADED = False
-
 def buy_item(item_type, item_id, price, user_data, users_data):
     """
     Process the purchase of an item
@@ -61,13 +58,6 @@ def show_shop():
     """
     # Zastosuj style Material 3
     apply_material3_theme()
-    
-    global _IS_SHOP_NEW_LOADED
-    
-    # Unikaj podwójnego renderowania
-    if _IS_SHOP_NEW_LOADED:
-        return
-    _IS_SHOP_NEW_LOADED = True
     
     # Załaduj dane użytkownika
     users_data = load_user_data()
