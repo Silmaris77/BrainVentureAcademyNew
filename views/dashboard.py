@@ -504,13 +504,17 @@ def show_recent_activities(user_data):
                 'title': f'Zdobyto odznakę: {badge_name}',
                 'time': 'niedawno'
             })
-    
-    # Dodaj informacje o ukończonych lekcjach
+      # Dodaj informacje o ukończonych lekcjach
     if completed_lessons:
+        # Pobierz tytuł ostatniej ukończonej lekcji
+        last_lesson_id = completed_lessons[-1]
+        lessons_data = load_lessons()
+        lesson_title = lessons_data.get(last_lesson_id, {}).get('title', last_lesson_id)
+        
         activities.append({
             'icon': '✓',
             'color': '#27ae60',
-            'title': f'Ukończono lekcję: {completed_lessons[-1] if completed_lessons else "Brak"}',
+            'title': f'Ukończono lekcję: {lesson_title}',
             'time': '2 godziny temu'
         })
     
