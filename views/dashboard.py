@@ -242,15 +242,16 @@ def show_stats_section(user_data, device_type):
     level_change = f"+{max(0, level - 1)}"
     
     # Utwórz 5 kolumn
-    cols = st.columns(5)
+    cols = st.columns(4)
     
     # 5 kart statystyk
     stats = [
         {"icon": "🏆", "value": f"{xp}", "label": "Punkty XP", "change": xp_change},
+        {"icon": "⭐", "value": f"{level}", "label": "Poziom", "change": level_change},
         {"icon": "📚", "value": f"{completed_lessons}", "label": "Ukończone lekcje", "change": lessons_change},
         {"icon": "🔥", "value": f"{streak}", "label": "Aktualna passa", "change": streak_change},
-        {"icon": "⭐", "value": f"{level}", "label": "Poziom", "change": level_change},
-        {"icon": "🎯", "value": f"{missions_progress['completed']}", "label": "Dzisiejsze misje", "change": f"+{missions_progress['completed']}"}
+
+        # {"icon": "🎯", "value": f"{missions_progress['completed']}", "label": "Dzisiejsze misje", "change": f"+{missions_progress['completed']}"}
     ]
     
     # Wygeneruj kartę w każdej kolumnie
@@ -279,16 +280,15 @@ def show_stats_section(user_data, device_type):
 
 def show_main_content(user_data, device_type):
     """Główna zawartość dashboardu"""
-    
+    # Sekcja dostępnych lekcji - teraz używa lesson_card
+    show_available_lessons(device_type)
     # Sekcja wyników testu neuroleadera - tylko jeśli użytkownik wykonał test
     show_neuroleader_results_section(user_data, device_type)
         
-    # Sekcja dostępnych lekcji - teraz używa lesson_card
-    show_available_lessons(device_type)
+
 
     # Sekcja misji dziennych
     show_daily_missions_section()    # Sekcja ostatnich aktywności
-    show_recent_activities(user_data)
 
     
 
@@ -356,18 +356,17 @@ def show_neuroleader_results_section(user_data, device_type):
                             
             except Exception as e:
                 st.warning("Nie udało się wygenerować wykresu radarowego.")
-        
-        # Action buttons
+          # Action buttons
         col1, col2, col3 = st.columns(3)
         
         with col1:
             if zen_button("🔍 Szczegółowy opis", key="dashboard_detailed_description"):
-                st.session_state.page = 'neuroleader_explorer'
+                st.session_state.page = 'degen_explorer'
                 st.rerun()
                 
         with col2:
             if zen_button("🔄 Wykonaj test ponownie", key="dashboard_retake_test"):
-                st.session_state.page = 'neuroleader_explorer'
+                st.session_state.page = 'degen_explorer'
                 st.rerun()
                 
         with col3:
@@ -396,14 +395,13 @@ def show_neuroleader_results_section(user_data, device_type):
             <p style='color: #666; margin-bottom: 20px; line-height: 1.6;'>
                 Wykonaj nasz test psychologiczny i odkryj swój unikalny profil przywódczy. 
                 Test zajmie tylko kilka minut i pomoże Ci lepiej zrozumieć swoje mocne strony jako lider.
-            </p>
-        </div>
+            </p>        </div>
         """, unsafe_allow_html=True)
         
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             if zen_button("🚀 Wykonaj test neuroleadera", key="dashboard_take_test", use_container_width=True):
-                st.session_state.page = 'neuroleader_explorer'
+                st.session_state.page = 'degen_explorer'
                 st.rerun()
         
         st.markdown("</div>", unsafe_allow_html=True)
@@ -411,6 +409,8 @@ def show_neuroleader_results_section(user_data, device_type):
 
 def show_dashboard_sidebar(user_data, device_type):
     """Sidebar z dodatkowymi informacjami"""       # Profil neuroleaderski
+    show_recent_activities(user_data)
+
     show_neuroleader_profile_compact(user_data)
     
     # Ranking XP
@@ -740,15 +740,14 @@ def show_neuroleader_profile_compact(user_data):
                 Twój dominujący typ
             </div>
         </div>
-        """, unsafe_allow_html=True)
-        
+        """, unsafe_allow_html=True)        
         if zen_button("Zobacz szczegóły", key="profile_details"):
-            st.session_state.page = 'neuroleader_explorer'
+            st.session_state.page = 'degen_explorer'
             st.rerun()
     else:
         st.info("Wykonaj test, aby odkryć swój profil")
         if zen_button("Wykonaj test", key="take_test_sidebar"):
-            st.session_state.page = 'neuroleader_explorer'
+            st.session_state.page = 'degen_explorer'
             st.rerun()
     
     st.markdown("</div>", unsafe_allow_html=True)

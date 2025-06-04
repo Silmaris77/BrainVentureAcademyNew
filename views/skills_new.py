@@ -416,7 +416,7 @@ def display_block_with_skills(block_id, block, categories, user_skills, user_xp,
             else:
                 status_emoji = "⭕"
             
-            display_name = f"{status_emoji} {category['icon']} {category['name']} ({progress_percent}%)"
+            display_name = f"{status_emoji} {category['name']} ({progress_percent}%)"
             display_names.append(display_name)
             skill_options[display_name] = cat_id
         
