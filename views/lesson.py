@@ -9,6 +9,53 @@ from utils.lesson_progress import (
     is_lesson_fully_completed, get_fragment_xp_breakdown, mark_lesson_as_completed
 )
 from utils.real_time_updates import get_live_user_stats, live_xp_indicator, show_xp_notification
+from datetime import datetime
+
+def save_lesson_response(lesson_id, section_type, section_title, response):
+    """Save user's response for a specific lesson section (reflection or application)"""
+    if not st.session_state.get('username'):
+        return False
+    
+    users_data = load_user_data()
+    username = st.session_state.username
+    
+    if username not in users_data:
+        return False
+    
+    # Initialize lesson_responses if it doesn't exist
+    if 'lesson_responses' not in users_data[username]:
+        users_data[username]['lesson_responses'] = {}
+    
+    # Initialize lesson data if it doesn't exist
+    if lesson_id not in users_data[username]['lesson_responses']:
+        users_data[username]['lesson_responses'][lesson_id] = {}
+    
+    # Initialize section type if it doesn't exist
+    if section_type not in users_data[username]['lesson_responses'][lesson_id]:
+        users_data[username]['lesson_responses'][lesson_id][section_type] = {}
+    
+    # Save the response
+    users_data[username]['lesson_responses'][lesson_id][section_type][section_title] = {
+        'response': response,
+        'timestamp': datetime.now().isoformat()
+    }
+    
+    # Save to file
+    save_user_data(users_data)
+    return True
+
+def load_lesson_response(lesson_id, section_type, section_title):
+    """Load user's previously saved response for a specific lesson section"""
+    if not st.session_state.get('username'):
+        return ""
+    
+    users_data = load_user_data()
+    username = st.session_state.username
+    
+    try:
+        return users_data[username]['lesson_responses'][lesson_id][section_type][section_title]['response']
+    except (KeyError, TypeError):
+        return ""
 
 def get_difficulty_stars(difficulty):
     """Konwertuje poziom trudności (liczba lub tekst) na odpowiednią liczbę gwiazdek."""
@@ -186,8 +233,8 @@ def show_lesson():
             'intro': 'Wprowadzenie',
             'opening_quiz': 'Quiz startowy',
             'content': 'Materiał',
-            'reflection': 'Refleksja',
-            'application': 'Zadania praktyczne',
+            'reflection': 'Praktyka',
+            'application': 'Wdrożenie',
             'closing_quiz': 'Quiz końcowy',
             'summary': 'Podsumowanie'
         }
@@ -534,38 +581,36 @@ def show_lesson():
                 st.error("Lekcja nie zawiera sekcji 'reflection'!")
             elif 'sections' not in lesson['sections'].get('reflection', {}):
                 st.error("Sekcja 'reflection' nie zawiera klucza 'sections'!")
-            else:
-                # Wyświetl sekcje refleksji
+            else:                # Wyświetl sekcje refleksji
                 for section in lesson["sections"]["reflection"]["sections"]:
                     st.markdown(f"### {section.get('title', 'Zadanie refleksyjne')}")
                     st.markdown(section.get("content", "Brak treści"), unsafe_allow_html=True)
                     
-                    # Generuj klucz dla przechowywania odpowiedzi
-                    reflection_key = f"reflection_{section.get('title', '').replace(' ', '_').lower()}"
-                    
-                    # Generuj INNY klucz dla widgetu tekstowego
-                    widget_key = f"input_{reflection_key}"
+                    # Klucz dla identyfikacji sekcji
+                    section_title = section.get('title', '')
                     
                     # Użyj formularza, aby uniknąć problemów z aktualizacją stanu sesji
-                    with st.form(key=f"form_{reflection_key}"):
-                        # Pobierz istniejącą odpowiedź (jeśli jest)
-                        existing_response = st.session_state.get(reflection_key, "")
+                    with st.form(key=f"form_reflection_{section_title.replace(' ', '_').lower()}"):
+                        # Pobierz zapisaną odpowiedź z danych użytkownika
+                        existing_response = load_lesson_response(lesson_id, 'reflection', section_title)
                         
                         # Wyświetl pole tekstowe z istniejącą odpowiedzią
                         user_reflection = st.text_area(
                             "Twoja odpowiedź:",
                             value=existing_response,
                             height=200,
-                            key=widget_key
+                            key=f"reflection_input_{section_title.replace(' ', '_').lower()}"
                         )
                         
                         # Przycisk do zapisywania odpowiedzi w formularzu
                         submitted = st.form_submit_button("Zapisz odpowiedź")
                         
                         if submitted:
-                            # Zapisz odpowiedź w stanie sesji
-                            st.session_state[reflection_key] = user_reflection
-                            st.success("Twoja odpowiedź została zapisana!")
+                            # Zapisz odpowiedź na stałe w danych użytkownika
+                            if save_lesson_response(lesson_id, 'reflection', section_title, user_reflection):
+                                st.success("Twoja odpowiedź została zapisana na stałe!")
+                            else:
+                                st.error("Błąd podczas zapisywania odpowiedzi.")
               # Przycisk "Dalej" po refleksji
             st.markdown("<div class='next-button'>", unsafe_allow_html=True)
             if zen_button(f"Dalej: {step_names.get(next_step, next_step.capitalize())}", use_container_width=False):                
@@ -598,37 +643,36 @@ def show_lesson():
                 st.error("Lekcja nie zawiera sekcji 'application'!")
             elif 'sections' not in lesson['sections'].get('application', {}):
                 st.error("Sekcja 'application' nie zawiera klucza 'sections'!")
-            else:
-                # Wyświetl zadania praktyczne
+            else:                # Wyświetl zadania praktyczne
                 for section in lesson["sections"]["application"]["sections"]:
                     st.markdown(f"### {section.get('title', 'Zadanie praktyczne')}")
                     st.markdown(section.get("content", "Brak treści"), unsafe_allow_html=True)
                     
-                    # Generuj klucz dla przechowywania odpowiedzi
-                    task_key = f"application_{section.get('title', '').replace(' ', '_').lower()}"
+                    # Klucz dla identyfikacji sekcji
+                    section_title = section.get('title', '')
                     
                     # Użyj formularza, aby uniknąć problemów z aktualizacją stanu sesji
-                    with st.form(key=f"form_{task_key}"):
-                        # Pobierz istniejącą odpowiedź (jeśli jest)
-                        existing_solution = st.session_state.get(task_key, "")
+                    with st.form(key=f"form_application_{section_title.replace(' ', '_').lower()}"):
+                        # Pobierz zapisaną odpowiedź z danych użytkownika
+                        existing_solution = load_lesson_response(lesson_id, 'application', section_title)
                         
                         # Wyświetl pole tekstowe z istniejącą odpowiedzią
                         user_solution = st.text_area(
                             "Twoje rozwiązanie:",
                             value=existing_solution,
                             height=200,
-                            key=f"input_{task_key}"
+                            key=f"application_input_{section_title.replace(' ', '_').lower()}"
                         )
                         
                         # Przycisk do zapisywania odpowiedzi w formularzu
                         submitted = st.form_submit_button("Zapisz rozwiązanie")
                         
                         if submitted:
-                            # Zapisz odpowiedź w stanie sesji
-                            st.session_state[task_key] = user_solution
-                            st.success("Twoje rozwiązanie zostało zapisana!")
-                            # Dodaj odświeżenie strony po zapisaniu
-                            st.rerun()
+                            # Zapisz odpowiedź na stałe w danych użytkownika
+                            if save_lesson_response(lesson_id, 'application', section_title, user_solution):
+                                st.success("Twoje rozwiązanie zostało zapisane na stałe!")
+                            else:
+                                st.error("Błąd podczas zapisywania rozwiązania.")
               # Przycisk "Dalej" po zadaniach praktycznych
             st.markdown("<div class='next-button'>", unsafe_allow_html=True)
             if zen_button(f"Dalej: {step_names.get(next_step, next_step.capitalize())}", use_container_width=False):
@@ -1090,8 +1134,5 @@ def display_quiz(quiz_data, passing_threshold=60):
                 st.info("📋 Dziękujemy za wypełnienie quizu diagnostycznego! Nie martw się wynikiem - to pomaga nam lepiej dopasować materiał.")
         
         return is_completed, is_passed, earned_points
-    
-    # Quiz nie jest jeszcze ukończony
+      # Quiz nie jest jeszcze ukończony
     return is_completed, False, 0
-
-# Dodaj CSS do poprawy wyglądu expanderów, z uwzględnieniem urządzeń mobilnych
