@@ -37,7 +37,7 @@ from utils.inventory import (
 )
 from config.settings import USER_AVATARS, THEMES, NEUROLEADER_TYPES, BADGES
 from data.neuroleader_details import degen_details
-from views.degen_explorer import plot_radar_chart
+from views.neuroleader_explorer import plot_radar_chart
 from views.dashboard import calculate_xp_progress
 from utils.components import zen_header, zen_button, notification, content_section, stat_card, xp_level_display, goal_card, badge_card, progress_bar, tip_block, quote_block,  add_animations_css
 from utils.user_components import user_stats_panel

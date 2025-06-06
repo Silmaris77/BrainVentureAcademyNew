@@ -22,12 +22,11 @@ def test_imports():
     except Exception as e:
         print(f"✗ Dashboard import failed: {e}")
         return False
-    
-    try:
-        from views.degen_explorer import show_degen_explorer
-        print("✓ Degen explorer import successful")
+      try:
+        from views.neuroleader_explorer import show_neuroleader_explorer
+        print("✓ Neuroleader explorer import successful")
     except Exception as e:
-        print(f"✗ Degen explorer import failed: {e}")
+        print(f"✗ Neuroleader explorer import failed: {e}")
         return False
     
     try:
@@ -44,8 +43,7 @@ def test_routing_configuration():
     print("\nTesting routing configuration...")
     
     try:
-        import main
-        # Check if the routing dictionary or logic includes 'degen_explorer'
+        import main        # Check if the routing dictionary or logic includes 'degen_explorer'
         with open('main.py', 'r', encoding='utf-8') as f:
             main_content = f.read()
             
@@ -55,10 +53,10 @@ def test_routing_configuration():
             print("✗ 'degen_explorer' route not found in main.py")
             return False
             
-        if "show_degen_explorer" in main_content:
-            print("✓ 'show_degen_explorer' function call found in main.py")
+        if "show_neuroleader_explorer" in main_content:
+            print("✓ 'show_neuroleader_explorer' function call found in main.py")
         else:
-            print("✗ 'show_degen_explorer' function call not found in main.py")
+            print("✗ 'show_neuroleader_explorer' function call not found in main.py")
             return False
             
     except Exception as e:

@@ -9,7 +9,12 @@ def init_session_state():
         st.session_state.username = None
         
     if "page" not in st.session_state:
-        st.session_state.page = "dashboard"
+        # Jeśli użytkownik nie jest zalogowany, nie ustawiaj domyślnej strony
+        # Pozwól aby strona logowania była domyślna
+        if st.session_state.get("logged_in", False):
+            st.session_state.page = "dashboard"
+        else:
+            st.session_state.page = "login"  # Domyślna strona dla niezalogowanych
       # Upewnij się, że strona jest poprawna
     valid_pages = ["dashboard", "degen_test", "lesson", "profile", "degen_explorer", "skills", "shop"]
     if st.session_state.page not in valid_pages:

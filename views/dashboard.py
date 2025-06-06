@@ -11,7 +11,7 @@ from config.settings import DAILY_MISSIONS, XP_LEVELS, USER_AVATARS
 from data.lessons import load_lessons
 from utils.goals import get_user_goals, calculate_goal_metrics
 from utils.daily_missions import get_daily_missions_progress
-from views.degen_explorer import plot_radar_chart
+from views.neuroleader_explorer import plot_radar_chart
 from data.neuroleader_details import degen_details
 from utils.material3_components import apply_material3_theme
 from utils.layout import get_device_type, responsive_grid, responsive_container, toggle_device_view

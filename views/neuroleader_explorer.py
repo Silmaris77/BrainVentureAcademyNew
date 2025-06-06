@@ -89,16 +89,17 @@ def plot_radar_chart(scores, device_type=None):
     # Ensure we have a valid limit
     max_val = max(values) if max(values) > 0 else 1
     y_max = max_val * 1.2  # Add some padding at the top
-    ax.set_ylim(0, y_max)
-    
-    # Adjust label positions and appearance for better device compatibility
-    # For mobile, rotate labels to fit better on small screens
+    ax.set_ylim(0, y_max)    # Adjust label positions and appearance for better device compatibility
+    # Set the angular ticks and labels using radians
+    ax.set_xticks(angles_radians)
     if device_type == 'mobile':
         # Use shorter labels on mobile
-        ax.set_thetagrids(angles_degrees, labels, fontsize=font_size-1)
-        plt.setp(ax.get_xticklabels(), rotation=67.5)  # Rotate labels for better fit
+        ax.set_xticklabels(labels, fontsize=font_size-1)
+        # Rotate labels for better fit on mobile
+        for label in ax.get_xticklabels():
+            label.set_rotation(67.5)
     else:
-        ax.set_thetagrids(angles_degrees, labels, fontsize=font_size)
+        ax.set_xticklabels(labels, fontsize=font_size)
     
     # Set title with responsive size
     ax.set_title("Twój profil neuroleaderski", size=title_size, pad=20)
