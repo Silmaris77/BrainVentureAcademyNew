@@ -15,7 +15,7 @@ def load_extended_material3_css():
 
 def m3_button_styles():
     """Dodaje style przycisków Material 3 do interfejsu"""
-    return st.markdown("""
+    st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
     
@@ -56,7 +56,7 @@ def m3_button_styles():
 
 def m3_lesson_card_styles():
     """Dodaje style kart lekcji Material 3 do interfejsu"""
-    return st.markdown("""
+    st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
     
@@ -315,11 +315,14 @@ def apply_material3_theme():
     """, unsafe_allow_html=True)
 
 def m3_card(title, content, badge=None, icon=None):
-    """Renderuje prostą kartę w stylu Material 3"""
+    """Renderuje prostą kartę w stylu Material 3"""    
     icon_html = f'<span style="font-size: 24px; margin-right: 12px;">{icon}</span>' if icon else ""
     badge_html = f'<div class="m3-badge" style="background-color: #673AB7; margin-left: auto;">{badge}</div>' if badge else ""
     
-    card_html = f"""
+    # Upewnij się, że style są załadowane
+    m3_lesson_card_styles()
+      # Tworzymy HTML karty i bezpośrednio go renderujemy
+    st.markdown(f'''
     <div class="m3-lesson-card">
         <div class="m3-card-content">
             <div style="display: flex; align-items: center;">
@@ -327,13 +330,9 @@ def m3_card(title, content, badge=None, icon=None):
                 <h3 style="margin: 0; flex-grow: 1;">{title}</h3>
                 {badge_html}
             </div>
-            <p class="m3-description">{content}</p>
-        </div>
+            <p class="m3-description">{content}</p>        </div>
     </div>
-    """
-    
-    m3_lesson_card_styles()  # Upewnij się, że style są załadowane
-    return st.markdown(card_html, unsafe_allow_html=True)
+    ''', unsafe_allow_html=True)
 
 def m3_chip(label, icon=None, is_selected=False, color="#E0E0E0", text_color="#000000"):
     """Renderuje chip w stylu Material 3"""

@@ -14,9 +14,8 @@ def init_session_state():
         if st.session_state.get("logged_in", False):
             st.session_state.page = "dashboard"
         else:
-            st.session_state.page = "login"  # Domyślna strona dla niezalogowanych
-      # Upewnij się, że strona jest poprawna
-    valid_pages = ["dashboard", "degen_test", "lesson", "profile", "degen_explorer", "skills", "shop"]
+            st.session_state.page = "login"  # Domyślna strona dla niezalogowanych    # Upewnij się, że strona jest poprawna
+    valid_pages = ["dashboard", "degen_test", "lesson", "profile", "degen_explorer", "skills", "shop", "inspirations"]
     if st.session_state.page not in valid_pages:
         st.session_state.page = "dashboard"
 

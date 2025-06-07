@@ -23,6 +23,7 @@ try:
     from views.neuroleader_explorer import show_neuroleader_explorer
     from views.skills_new import show_skill_tree
     from views.admin import show_admin_dashboard
+    from views.inspirations import show_inspirations
     
     # Import shop module is done within the routing section
 except Exception as e:
@@ -73,7 +74,9 @@ def main():
         elif st.session_state.page == 'degen_explorer':
             show_neuroleader_explorer()
         elif st.session_state.page == 'skills':
-            show_skill_tree()
+            show_skill_tree()        
+        elif st.session_state.page == 'inspirations':
+            show_inspirations()
         elif st.session_state.page == 'shop':
             try:
                 # Direct import to ensure we only use the new shop
