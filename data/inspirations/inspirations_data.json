@@ -1,0 +1,116 @@
+{
+    "blog_articles": [
+        {
+            "id": "stress_decision_making",
+            "title": "Wpływ stresu na podejmowanie decyzji biznesowych",
+            "content": "Najnowsze badania pokazują, jak poziom stresu wpływa na obszary mózgu odpowiedzialne za podejmowanie strategicznych decyzji w biznesie...",
+            "date": "5 czerwca 2025",
+            "author": "Dr Anna Kowalska",
+            "icon": "🧠",
+            "tags": ["stres", "podejmowanie decyzji", "biznes"],
+            "image": "stress_brain.jpg",
+            "file_path": "blog/stress_decision_making.md"
+        },
+        {
+            "id": "neuroplasticity_leadership",
+            "title": "Neuroplastyczność a rozwój umiejętności przywódczych",
+            "content": "Jak świadome praktyki mogą zmienić połączenia neuronalne i poprawić zdolności przywódcze? Przegląd najnowszych badań z dziedziny neuroplastyczności...",
+            "date": "1 czerwca 2025",
+            "author": "Prof. Jan Nowak",
+            "icon": "🔄",
+            "tags": ["neuroplastyczność", "przywództwo", "rozwój osobisty"],
+            "image": "brain_plasticity.jpg",
+            "file_path": "blog/neuroplasticity_leadership.md"
+        },        {
+            "id": "empathy_management",
+            "title": "Empatia w zarządzaniu zespołem - perspektywa neuronaukowa",
+            "content": "Odkrycia neuronaukowców dotyczące neuronów lustrzanych rzucają nowe światło na budowanie relacji w zespole i efektywne zarządzanie...",
+            "date": "28 maja 2025",
+            "author": "Marta Wiśniewska",
+            "icon": "💓",
+            "tags": ["empatia", "zarządzanie zespołem", "neurony lustrzane"],
+            "image": "mirror_neurons.jpg",
+            "file_path": "blog/empathy_management.md"
+        },        {
+            "id": "forrest_gump_neuroleadership",
+            "title": "Co Forrest Gump wiedział o neuroprzywództwie, zanim to stało się modne?",
+            "content": "Pamiętam, jak kilkanaście lat temu, zupełnie bez planu, postanowiłem pobiegać. Włożyłem buty, wyszedłem z domu i zacząłem biec. To była medytacja w ruchu, która miała głęboki związek z neuroprzywództwem...",
+            "date": "8 maja 2025",
+            "author": "Paweł Książyk",
+            "icon": "🏃",
+            "tags": ["neuroprzywództwo", "bieganie", "neurobiologia", "mikrozmiana"],
+            "image": "forrest_gump_running.jpg",
+            "file_path": "blog/forrest_gump_neuroleadership.md"
+        }
+    ],
+    "tutorials": [
+        {
+            "id": "stress_reduction",
+            "title": "Techniki redukcji stresu oparte na neuronaukach",
+            "content": "Krok po kroku nauczysz się, jak stosować techniki oddechowe i mindfulness, które bezpośrednio wpływają na układ parasympatyczny, redukując poziom kortyzolu...",
+            "duration": "15 minut",
+            "level": "Początkujący",
+            "icon": "🧘",
+            "tags": ["stres", "mindfulness", "techniki oddechowe"],
+            "file_path": "tutorials/stress_reduction.md"
+        },
+        {
+            "id": "building_habits",
+            "title": "Budowanie efektywnych nawyków w oparciu o neurobiologię",
+            "content": "Ten tutorial pokazuje, jak wykorzystać wiedzę o mechanizmach nagrody w mózgu do tworzenia długotrwałych, pozytywnych nawyków w zarządzaniu...",
+            "duration": "25 minut",
+            "level": "Średniozaawansowany",
+            "icon": "⏱️",
+            "tags": ["nawyki", "system nagrody", "produktywność"],
+            "file_path": "tutorials/building_habits.md"
+        },
+        {
+            "id": "neuro_meetings",
+            "title": "Prowadzenie spotkań z wykorzystaniem zasad neuroergonomii",
+            "content": "Dowiedz się, jak zaprojektować spotkania, które wykorzystują naturalne cykle energii mózgu, zwiększając produktywność i satysfakcję uczestników...",
+            "duration": "20 minut",
+            "level": "Zaawansowany",
+            "icon": "👥",
+            "tags": ["spotkania", "neuroergonomia", "produktywność"],
+            "file_path": "tutorials/neuro_meetings.md"
+        }
+    ],
+    "facts": [
+        {
+            "id": "shower_ideas",
+            "title": "Dlaczego najlepsze pomysły przychodzą pod prysznicem?",
+            "content": "Badania pokazują, że monotonne czynności, takie jak prysznic, aktywują tzw. tryb domyślny mózgu (DMN - Default Mode Network), który sprzyja kreatywności i łączeniu odległych koncepcji...",
+            "source": "Journal of Cognitive Neuroscience",
+            "icon": "💡",
+            "tags": ["kreatywność", "DMN", "innowacje"],
+            "file_path": "facts/shower_ideas.md"
+        },
+        {
+            "id": "blue_color",
+            "title": "Wpływ koloru niebieskiego na produktywność",
+            "content": "Ekspozycja na kolor niebieski może zwiększyć produktywność o 15-20%. Neurobiologiczne badania pokazują, że niebieski aktywuje receptory w oku, które bezpośrednio stymulują obszar mózgu odpowiedzialny za czujność...",
+            "source": "Color Research & Application Journal",
+            "icon": "🔵",
+            "tags": ["produktywność", "kolor", "neurobiologia"],
+            "file_path": "facts/blue_color.md"
+        },
+        {
+            "id": "ikea_effect",
+            "title": "Efekt IKEA w psychologii zarządzania",
+            "content": "Neuroimaging pokazuje, że ludzie wyżej cenią rzeczy, które sami współtworzyli. Ten fenomen, znany jako 'efekt IKEA', ma głębokie implikacje dla angażowania pracowników w procesy decyzyjne...",
+            "source": "Harvard Business Review",
+            "icon": "🪑",
+            "tags": ["zaangażowanie", "procesy decyzyjne", "psychologia"],
+            "file_path": "facts/ikea_effect.md"
+        },
+        {
+            "id": "multitasking_myth",
+            "title": "Dlaczego wielozadaniowość szkodzi wydajności",
+            "content": "Mózg człowieka nie jest zdolny do prawdziwej wielozadaniowości. Badania pokazują, że tzw. 'switch cost' (koszt przełączania) między zadaniami może obniżyć produktywność nawet o 40% i zwiększyć ilość błędów...",
+            "source": "Psychology Today",
+            "icon": "⏳",
+            "tags": ["wielozadaniowość", "produktywność", "uwaga"],
+            "file_path": "facts/multitasking_myth.md"
+        }
+    ]
+}

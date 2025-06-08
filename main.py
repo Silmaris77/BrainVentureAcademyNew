@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import sys
 import traceback
-from config.settings import PAGE_CONFIG
+from config.settings import PAGE_CONFIG, FEATURE_FLAGS
 
 # Ta funkcja musi być wywołana jako pierwsza funkcja Streamlit
 st.set_page_config(**PAGE_CONFIG)
@@ -19,11 +19,11 @@ try:
     from views.login import show_login_page
     from views.dashboard import show_dashboard
     from views.lesson import show_lesson
-    from views.profile import show_profile
+    from views.profile import show_profile    
     from views.neuroleader_explorer import show_neuroleader_explorer
     from views.skills_new import show_skill_tree
     from views.admin import show_admin_dashboard
-    from views.inspirations import show_inspirations
+    from views.inspirations_new import show_inspirations
     
     # Import shop module is done within the routing section
 except Exception as e:

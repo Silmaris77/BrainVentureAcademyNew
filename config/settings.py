@@ -31,6 +31,11 @@ XP_LEVELS = {
     10: 10000
 }
 
+# Feature flags
+FEATURE_FLAGS = {
+    "USE_NEW_INSPIRATIONS": True  # Set to True to use the new file-based inspirations system, False for original
+}
+
 # CSS styles moved to static/css/style.css
 # This variable is kept for backward compatibility
 APP_STYLES = """
