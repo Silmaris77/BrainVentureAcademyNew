@@ -137,14 +137,23 @@ def show_profile():
                                 <div style="font-size: 0.8rem;">{selected_indicator}{avatar_id.title()}</div>
                             </div>
                             """, unsafe_allow_html=True)
-            
-            # We still need a form to submit the selection
+              # We still need a form to submit the selection
             # Streamlit's JavaScript interaction is limited, so we use a dropdown for actual selection
+            
+            # Handle case where current avatar doesn't exist in the new avatar list
+            try:
+                avatar_index = list(USER_AVATARS.keys()).index(current_avatar)
+            except ValueError:
+                # If current avatar doesn't exist, default to 'default' avatar
+                current_avatar = 'default'
+                avatar_index = list(USER_AVATARS.keys()).index(current_avatar)
+            
             selected_avatar = st.selectbox(
                 "Wybierz swojego avatara:",
                 options=list(USER_AVATARS.keys()),
                 format_func=lambda x: f"{USER_AVATARS[x]} - {x.title()}",
-                index=list(USER_AVATARS.keys()).index(current_avatar),
+                index=avatar_index,
+                
                 label_visibility="collapsed"
             )
             

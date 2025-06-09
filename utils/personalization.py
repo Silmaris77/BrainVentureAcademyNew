@@ -33,6 +33,10 @@ def get_user_style(username):
         theme_id = user_data.get('theme', 'default')
         avatar_id = user_data.get('avatar', 'default')
         
+        # Handle case where old avatar doesn't exist anymore
+        if avatar_id not in USER_AVATARS:
+            avatar_id = 'default'
+
         return {
             'theme': THEMES[theme_id],
             'avatar': USER_AVATARS[avatar_id]

@@ -57,14 +57,12 @@ DAILY_MISSIONS = [
 # User avatar options
 USER_AVATARS = {
     "default": "👤",
-    "zen": "🧘‍♂️",
-    "yolo": "🚀",
-    "emo": "😭",
-    "strategist": "🎯",
-    "scientist": "🔬",
-    "spreadsheet": "📊",
-    "meta": "🔄",
-    "hype": "📣"
+    "neuroanalityk": "🧠",
+    "neuroreaktor": "🔥",
+    "neurobalanser": "⚖️",
+    "neuroempata": "💝",
+    "neuroinnowator": "🚀",
+    "neuroinspirator": "✨"
 }
 
 # Theme options
