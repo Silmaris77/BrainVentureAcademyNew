@@ -81,7 +81,7 @@ def show_skill_tree():
             'difficulty': category_info.get('difficulty', 'Beginner'),
             'estimated_time': category_info.get('estimated_time', '2-3 tygodnie')
         }      # Header i nowy tytuł
-    st.markdown("<h1 class='skills-header'>Akademia Neuroprzywództwa 🧠</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='skills-header'>BrainVenture - Drzewo umiejętności 🧠</h1>", unsafe_allow_html=True)
     
     # System zakładek
     tab1, tab2, tab3 = st.tabs(["🗺️ Mapa Kursu", "📊 Statystyki", "🎯 Moduły"])

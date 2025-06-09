@@ -304,7 +304,7 @@ def show_neuroleader_results_section(user_data, device_type):
         st.markdown("""
         <div class="dashboard-section">
             <div class="section-header">
-                <h3 class="section-title">🧠 Twój profil neuroleaderski</h3>
+                <h3 class="section-title">🧠 Twój profil neurolidera</h3>
             </div>
         """, unsafe_allow_html=True)
         
@@ -381,7 +381,7 @@ def show_neuroleader_results_section(user_data, device_type):
         st.markdown("""
         <div class="dashboard-section">
             <div class="section-header">
-                <h3 class="section-title">🧠 Odkryj swój typ neuroleadera</h3>
+                <h3 class="section-title">🧠 Odkryj swój typ neurolidera</h3>
             </div>
         """, unsafe_allow_html=True)
         
@@ -390,7 +390,7 @@ def show_neuroleader_results_section(user_data, device_type):
                     background: linear-gradient(135deg, #3498db20, #3498db10);
                     border: 2px solid #3498db40; margin-bottom: 20px;'>
             <h3 style='color: #3498db; margin-bottom: 15px;'>
-                🎯 Jeszcze nie poznałeś swojego typu neuroleadera!
+                🎯 Jeszcze nie poznałeś swojego typu neurolidera!
             </h3>
             <p style='color: #666; margin-bottom: 20px; line-height: 1.6;'>
                 Wykonaj nasz test psychologiczny i odkryj swój unikalny profil przywódczy. 
@@ -400,7 +400,7 @@ def show_neuroleader_results_section(user_data, device_type):
         
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            if zen_button("🚀 Wykonaj test neuroleadera", key="dashboard_take_test", use_container_width=True):
+            if zen_button("🚀 Wykonaj test neurolidera", key="dashboard_take_test", use_container_width=True):
                 st.session_state.page = 'degen_explorer'
                 st.rerun()
         
@@ -408,7 +408,7 @@ def show_neuroleader_results_section(user_data, device_type):
 
 
 def show_dashboard_sidebar(user_data, device_type):
-    """Sidebar z dodatkowymi informacjami"""       # Profil neuroleaderski
+    """Sidebar z dodatkowymi informacjami"""       # Profil neurolidera
     show_recent_activities(user_data)
 
     show_neuroleader_profile_compact(user_data)
@@ -523,7 +523,7 @@ def show_recent_activities(user_data):
         activities.append({
             'icon': '🧠',
             'color': '#3498db',
-            'title': f'Odkryto typ neuroleadera: {neuroleader_type}',
+            'title': f'Odkryto typ neurolidera: {neuroleader_type}',
             'time': '1 dzień temu'
         })
     
@@ -723,11 +723,11 @@ def show_progress_widget(user_data):
     """, unsafe_allow_html=True)
 
 def show_neuroleader_profile_compact(user_data):
-    """Kompaktowy profil neuroleaderski"""
+    """Kompaktowy profil neurolidera"""
     st.markdown("""
     <div class="dashboard-section">
         <div class="section-header">
-            <h3 class="section-title">Profil neuroleaderski</h3>
+            <h3 class="section-title">Profil neurolidera</h3>
         </div>
     """, unsafe_allow_html=True)
     
@@ -795,7 +795,7 @@ def show_dashboard():
     # Pobierz aktualny typ urządzenia
     device_type = get_device_type()
       # Używamy naszego komponentu nagłówka - bez dodatkowego CSS
-    zen_header("Dashboard Neuroleaderów")
+    zen_header("Dashboard")
     
     # Add live XP indicator
     live_xp_indicator()

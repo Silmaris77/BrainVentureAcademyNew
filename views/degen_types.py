@@ -34,7 +34,7 @@ def show_degen_types():
 def show_degen_test_content():
     """Wyświetla zawartość testu typu neuroleadera"""
     
-    zen_header("Test Typu Neuroleadera 🎭")
+    zen_header("Test Typu Neurolidera 🎭")
     
     st.markdown("""
     ## Odkryj swój typ przywódcy

@@ -74,7 +74,7 @@ def show_shop():
     user_data = users_data.get(st.session_state.username, {})
     
     # Wyświetl główną zawartość
-    zen_header("Sklep Neuroleadershipu 🧠🛒")
+    zen_header("Sklep 🛒")
     
     # Wyświetl ilość monet użytkownika
     st.markdown(f"### Twoje NeuroCoins: <span style='color: #6366f1;'>🧠 {user_data.get('degen_coins', 0)}</span>", unsafe_allow_html=True)

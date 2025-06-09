@@ -95,7 +95,7 @@ def show_lesson():
     # Pobierz aktualny typ urządzenia
     device_type = get_device_type()
     
-    zen_header("Kurs Zen Degen Academy")
+    zen_header("BrainVenture - Lekcje",)
     lessons = load_lessons()
     
     # Check if we're viewing a specific lesson or the overview

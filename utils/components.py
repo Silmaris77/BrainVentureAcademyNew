@@ -255,7 +255,7 @@ def navigation_menu():
         {"id": "skills", "name": "Umiejętności", "icon": "🌳"},
         {"id": "inspirations", "name": "Inspiracje", "icon": "💡"},
         {"id": "shop", "name": "Sklep", "icon": "🛒"},
-        {"id": "degen_explorer", "name": "Neuroleaderzy", "icon": "🧠"},
+        {"id": "degen_explorer", "name": "Neuroliderzy", "icon": "🧠"},
         {"id": "profile", "name": "Profil", "icon": "👤"}
     ]
     

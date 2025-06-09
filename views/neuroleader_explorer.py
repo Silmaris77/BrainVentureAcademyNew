@@ -152,7 +152,7 @@ def show_neuroleader_explorer():
     # Pobierz aktualny typ urządzenia
     device_type = get_device_type()
 
-    zen_header("Typy Neuroleaderów")
+    zen_header("Typy Neuroliderów")
     
     # Utwórz tabs dla podsekcji
     tab1, tab2 = st.tabs(["Test Neuroleadera", "Eksplorator Typów"])
