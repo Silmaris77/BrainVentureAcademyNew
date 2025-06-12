@@ -142,8 +142,14 @@ def calculate_lesson_completion(lesson_id):
     """Oblicz procent ukończenia lekcji"""
     progress = get_lesson_fragment_progress(lesson_id)
     
-    # Nowy 7-krokowy system
-    steps = ['intro', 'opening_quiz', 'content', 'reflection', 'application', 'closing_quiz', 'summary']
+    # Nowa struktura z practical_exercises lub backward compatibility
+    if progress.get('practical_exercises_completed', False):
+        # Nowa struktura neuroleadership - 6 kroków
+        steps = ['intro', 'opening_quiz', 'content', 'practical_exercises', 'closing_quiz', 'summary']
+    else:
+        # Stara struktura - 7 kroków (backward compatibility)
+        steps = ['intro', 'opening_quiz', 'content', 'reflection', 'application', 'closing_quiz', 'summary']
+    
     completed = sum(1 for step in steps if progress.get(f"{step}_completed", False))
     
     return (completed / len(steps)) * 100

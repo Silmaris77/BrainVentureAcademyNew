@@ -1,0 +1,183 @@
+{
+  "id": "EXAMPLE_NEURO",
+  "xp_reward": 100,
+  "tag": "Przykład struktury neuroprzywództwa",
+  "description": "Przykładowa lekcja pokazująca nową strukturę practical_exercises z 4 zakładkami neuroleadershipowymi.",
+  "title": "Przykład: Nowa struktura ćwiczeń praktycznych",
+  "difficulty": "intermediate",
+  "estimated_time": "30 min",
+  "intro": {
+    "main": "<p><strong>🧠 Wprowadzenie do nowej struktury ćwiczeń praktycznych</strong></p><p>Ta lekcja jest przykładem nowej struktury, która zastępuje osobne sekcje refleksji i aplikacji jedną zintegrowaną sekcją 'practical_exercises' z 4 specjalistycznymi zakładkami.</p>",
+    "case_study": "<p><strong>📊 Case Study: Transformacja struktury lekcji</strong></p><p>Poprzednio mieliśmy osobne sekcje reflection i application. Teraz wprowadzamy jedną sekcję practical_exercises z 4 zakładkami: Autotest, Refleksja, Analiza i Wdrożenie.</p>"
+  },
+  "sections": {
+    "opening_quiz": {
+      "title": "Quiz startowy",
+      "description": "Sprawdź swoją wiedzę przed rozpoczęciem lekcji",
+      "questions": [
+        {
+          "question": "Która struktura jest nowa w neuroprzywództwie?",
+          "options": [
+            "Reflection + Application",
+            "Practical Exercises z 4 zakładkami",
+            "Quiz + Content",
+            "Intro + Summary"
+          ],
+          "correct_answer": 1,
+          "explanation": "Nowa struktura łączy reflection i application w jedną sekcję practical_exercises z 4 zakładkami."
+        }
+      ]
+    },
+    "learning": {
+      "sections": [
+        {
+          "title": "1. Nowa struktura ćwiczeń praktycznych 🧠",
+          "content": "<p><strong>Czym są ćwiczenia praktyczne?</strong></p><p>Ćwiczenia praktyczne to zintegrowana sekcja, która łączy w sobie elementy refleksji i praktycznej aplikacji wiedzy. Składa się z 4 zakładek:</p><ul><li>🧠 <strong>Autotest przywódczy</strong> - samoocena umiejętności</li><li>📝 <strong>Refleksja przywódcza</strong> - głęboka analiza doświadczeń</li><li>📊 <strong>Analiza przywództwa</strong> - systematyczne badanie sytuacji</li><li>🎯 <strong>Plan rozwoju</strong> - konkretne kroki do wdrożenia</li></ul>"
+        },
+        {
+          "title": "2. Korzyści z nowej struktury 💡",
+          "content": "<p><strong>Dlaczego nowa struktura jest lepsza?</strong></p><p>Nowa struktura practical_exercises oferuje:</p><ul><li>Lepszą integrację teorii z praktyką</li><li>Więcej interaktywności</li><li>Stopniowe pogłębianie wiedzy</li><li>Konkretne plany działania</li></ul><p>Każda zakładka ma swój cel i prowadzi uczestnika przez proces uczenia się od samooceny do konkretnych działań.</p>"
+        }
+      ]
+    },
+    "practical_exercises": {
+      "title": "Ćwiczenia praktyczne",
+      "tabs": {
+        "autotest": {
+          "title": "🧠 Autotest przywódczy",
+          "description": "Oceń swoje aktualne umiejętności przywódcze",
+          "sections": [
+            {
+              "title": "Samoocena umiejętności komunikacyjnych",
+              "content": "Na skali od 1 do 10, jak oceniasz swoje umiejętności komunikacyjne z zespołem? Uzasadnij swoją ocenę konkretnym przykładem z ostatniego miesiąca.",
+              "input_type": "textarea",
+              "placeholder": "Moja ocena: X/10. Przykład sytuacji..."
+            },
+            {
+              "title": "Test zarządzania stresem",
+              "content": "Opisz ostatnią sytuację stresową w pracy. Jak zareagowałeś? Czy Twoja reakcja była konstruktywna?",
+              "input_type": "textarea",
+              "placeholder": "Sytuacja stresowa: ... Moja reakcja: ... Ocena konstruktywności..."
+            },
+            {
+              "title": "Ocena wpływu na zespół",
+              "content": "Jak Twój styl przywództwa wpływa na motywację zespołu? Podaj konkretne obserwacje.",
+              "input_type": "textarea",
+              "placeholder": "Obserwacje dotyczące wpływu na motywację zespołu..."
+            }
+          ]
+        },
+        "reflection": {
+          "title": "📝 Refleksja przywódcza",
+          "description": "Przeprowadź głęboką analizę swoich doświadczeń przywódczych",
+          "sections": [
+            {
+              "title": "Analiza własnych wzorców przywódczych",
+              "content": "Zastanów się nad swoimi naturalnymi reakcjami w sytuacjach przywódczych. Które wzorce służą Ci dobrze, a które chciałbyś zmienić?",
+              "input_type": "textarea",
+              "placeholder": "Moje wzorce przywódcze: dobre... do zmiany..."
+            },
+            {
+              "title": "Refleksja nad błędami i sukcesami",
+              "content": "Przypomnij sobie znaczący sukces i porażkę z ostatniego roku. Co możesz z nich wyciągnąć dla swojego rozwoju jako lider?",
+              "input_type": "textarea",
+              "placeholder": "Sukces: ... Porażka: ... Wnioski..."
+            },
+            {
+              "title": "Wartości i misja osobista",
+              "content": "Jakie wartości są dla Ciebie najważniejsze jako lider? Jak te wartości przekładają się na Twoje codzienne działania?",
+              "input_type": "textarea",
+              "placeholder": "Moje kluczowe wartości... Jak je realizuję..."
+            }
+          ]
+        },
+        "analysis": {
+          "title": "📊 Analiza przywództwa",
+          "description": "Systematyczna analiza Twojej sytuacji przywódczej",
+          "sections": [
+            {
+              "title": "Analiza SWOT Twojego przywództwa",
+              "content": "Przeprowadź analizę SWOT swojego stylu przywództwa. Zidentyfikuj mocne strony, słabe strony, szanse i zagrożenia.",
+              "input_type": "textarea",
+              "placeholder": "Strengths (Mocne strony): ...\nWeaknesses (Słabe strony): ...\nOpportunities (Szanse): ...\nThreats (Zagrożenia): ..."
+            },
+            {
+              "title": "Mapa interesariuszy",
+              "content": "Zidentyfikuj kluczowych interesariuszy w Twoim środowisku pracy. Jak Twój styl przywództwa wpływa na relacje z każdym z nich?",
+              "input_type": "textarea",
+              "placeholder": "Interesariusze: ... Wpływ mojego stylu na relacje..."
+            },
+            {
+              "title": "Analiza efektywności zespołu",
+              "content": "Oceń efektywność swojego zespołu w różnych obszarach. Gdzie jest największy potencjał do poprawy?",
+              "input_type": "textarea",
+              "placeholder": "Efektywność w obszarach: ... Potencjał do poprawy..."
+            }
+          ]
+        },
+        "implementation": {
+          "title": "🎯 Plan rozwoju",
+          "description": "Opracuj konkretny plan wdrożenia zmian w swoim przywództwie",
+          "sections": [
+            {
+              "title": "3 najważniejsze cele rozwojowe",
+              "content": "Zdefiniuj 3 najważniejsze cele swojego rozwoju jako lider na najbliższe 3 miesiące. Każdy cel powinien być SMART.",
+              "input_type": "textarea",
+              "placeholder": "Cel 1: ...\nCel 2: ...\nCel 3: ..."
+            },
+            {
+              "title": "Plan działań na najbliższy tydzień",
+              "content": "Określ konkretne działania, które podejmiesz w najbliższym tygodniu, aby zacząć pracę nad swoim rozwojem przywódczym.",
+              "input_type": "textarea",
+              "placeholder": "Działania na tydzień: 1... 2... 3..."
+            },
+            {
+              "title": "System monitorowania postępów",
+              "content": "Jak będziesz mierzyć swoje postępy? Jakie wskaźniki i feedback będziesz zbierać?",
+              "input_type": "textarea",
+              "placeholder": "Wskaźniki postępu... Źródła feedback..."
+            },
+            {
+              "title": "Plan rozwoju długoterminowego",
+              "content": "Jak widzisz swój rozwój jako lider w perspektywie roku? Jakie kompetencje chcesz rozwinąć?",
+              "input_type": "textarea",
+              "placeholder": "Wizja rozwoju na rok... Kompetencje do rozwinięcia..."
+            }
+          ]
+        }
+      }
+    },
+    "closing_quiz": {
+      "title": "Quiz końcowy",
+      "description": "Sprawdź, ile zapamiętałeś z lekcji",
+      "questions": [
+        {
+          "question": "Ile zakładek ma sekcja practical_exercises?",
+          "options": [
+            "2",
+            "3", 
+            "4",
+            "5"
+          ],
+          "correct_answer": 2,
+          "explanation": "Sekcja practical_exercises ma 4 zakładki: Autotest, Refleksja, Analiza i Wdrożenie."
+        },
+        {
+          "question": "Która zakładka skupia się na konkretnych planach działania?",
+          "options": [
+            "Autotest przywódczy",
+            "Refleksja przywódcza",
+            "Analiza przywództwa", 
+            "Plan rozwoju"
+          ],
+          "correct_answer": 3,
+          "explanation": "Zakładka 'Plan rozwoju' skupia się na opracowaniu konkretnych planów wdrożenia zmian."
+        }
+      ]
+    },
+    "summary": {
+      "title": "Podsumowanie",
+      "content": "<p><strong>🎯 Podsumowanie nowej struktury</strong></p><p>Nowa struktura practical_exercises oferuje:</p><ul><li>Zintegrowane podejście do nauki</li><li>4 uzupełniające się zakładki</li><li>Lepszą praktyczną aplikację wiedzy</li><li>Konkretne plany rozwoju</li></ul><p>Ta struktura będzie używana we wszystkich nowych lekcjach neuroprzywództwa.</p>"
+    }
+  }
+}

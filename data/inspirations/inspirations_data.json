@@ -102,8 +102,7 @@
             "icon": "🪑",
             "tags": ["zaangażowanie", "procesy decyzyjne", "psychologia"],
             "file_path": "facts/ikea_effect.md"
-        },
-        {
+        },        {
             "id": "multitasking_myth",
             "title": "Dlaczego wielozadaniowość szkodzi wydajności",
             "content": "Mózg człowieka nie jest zdolny do prawdziwej wielozadaniowości. Badania pokazują, że tzw. 'switch cost' (koszt przełączania) między zadaniami może obniżyć produktywność nawet o 40% i zwiększyć ilość błędów...",
@@ -111,6 +110,15 @@
             "icon": "⏳",
             "tags": ["wielozadaniowość", "produktywność", "uwaga"],
             "file_path": "facts/multitasking_myth.md"
+        },
+        {
+            "id": "chewing_gum_brain",
+            "title": "Bystrzak w mgnieniu oka??? To proste!!!",
+            "content": "Wystarczy żucie gumy! Po 5 minutach od rozpoczęcia żucia nasz mózg \"dostaje kopa\"! Profesor psychologii Uniwersytetu St Lawrence w USA Serge Onyper dowiódł w swoich badaniach, że to dobry sposób na zwiększenie wydolności naszego mózgu, przynajmniej na chwilę...",
+            "source": "Uniwersytet St Lawrence, USA",
+            "icon": "🧠",
+            "tags": ["wydajność mózgu", "żucie gumy", "koncentracja", "badania naukowe"],
+            "file_path": "facts/Żucie_gumy_a_mózg.md"
         }
     ]
 }

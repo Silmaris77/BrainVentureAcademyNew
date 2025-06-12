@@ -91,56 +91,108 @@
         },        {
           "title": "6. Podsumowanie i Wnioski 🎯 ",
           "content": "<p>Neuroprzywództwo to game changer w świecie zarządzania. 🌍💡 Łącząc wiedzę neuronaukową z teorią przywództwa, daje liderom narzędzia, które pomagają lepiej zrozumieć ludzi, ich motywacje, zachowania i reakcje na zmiany. Dzięki neuroprzywództwu, liderzy mogą skuteczniej zarządzać zespołami, wspierać innowacje oraz rozwiązywać problemy w bardziej efektywny sposób. 🚀💼</p><p>Neuroprzywództwo w praktyce to coś więcej niż teoria. To narzędzie, które pomaga tworzyć innowacyjne i zaangażowane zespoły, bazujące na naukowych podstawach. Zrozumienie, jak działają neuroprzekaźniki, takie jak dopamina i oksytocyna, pozwala liderom motywować zespół i budować silniejsze relacje. 💪💖</p><p>Firmy, takie jak Google, Microsoft i Cigna, już stosują neuroprzywództwo i widzą realne korzyści. To zwiększa efektywność zespołów i zmniejsza opór wobec zmian – idealne w czasach, kiedy zmiany są na porządku dziennym! 🔄🎯</p><p>W kontekście zmian organizacyjnych i innowacji, neuroprzywództwo daje liderom narzędzia do skutecznego zarządzania oporem, rozumienia, jak mózg reaguje na nowe sytuacje, i tworzenia środowiska sprzyjającego kreatywności. 🎨💡 Dzięki neuroplastyczności, umiejętności przywódcze nie są stałe – możesz je rozwijać przez całą karierę! 🔄🚀</p><p>Model SCARF – czyli Status, Pewność, Autonomia, Przynależność i Sprawiedliwość – jest super narzędziem, które pozwala minimalizować zagrożenia społeczne w miejscu pracy i zwiększać nagrody, co prowadzi do większego zaangażowania i motywacji zespołów. 🏅🎯</p><p>Przyszłość neuroprzywództwa zapowiada się ekscytująco! 🔮 Z każdym rokiem będziemy mieli więcej wiedzy o tym, jak mózg wpływa na nasze decyzje i jak można lepiej wykorzystać te mechanizmy w pracy menedżera. Choć wyzwaniem pozostaje wdrożenie tych koncepcji w codziennej pracy liderów, to rosnąca świadomość na temat neurobiologii w zarządzaniu sprawia, że neuroprzywództwo będzie kluczowe w kształtowaniu przyszłości przywództwa. 🌱🚀</p><p><strong>Neuroprzywództwo to po prostu przyszłość zarządzania. Czas zacząć je stosować! 🧠✨</strong></p>"        }
-      ]    },
-    "reflection": {
-      "title": "Refleksja",
-      "sections": [
-        {
-          "title": "Analiza sytuacji stresowej",
-          "content": "Zastanów się nad ostatnią sytuacją stresową w Twojej pracy. Jak reagowały kora przedczołowa i ciało migdałowate? Co mogłeś zrobić inaczej, znając zasady neuroprzywództwa?"
-        },
-        {
-          "title": "Model SCARF w komunikacji",
-          "content": "Przeanalizuj swój styl komunikacji z zespołem przez pryzmat modelu SCARF. Które elementy wzmacniasz, a które mogą być zagrożone?"
-        },
-        {
-          "title": "Zarządzanie zmianą",
-          "content": "Pomyśl o ostatniej zmianie wprowadzonej w Twojej organizacji. Jak można było ją wprowadzić lepiej, uwzględniając neurobiologiczne reakcje na zmianę?"
-        },
-        {
-          "title": "Motywacja zespołu",
-          "content": "W jaki sposób możesz wykorzystać wiedzę o dopaminie i oksytocynie do lepszego motywowania swojego zespołu?"
-        },
-        {
-          "title": "Plan działań",
-          "content": "Jakie konkretne działania planujesz wdrożyć w najbliższym tygodniu, aby zastosować zasady neuroprzywództwa w praktyce?"
+      ]    },    "practical_exercises": {
+      "title": "Ćwiczenia praktyczne",      "tabs": {
+        "autotest": {
+          "title": "Autotest",
+          "description": "Oceń swoje aktualne umiejętności neuroprzywództwa",
+          "sections": [
+            {
+              "title": "Test znajomości modelu SCARF",
+              "content": "Oceń na skali 1-10, jak dobrze rozumiesz i stosujesz model SCARF w komunikacji z zespołem. Podaj konkretny przykład z ostatniego miesiąca, gdy świadomie lub nieświadomie wpłynąłeś na któryś z elementów SCARF.",
+              "input_type": "textarea",
+              "placeholder": "Moja ocena znajomości SCARF: X/10\n\nKonkretny przykład sytuacji:\n- Status: jak wpłynąłem na poczucie statusu członków zespołu?\n- Certainty: czy zapewniłem jasność i przewidywalność?\n- Autonomy: czy dałem poczucie wpływu i kontroli?\n- Relatedness: jak wzmocniłem relacje i przynależność?\n- Fairness: czy działania były postrzegane jako sprawiedliwe?"
+            },
+            {
+              "title": "Samoocena zarządzania stresem neurobiologicznym",
+              "content": "Opisz ostatnią sytuację, gdy byłeś pod presją. Czy zareagowała głównie kora przedczołowa (logicznie, spokojnie) czy ciało migdałowate (emocjonalnie, impulsywnie)? Jak ta reakcja wpłynęła na zespół?",
+              "input_type": "textarea",
+              "placeholder": "Sytuacja stresowa: ...\n\nMoja reakcja:\n- Poziom kory przedczołowej (logika): ...\n- Poziom ciała migdałowatego (emocje): ...\n- Wpływ na zespół: ...\n- Co bym zrobił inaczej, znając neurobiologię stresu: ..."
+            },
+            {
+              "title": "Test umiejętności aktywacji dopaminy i oksytocyny",
+              "content": "Jak często świadomie działasz, aby wyzwolić dopaminę (motywacja, nagrody) i oksytocynę (zaufanie, więzi) w swoim zespole? Podaj konkretne przykłady swoich działań.",
+              "input_type": "textarea",
+              "placeholder": "Działania aktywujące dopaminę (system nagród, uznanie, postęp):\n1. ...\n2. ...\n3. ...\n\nDziałania aktywujące oksytocynę (zaufanie, więzi, empatia):\n1. ...\n2. ...\n3. ...\n\nCzęstotliwość świadomego stosowania: ..."
+            }
+          ]
+        },        "reflection": {
+          "title": "Refleksja",
+          "description": "Przeprowadź głęboką analizę swoich doświadczeń z perspektywy neuroprzywództwa",
+          "sections": [
+            {
+              "title": "Analiza własnych wzorców neurobiologicznych",
+              "content": "Zastanów się nad swoimi naturalnymi reakcjami w sytuacjach przywódczych. Kiedy Twój mózg wybiera tryb kory przedczołowej, a kiedy ciała migdałowatego? Jakie triggery je aktywują?",
+              "input_type": "textarea",
+              "placeholder": "Moje wzorce reakcji:\n\nKiedy dominuje kora przedczołowa (spokój, logika):\n- Sytuacje: ...\n- Triggery pozytywne: ...\n- Efekty na zespół: ...\n\nKiedy dominuje ciało migdałowate (stres, emocje):\n- Sytuacje: ...\n- Triggery negatywne: ...\n- Efekty na zespół: ...\n\nWzorce, które chcę zmienić: ..."
+            },
+            {
+              "title": "Refleksja nad stosowaniem modelu SCARF",
+              "content": "Przypomnij sobie sytuację z ostatniego miesiąca, gdy komunikacja z zespołem nie poszła zgodnie z planem. Przeanalizuj ją przez pryzmat modelu SCARF - które potrzeby mogły zostać naruszone?",
+              "input_type": "textarea",
+              "placeholder": "Opis sytuacji komunikacyjnej: ...\n\nAnaliza przez SCARF:\n- Status: czy ktoś poczuł się pomniejszony lub niedoceniony?\n- Certainty: czy była jasność co do oczekiwań i procesów?\n- Autonomy: czy zespół miał poczucie wpływu na decyzje?\n- Relatedness: czy wzmocniłem czy osłabiłem więzi zespołowe?\n- Fairness: czy podejście było postrzegane jako sprawiedliwe?\n\nWnioski i nauki na przyszłość: ..."
+            },
+            {
+              "title": "Refleksja nad wpływem na neurochemię zespołu",
+              "content": "Jak Twoje słowa, gesty i decyzje wpływają na chemię mózgu Twoich współpracowników? Kiedy ostatnio świadomie działałeś, aby poprawić ich nastrój i motywację?",
+              "input_type": "textarea",
+              "placeholder": "Mój wpływ na neurochemię zespołu:\n\nDziałania zwiększające dopaminę (poczucie sukcesu, postępu):\n- Co robię dobrze: ...\n- Co mógłbym robić częściej: ...\n\nDziałania zwiększające oksytocynę (zaufanie, więzi):\n- Co robię dobrze: ...\n- Co mógłbym robić częściej: ...\n\nDziałania zmniejszające kortyzol (redukcja stresu):\n- Co robię dobrze: ...\n- Gdzie są przestrzenie do poprawy: ..."
+            }
+          ]
+        },        "analysis": {
+          "title": "Analiza",
+          "description": "Systematyczna analiza Twojego neuroprzywództwa w kontekście zespołu i organizacji",
+          "sections": [
+            {
+              "title": "Analiza SCARF środowiska pracy",
+              "content": "Przeprowadź systematyczną analizę swojego środowiska pracy przez pryzmat modelu SCARF. Oceń, jak każdy element wpływa na Ciebie i Twój zespół.",
+              "input_type": "textarea",
+              "placeholder": "Analiza środowiska pracy przez SCARF:\n\nSTATUS - Hierarchia i pozycja:\n- Mocne strony naszego systemu: ...\n- Obszary zagrożeń dla statusu: ...\n- Możliwości wzmocnienia: ...\n\nCERTAINTY - Jasność i przewidywalność:\n- Co jest jasne i przewidywalne: ...\n- Gdzie jest za dużo niepewności: ...\n- Jak mogę zwiększyć pewność: ...\n\nAUTONOMY - Poczucie kontroli:\n- Gdzie zespół ma wpływ na decyzje: ...\n- Gdzie brakuje autonomii: ...\n- Jak mogę zwiększyć poczucie kontroli: ...\n\nRELATEDNESS - Więzi i przynależność:\n- Mocne strony naszych relacji: ...\n- Gdzie są braki w więziach: ...\n- Jak mogę wzmocnić zespołowość: ...\n\nFAIRNESS - Sprawiedliwość:\n- Co działamy sprawiedliwie: ...\n- Gdzie mogą być postrzegane niesprawiedliwości: ...\n- Jak mogę poprawić poczucie fairplay: ..."
+            },
+            {
+              "title": "Mapa reakcji stresowych zespołu",
+              "content": "Zidentyfikuj wzorce reakcji stresowych w swoim zespole. Kto jak reaguje na presję? Jakie są główne triggery aktywujące ciało migdałowate u poszczególnych osób?",
+              "input_type": "textarea",
+              "placeholder": "Mapa reakcji stresowych zespołu:\n\nOsoba 1: [imię/inicjały]\n- Główne triggery stresu: ...\n- Jak reaguje (kora przedczołowa vs ciało migdałowate): ...\n- Co go/ją uspokaja: ...\n- Jak mogę lepiej wspierać: ...\n\nOsoba 2: [imię/inicjały]\n- Główne triggery stresu: ...\n- Jak reaguje: ...\n- Co go/ją uspokaja: ...\n- Jak mogę lepiej wspierać: ...\n\n[kontynuuj dla kluczowych członków zespołu]\n\nWzorce grupowe:\n- Wspólne triggery zespołowe: ...\n- Kolektywne reakcje na stres: ...\n- Najefektywniejsze sposoby uspokajania zespołu: ..."
+            },
+            {
+              "title": "Analiza efektywności neuroprzywództwa",
+              "content": "Oceń, w których obszarach Twoje neuroprzywództwo jest najefektywniejsze, a gdzie potrzebujesz rozwoju. Uwzględnij feedback zespołu i obserwowane rezultaty.",
+              "input_type": "textarea",
+              "placeholder": "Analiza efektywności mojego neuroprzywództwa:\n\nNAJMOCNIEJSZE OBSZARY:\n1. W czym jestem dobry z perspektywy neuroprzywództwa: ...\n2. Jakie rezultaty to przynosi zespołowi: ...\n3. Co mówi o tym feedback, który otrzymuję: ...\n\nOBSZARY DO ROZWOJU:\n1. Gdzie widzę największe braki: ...\n2. Jakie to ma konsekwencje dla zespołu: ...\n3. Co wskazuje na potrzebę poprawy: ...\n\nWPŁYW NA WYNIKI:\n- Jak moje neuroprzywództwo wpływa na produktywność: ...\n- Wpływ na motywację i zaangażowanie: ...\n- Wpływ na atmosferę i relacje: ...\n- Wpływ na innowacyjność i kreatywność: ..."
+            }
+          ]
+        },        "implementation": {
+          "title": "Plan rozwoju",
+          "description": "Opracuj konkretny plan wdrożenia neuroprzywództwa w codziennej praktyce",
+          "sections": [
+            {
+              "title": "3 najważniejsze cele neuroprzywódcze",
+              "content": "Zdefiniuj 3 najważniejsze cele swojego rozwoju w neuroprzywództwie na najbliższe 3 miesiące. Każdy cel powinien być SMART i oparty na konkretnych zasadach neurobiologii.",
+              "input_type": "textarea",
+              "placeholder": "CEL 1 - Zarządzanie stresem neurobiologicznym:\nSpecific: Nauczę się rozpoznawać i kontrolować reakcje ciała migdałowatego\nMeasurable: Będę notować swoje reakcje stresowe przez 30 dni i zmniejszę impulsywne reakcje o X%\nAchievable: Zastosuję techniki oddechowe i pauzy 3-sekundowe\nRelevant: Poprawi to komunikację z zespołem i efektywność decyzji\nTime-bound: W ciągu 3 miesięcy\n\nCEL 2 - Mistrzostwo w modelu SCARF:\nSpecific: ...\nMeasurable: ...\nAchievable: ...\nRelevant: ...\nTime-bound: ...\n\nCEL 3 - Aktywacja pozytywnej neurochemii zespołu:\nSpecific: ...\nMeasurable: ...\nAchievable: ...\nRelevant: ...\nTime-bound: ..."
+            },
+            {
+              "title": "Plan działań na najbliższy tydzień",
+              "content": "Określ konkretne działania neuroprzywódcze, które podejmiesz w najbliższym tygodniu. Skup się na małych, ale konsekwentnych krokach.",
+              "input_type": "textarea",
+              "placeholder": "NEUROPRZYWÓDCZE DZIAŁANIA NA TYDZIEŃ:\n\nPoniedziałek:\n- Rano: Rozpocznę spotkanie zespołowe od 3 głębokich oddechów (uspokojenie ciała migdałowatego)\n- Podczas dnia: Zastosować pauzę 3-sekundową przed każdą ważną odpowiedzią\n- Wieczorem: Notuję obserwacje o swoich reakcjach stresowych\n\nWtorek:\n- Rano: Testuję komunikację przez SCARF - świadomie wzmocnię Status jednej osoby\n- Podczas dnia: Daję konkretną, pozytywną informację zwrotną (aktywacja dopaminy)\n- Wieczorem: Notuję reakcje zespołu\n\n[kontynuuj plan dla pozostałych dni]\n\nSzczególne focus areas tego tygodnia:\n1. ...\n2. ...\n3. ..."
+            },
+            {
+              "title": "System monitorowania postępów neurobiologicznych",
+              "content": "Jak będziesz mierzyć swoje postępy w neuroprzywództwie? Jakie wskaźniki neurobiologiczne i feedback będziesz zbierać?",
+              "input_type": "textarea",
+              "placeholder": "SYSTEM MONITOROWANIA NEUROPRZYWÓDZTWA:\n\nWSKAŹNIKI WŁASNE:\n- Dziennik reakcji stresowych (częstotliwość dominacji ciała migdałowatego vs kory przedczołowej)\n- Tracker stosowania modelu SCARF (ile razy dziennie świadomie go używam)\n- Pomiar satysfakcji z własnych reakcji przywódczych (skala 1-10 dziennie)\n\nWSKAŹNIKI ZESPOŁOWE:\n- Regularne mikro-ankiety o samopoczucie zespołu (dopamina, motywacja)\n- Obserwacja częstotliwości śmiechu/pozytywnych interakcji (oksytocyna)\n- Monitorowanie reakcji na zmiany/stres (reakcje ciała migdałowatego zespołu)\n\nFEEDBACK:\n- Cotygodniowe check-iny 1:1 z kluczowymi osobami\n- Miesięczna samoocena + ocena zespołu mojego neuroprzywództwa\n- Kwartalny 360-degree feedback z perspektywą neuroprzywództwa\n\nNARZĘDZIA:\n- Aplikacja/notatnik do trackingu: ...\n- Regularność pomiaru: ...\n- Kryteria sukcesu: ..."
+            },
+            {
+              "title": "Plan rozwoju długoterminowego",
+              "content": "Jak widzisz swój rozwój jako neuroprzywódca w perspektywie roku? Jakie zaawansowane kompetencje neurobiologiczne chcesz rozwinąć?",
+              "input_type": "textarea",
+              "placeholder": "WIZJA NEUROPRZYWÓDCY - ROK 2025:\n\nKIM CHCĘ BYĆ jako neuroprzywódca:\n- Mistrz samoregulacji neurobiologicznej (pełna kontrola nad reakcjami kory przedczołowej vs ciała migdałowatego)\n- Ekspert w czytaniu i zarządzaniu neurochemią zespołu\n- Lider potrafiący świadomie aktywować pozytywne stany mózgu u innych\n- [dodaj inne aspiracje]\n\nKOMPETENCJE DO ROZWINIĘCIA:\n1. Zaawansowane zarządzanie SCARF w skali organizacyjnej\n2. Neurobiologia kreatywności i innowacji w zespołach\n3. Neuroprzywództwo w zarządzaniu zmianą i transformacją\n4. Coaching oparty na neurobiologii\n5. [dodaj inne]\n\nKROKI ROZWOJOWE:\n- Miesiące 1-3: ...\n- Miesiące 4-6: ...\n- Miesiące 7-9: ...\n- Miesiące 10-12: ...\n\nZASOBY I WSPARCIE:\n- Książki/kursy: ...\n- Mentoring/coaching: ...\n- Praktyka/eksperymenty: ...\n- Społeczność/networking: ..."
+            }
+          ]
         }
-      ]    },
-    
-    "application": {
-      "title": "Zastosowanie w praktyce",
-      "sections": [
-        {
-          "title": "Obserwacja reakcji stresowych",
-          "content": "Przez następny tydzień obserwuj swoje reakcje stresowe i zapisuj, kiedy dominuje kora przedczołowa, a kiedy ciało migdałowate. Eksperymentuj z technikami uspokajania ciała migdałowatego."
-        },
-        {
-          "title": "Analiza komunikacji przez SCARF",
-          "content": "Przeanalizuj komunikację w swoim zespole przez pryzmat modelu SCARF. Zidentyfikuj 3 konkretne obszary do poprawy i zaplanuj działania."
-        },
-        {
-          "title": "System nagród dopaminergicznych",
-          "content": "Zaprojektuj system małych nagród i uznań dla swojego zespołu, wykorzystując wiedzę o dopaminie. Wdróż go i obserwuj reakcje."
-        },
-        {
-          "title": "Zarządzanie zmianą przez SCARF",
-          "content": "Przy następnej zmianie w organizacji zastosuj stopniowe wprowadzanie z wykorzystaniem zasad SCARF. Dokumentuj reakcje zespołu."
-        },
-        {
-          "title": "Eksperyment z budowaniem zaufania",
-          "content": "Przeprowadź eksperyment z budowaniem zaufania – wprowadź jedno działanie wspierające oksytocynę (np. regularne check-iny, wspólne cele) i monitoruj zmiany w dynamice zespołu."
-        }
-      ]
+      }
     },
     "closing_quiz": {
       "title": "Quiz końcowy",

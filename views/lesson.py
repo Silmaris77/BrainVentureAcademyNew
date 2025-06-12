@@ -188,15 +188,15 @@ def show_lesson():
         if 'quiz_score' not in st.session_state:
             st.session_state.quiz_score = 0
           # Get current user's lesson progress using the new fragment system
-        fragment_progress = get_lesson_fragment_progress(lesson_id)
-          # Initialize legacy session progress for UI compatibility
+        fragment_progress = get_lesson_fragment_progress(lesson_id)          # Initialize legacy session progress for UI compatibility
         if 'lesson_progress' not in st.session_state:
             st.session_state.lesson_progress = {
                 'intro': fragment_progress.get('intro_completed', False),
                 'opening_quiz': fragment_progress.get('opening_quiz_completed', False),
                 'content': fragment_progress.get('content_completed', False),
-                'reflection': fragment_progress.get('reflection_completed', False),
-                'application': fragment_progress.get('application_completed', False),
+                'practical_exercises': fragment_progress.get('practical_exercises_completed', False),
+                'reflection': fragment_progress.get('reflection_completed', False),  # backward compatibility
+                'application': fragment_progress.get('application_completed', False),  # backward compatibility
                 'closing_quiz': fragment_progress.get('closing_quiz_completed', False),
                 'summary': fragment_progress.get('summary_completed', False),
                 'total_xp_earned': fragment_progress.get('total_xp_earned', 0),
@@ -204,47 +204,59 @@ def show_lesson():
                 'quiz_scores': {},
                 'answers': {}
             }
-        
-        # Oblicz całkowitą liczbę dostępnych kroków w tej lekcji
-        available_steps = ['intro', 'content', 'reflection', 'summary']
+          # Oblicz całkowitą liczbę dostępnych kroków w tej lekcji
+        available_steps = ['intro', 'content', 'summary']
         if 'sections' in lesson:
             if 'opening_quiz' in lesson.get('sections', {}):
                 available_steps.append('opening_quiz')
+            if 'practical_exercises' in lesson.get('sections', {}):
+                available_steps.append('practical_exercises')
+            elif 'reflection' in lesson.get('sections', {}):
+                available_steps.append('reflection')  # backward compatibility
             if 'application' in lesson.get('sections', {}):
-                available_steps.append('application')
+                available_steps.append('application')  # backward compatibility
             if 'closing_quiz' in lesson.get('sections', {}):
                 available_steps.append('closing_quiz')
           # Ustal kolejność kroków
         step_order = ['intro']
         if 'opening_quiz' in available_steps:
             step_order.append('opening_quiz')
-        step_order.extend(['content', 'reflection'])
-        if 'application' in available_steps:
-            step_order.append('application')
+        step_order.append('content')
+        
+        # Nowa sekcja ćwiczeń praktycznych zamiast osobnych reflection i application
+        if 'practical_exercises' in available_steps:
+            step_order.append('practical_exercises')
+        else:
+            # Backward compatibility dla starszych lekcji
+            if 'reflection' in available_steps:
+                step_order.append('reflection')
+            if 'application' in available_steps:
+                step_order.append('application')
+        
         if 'closing_quiz' in available_steps:
             step_order.append('closing_quiz')
         step_order.append('summary')
         
         total_steps = len(step_order)
         base_xp = lesson.get('xp_reward', 100)
-        
-        # Mapowanie kroków do nazw wyświetlanych
+          # Mapowanie kroków do nazw wyświetlanych
         step_names = {
             'intro': 'Wprowadzenie',
             'opening_quiz': 'Quiz startowy',
             'content': 'Materiał',
-            'reflection': 'Praktyka',
-            'application': 'Wdrożenie',
+            'practical_exercises': 'Ćwiczenia praktyczne',
+            'reflection': 'Praktyka',  # backward compatibility
+            'application': 'Wdrożenie',  # backward compatibility
             'closing_quiz': 'Quiz końcowy',
             'summary': 'Podsumowanie'
-        }
-          # Mapowanie kroków do wartości XP (nowy system procentowy)
+        }          # Mapowanie kroków do wartości XP (nowy system procentowy)
         step_xp_values = {
             'intro': int(base_xp * 0.05),          # 5% całkowitego XP
             'opening_quiz': int(base_xp * 0.00),   # 0% całkowitego XP
             'content': int(base_xp * 0.30),        # 30% całkowitego XP (Merytoryka)
-            'reflection': int(base_xp * 0.20),     # 20% całkowitego XP
-            'application': int(base_xp * 0.20),    # 20% całkowitego XP
+            'practical_exercises': int(base_xp * 0.40),  # 40% całkowitego XP (nowa sekcja)
+            'reflection': int(base_xp * 0.20),     # 20% całkowitego XP (backward compatibility)
+            'application': int(base_xp * 0.20),    # 20% całkowitego XP (backward compatibility)
             'closing_quiz': int(base_xp * 0.20),   # 20% całkowitego XP
             'summary': int(base_xp * 0.05)         # 5% całkowitego XP
         }
@@ -690,11 +702,122 @@ def show_lesson():
                     
                     # Refresh user data for real-time updates
                     from utils.real_time_updates import refresh_user_data
-                    refresh_user_data()
-                  # Przejdź do następnego kroku
+                    refresh_user_data()                  # Przejdź do następnego kroku
                 st.session_state.lesson_step = next_step
                 st.rerun()
             st.markdown("</div>", unsafe_allow_html=True)
+        
+        elif st.session_state.lesson_step == 'practical_exercises':
+            # Nowa sekcja ćwiczeń praktycznych z pod-zakładkami
+            if 'sections' not in lesson:
+                st.error("Lekcja nie zawiera klucza 'sections'!")
+            elif 'practical_exercises' not in lesson.get('sections', {}):
+                st.error("Lekcja nie zawiera sekcji 'practical_exercises'!")
+            else:
+                practical_data = lesson['sections']['practical_exercises']
+                
+                # Sprawdź czy dane zawierają tabs
+                if 'tabs' not in practical_data:
+                    st.error("Sekcja 'practical_exercises' nie zawiera 'tabs'!")
+                else:
+                    # Przygotuj zakładki dla różnych typów ćwiczeń
+                    sub_tabs_data = practical_data['tabs']
+                    available_tabs = []
+                    tab_keys = []
+                      # Sprawdź które zakładki są dostępne (dostosowane do neuroprzywództwa):
+                    # 1. Autotest - sprawdzenie aktualnego stanu wiedzy o przywództwie
+                    if 'autotest' in sub_tabs_data:
+                        available_tabs.append("🧠 Autotest")
+                        tab_keys.append('autotest')
+                    
+                    # 2. Refleksja - przemyślenie własnych doświadczeń przywódczych
+                    if 'reflection' in sub_tabs_data:
+                        available_tabs.append("📝 Refleksja")
+                        tab_keys.append('reflection')
+                    
+                    # 3. Analiza - case studies i scenariusze przywódcze
+                    if 'analysis' in sub_tabs_data:
+                        available_tabs.append("📊 Analiza")
+                        tab_keys.append('analysis')
+                    
+                    # 4. Wdrożenie - konkretny plan rozwoju przywódczego
+                    if 'implementation' in sub_tabs_data:
+                        available_tabs.append("🎯 Plan rozwoju")
+                        tab_keys.append('implementation')
+                    
+                    if available_tabs:
+                        # Wyświetl pod-zakładki
+                        tabs = st.tabs(available_tabs)
+                        
+                        for i, (tab_key, tab_title) in enumerate(zip(tab_keys, available_tabs)):
+                            with tabs[i]:
+                                tab_data = sub_tabs_data[tab_key]
+                                
+                                # Wyświetl opis zakładki jeśli istnieje
+                                if 'description' in tab_data:
+                                    st.info(tab_data['description'])
+                                
+                                # Wyświetl sekcje w zakładce
+                                if 'sections' in tab_data:
+                                    for section in tab_data['sections']:
+                                        st.markdown(f"### {section.get('title', 'Sekcja')}")
+                                        st.markdown(section.get('content', 'Brak treści'), unsafe_allow_html=True)
+                                        
+                                        # Jeśli sekcja wymaga odpowiedzi użytkownika
+                                        if section.get('interactive', False):
+                                            # Generuj klucz dla przechowywania odpowiedzi
+                                            section_key = f"practical_{tab_key}_{section.get('title', '').replace(' ', '_').lower()}"
+                                            
+                                            # Użyj formularza dla lepszego UX
+                                            with st.form(key=f"form_{section_key}"):
+                                                # Pobierz istniejącą odpowiedź z danych użytkownika
+                                                existing_response = load_lesson_response(lesson_id, 'practical_exercises', f"{tab_key}_{section.get('title', '')}")
+                                                
+                                                # Wyświetl pole tekstowe z istniejącą odpowiedzią
+                                                user_response = st.text_area(
+                                                    "Twoja odpowiedź:",
+                                                    value=existing_response,
+                                                    height=200,
+                                                    key=f"input_{section_key}"
+                                                )
+                                                
+                                                # Przycisk do zapisywania odpowiedzi w formularzu
+                                                submitted = st.form_submit_button("Zapisz odpowiedź")
+                                                
+                                                if submitted:
+                                                    # Zapisz odpowiedź w danych użytkownika
+                                                    if save_lesson_response(lesson_id, 'practical_exercises', f"{tab_key}_{section.get('title', '')}", user_response):
+                                                        st.success("Twoja odpowiedź została zapisana!")
+                                                    else:
+                                                        st.error("Błąd podczas zapisywania odpowiedzi.")
+                                else:
+                                    st.warning(f"Zakładka '{tab_title}' nie zawiera sekcji do wyświetlenia.")
+                    else:
+                        st.warning("Nie znaleziono dostępnych pod-zakładek w sekcji ćwiczeń praktycznych.")
+                
+                # Przycisk "Dalej" po ćwiczeniach praktycznych
+                st.markdown("<div class='next-button'>", unsafe_allow_html=True)
+                if zen_button(f"Dalej: {step_names.get(next_step, next_step.capitalize())}", use_container_width=False):
+                    # Award fragment XP using the new system
+                    success, xp_awarded = award_fragment_xp(lesson_id, 'practical_exercises', step_xp_values['practical_exercises'])
+                    
+                    if success and xp_awarded > 0:
+                        # Update session state for UI compatibility
+                        st.session_state.lesson_progress['practical_exercises'] = True
+                        st.session_state.lesson_progress['steps_completed'] += 1
+                        st.session_state.lesson_progress['total_xp_earned'] += xp_awarded
+                        
+                        # Show real-time XP notification
+                        show_xp_notification(xp_awarded, f"Zdobyłeś {xp_awarded} XP za ukończenie ćwiczeń praktycznych!")
+                        
+                        # Refresh user data for real-time updates
+                        from utils.real_time_updates import refresh_user_data
+                        refresh_user_data()
+                    
+                    # Przejdź do następnego kroku
+                    st.session_state.lesson_step = next_step
+                    st.rerun()
+                st.markdown("</div>", unsafe_allow_html=True)
         
         elif st.session_state.lesson_step == 'closing_quiz':
             # Wyświetl quiz końcowy
@@ -872,8 +995,7 @@ def show_lesson():
         
         # Oblicz aktualny postęp na podstawie XP (nie liczby kroków)
         completion_percent = (current_xp / max_xp) * 100 if max_xp > 0 else 0
-        
-        # Przygotuj dane o kluczowych krokach do wyświetlenia
+          # Przygotuj dane o kluczowych krokach do wyświetlenia
         key_steps_info = []
         if 'intro' in step_order:
             completed = st.session_state.lesson_progress.get('intro', False)
@@ -883,13 +1005,20 @@ def show_lesson():
             completed = st.session_state.lesson_progress.get('content', False)
             key_steps_info.append(f"📚 Treść: {step_xp_values['content']} XP {'✅' if completed else ''}")
         
-        if 'reflection' in step_order:
-            completed = st.session_state.lesson_progress.get('reflection', False)
-            key_steps_info.append(f"🤔 Refleksja: {step_xp_values['reflection']} XP {'✅' if completed else ''}")
+        # Nowa sekcja ćwiczeń praktycznych albo stare reflection/application
+        if 'practical_exercises' in step_order:
+            completed = st.session_state.lesson_progress.get('practical_exercises', False)
+            key_steps_info.append(f"🧠 Ćwiczenia: {step_xp_values['practical_exercises']} XP {'✅' if completed else ''}")
+        else:
+            # Backward compatibility - stare sekcje
+            if 'reflection' in step_order:
+                completed = st.session_state.lesson_progress.get('reflection', False)
+                key_steps_info.append(f"🤔 Refleksja: {step_xp_values['reflection']} XP {'✅' if completed else ''}")
+            
+            if 'application' in step_order:
+                completed = st.session_state.lesson_progress.get('application', False)
+                key_steps_info.append(f"💪 Zadania: {step_xp_values['application']} XP {'✅' if completed else ''}")
         
-        if 'application' in step_order:
-            completed = st.session_state.lesson_progress.get('application', False)
-            key_steps_info.append(f"💪 Zadania: {step_xp_values['application']} XP {'✅' if completed else ''}")
         if 'closing_quiz' in step_order:
             completed = st.session_state.lesson_progress.get('closing_quiz', False)
             key_steps_info.append(f"🧠 Quiz: {step_xp_values['closing_quiz']} XP {'✅' if completed else ''}")
