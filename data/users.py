@@ -25,7 +25,7 @@ def register_user(username, password, password_confirm):
     elif password != password_confirm:
         return "Passwords do not match!"
     elif not username or not password:
-        return "Username and password are required!"
+        return "Username and password are required!"    
     else:
         user_id = str(uuid.uuid4())
         users_data[username] = {
@@ -33,11 +33,21 @@ def register_user(username, password, password_confirm):
             "password": password,
             "degen_type": None,
             "xp": 0,
+            "neurocoin": 0,  # ← NOWE POLE NEUROCOIN
             "level": 1,
             "joined_date": datetime.now().strftime("%Y-%m-%d"),
             "completed_lessons": [],
             "badges": [],
-            "test_taken": False
+            "test_taken": False,
+            "inventory": {
+                "avatar": [],
+                "background": [],
+                "special_lesson": [],
+                "booster": []
+            },
+            "active_boosters": {},
+            "active_avatar": "default",
+            "active_background": "default"
         }
         save_user_data(users_data)
         return "Registration successful!"

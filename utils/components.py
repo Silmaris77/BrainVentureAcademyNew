@@ -248,13 +248,13 @@ def zen_header(title, subtitle=None):
         st.markdown(f"<p class='zen-subtitle'>{subtitle}</p>", unsafe_allow_html=True)
 
 def navigation_menu():
-    """Wyświetla menu nawigacyjne aplikacji"""
+    """Wyświetla menu nawigacyjne aplikacji"""    
     menu_options = [
         {"id": "dashboard", "name": "Dashboard", "icon": "🏠"},
         {"id": "lesson", "name": "Lekcje", "icon": "📚"},
         {"id": "skills", "name": "Umiejętności", "icon": "🌳"},
         {"id": "inspirations", "name": "Inspiracje", "icon": "💡"},
-        {"id": "shop", "name": "Sklep", "icon": "🛒"},
+        {"id": "shop", "name": "Sklep Neurocoin", "icon": "🧠"},
         {"id": "degen_explorer", "name": "Neuroliderzy", "icon": "🧠"},
         {"id": "profile", "name": "Profil", "icon": "👤"}
     ]

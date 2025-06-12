@@ -100,18 +100,22 @@ def award_fragment_xp(lesson_id, fragment_type, xp_amount):
         
         if lesson_id not in lesson_progress:
             lesson_progress[lesson_id] = {}
-        
-        # Sprawdź czy XP za ten fragment już zostało przyznane
+          # Sprawdź czy XP za ten fragment już zostało przyznane
         fragment_key = f"{fragment_type}_xp_awarded"
         if not lesson_progress[lesson_id].get(fragment_key, False):
             # Dodaj XP
             current_xp = user_data.get('xp', 0)
             user_data['xp'] = current_xp + xp_amount
             
+            # Dodaj Neurocoin równe ilości XP ← KLUCZOWA FUNKCJONALNOŚĆ
+            current_neurocoin = user_data.get('neurocoin', 0)
+            user_data['neurocoin'] = current_neurocoin + xp_amount
+            
             # Zaznacz że XP zostało przyznane
             lesson_progress[lesson_id][fragment_key] = True
             lesson_progress[lesson_id][f"{fragment_type}_completed"] = True
             lesson_progress[lesson_id][f"{fragment_type}_xp"] = xp_amount
+            lesson_progress[lesson_id][f"{fragment_type}_neurocoin"] = xp_amount  # ← NOWE
             lesson_progress[lesson_id][f"{fragment_type}_timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
             user_data['lesson_progress'] = lesson_progress

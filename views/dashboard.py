@@ -230,6 +230,7 @@ def show_stats_section(user_data, device_type):
     
     # Oblicz dane statystyk
     xp = user_data.get('xp', 0)
+    neurocoin = user_data.get('neurocoin', 0)
     completed_lessons = len(user_data.get('completed_lessons', []))
     missions_progress = get_daily_missions_progress(st.session_state.username)
     streak = missions_progress['streak']
@@ -237,21 +238,21 @@ def show_stats_section(user_data, device_type):
     
     # Oblicz trend XP (przykładowy +15%)
     xp_change = "+15%"
+    neurocoin_change = "+15%"
     lessons_change = f"+{min(3, completed_lessons)}"
     streak_change = f"+{min(1, streak)}"
     level_change = f"+{max(0, level - 1)}"
     
     # Utwórz 5 kolumn
-    cols = st.columns(4)
+    cols = st.columns(5)
     
-    # 5 kart statystyk
+    # 5 kart statystyk - dodano Neurocoin między XP a Level
     stats = [
         {"icon": "🏆", "value": f"{xp}", "label": "Punkty XP", "change": xp_change},
+        {"icon": "🧠", "value": f"{neurocoin}", "label": "Neurocoin", "change": neurocoin_change},
         {"icon": "⭐", "value": f"{level}", "label": "Poziom", "change": level_change},
         {"icon": "📚", "value": f"{completed_lessons}", "label": "Ukończone lekcje", "change": lessons_change},
         {"icon": "🔥", "value": f"{streak}", "label": "Aktualna passa", "change": streak_change},
-
-        # {"icon": "🎯", "value": f"{missions_progress['completed']}", "label": "Dzisiejsze misje", "change": f"+{missions_progress['completed']}"}
     ]
     
     # Wygeneruj kartę w każdej kolumnie
@@ -408,10 +409,14 @@ def show_neuroleader_results_section(user_data, device_type):
 
 
 def show_dashboard_sidebar(user_data, device_type):
-    """Sidebar z dodatkowymi informacjami"""       # Profil neurolidera
+    """Sidebar z dodatkowymi informacjami"""       
+    # Profil neurolidera
     show_recent_activities(user_data)
 
     show_neuroleader_profile_compact(user_data)
+    
+    # Neurocoin Shop Quick Access
+    show_neurocoin_shop_widget(user_data)
     
     # Ranking XP
     show_leaderboard_compact()
@@ -781,6 +786,46 @@ def show_leaderboard_compact():
             </div>
         </div>
         """, unsafe_allow_html=True)
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+
+def show_neurocoin_shop_widget(user_data):
+    """Widget sklepu Neurocoin w sidebarze"""
+    neurocoin = user_data.get('neurocoin', 0)
+    
+    st.markdown("""
+    <div class="dashboard-section">
+        <div class="section-header">
+            <h3 class="section-title">🧠 Sklep Neurocoin</h3>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # Display current Neurocoin balance
+    st.markdown(f"""
+    <div style='text-align: center; padding: 15px; border-radius: 10px; 
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white; margin-bottom: 15px;'>
+        <div style='font-size: 1.1em; font-weight: bold; margin-bottom: 5px;'>
+            Twój balans
+        </div>
+        <div style='font-size: 1.8em; font-weight: bold;'>
+            🧠 {neurocoin} Neurocoin
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Quick shop access button
+    if zen_button("🛒 Otwórz sklep", key="quick_shop_access"):
+        st.session_state.page = 'shop'
+        st.rerun()
+    
+    # Display recent/featured items (optional)
+    st.markdown("""
+    <div style='font-size: 0.9em; color: #666; text-align: center; margin-top: 10px;'>
+        💡 Kupuj awatary, tła, boostery<br>
+        i premium lekcje za Neurocoin!
+    </div>
+    """, unsafe_allow_html=True)
     
     st.markdown("</div>", unsafe_allow_html=True)
 

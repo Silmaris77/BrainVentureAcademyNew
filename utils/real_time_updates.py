@@ -82,9 +82,9 @@ def live_xp_indicator():
         """, unsafe_allow_html=True)
 
 def show_xp_notification(xp_amount, reason=""):
-    """Pokaż animowaną notyfikację o otrzymaniu XP lub ukończeniu"""
+    """Pokaż animowaną notyfikację o otrzymaniu XP lub ukończeniu"""    
     if xp_amount > 0:
-        # Standard XP notification
+        # Standard XP + Neurocoin notification
         st.markdown(f"""
         <div style="position: fixed; top: 50%; left: 50%; 
                     transform: translate(-50%, -50%);
@@ -95,6 +95,9 @@ def show_xp_notification(xp_amount, reason=""):
                     box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
             <div style="font-size: 24px; font-weight: bold;">
                 🎉 +{xp_amount} XP!
+            </div>
+            <div style="font-size: 20px; font-weight: bold; margin-top: 8px;">
+                🧠 +{xp_amount} Neurocoin!
             </div>
             {f'<div style="font-size: 16px; margin-top: 5px;">{reason}</div>' if reason else ''}
         </div>
