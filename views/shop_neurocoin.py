@@ -315,6 +315,7 @@ def show_shop_item(category, item_id, item, user_inventory):
     # Check ownership status
     owned = False
     if category == 'booster':
+        # Count unused boosters
         booster_count = 0
         for booster in user_inventory['inventory'].get('booster', []):
             if isinstance(booster, dict) and booster.get('id') == item_id and not booster.get('used', False):
@@ -322,11 +323,10 @@ def show_shop_item(category, item_id, item, user_inventory):
             elif isinstance(booster, str) and booster == item_id:
                 booster_count += 1
         owned = booster_count > 0
-        owned_text = f"Posiadane: {booster_count}" if owned else "Nie posiadane"
     else:
         owned = item_id in user_inventory['inventory'].get(category, [])
-        owned_text = "Posiadane" if owned else "Nie posiadane"
     
+    # Check if currently equipped (for cosmetics)
     equipped = False
     if category in ['avatar', 'background']:
         equipped = user_inventory.get(f'active_{category}') == item_id
@@ -357,8 +357,7 @@ def show_shop_item(category, item_id, item, user_inventory):
                 </span>
             </div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+    </div>    """, unsafe_allow_html=True)
     
     # Action buttons in columns
     col1, col2 = st.columns(2)
@@ -379,7 +378,7 @@ def show_shop_item(category, item_id, item, user_inventory):
                 else:
                     st.error(message)
         else:
-            reason = "Już posiadane" if owned and item.get('one_time_purchase', False) else "Za mało DegenCoins"
+            reason = "Już posiadane" if owned and item.get('one_time_purchase', False) else "Za mało Neurocoin"
             st.button(f"KUP ({reason})", disabled=True, key=f"buy_disabled_{category}_{item_id}", use_container_width=True)
     
     with col2:
@@ -480,7 +479,7 @@ def show_shop():
     # Apply Material3 theme
     apply_material3_theme()
     
-    # Add custom CSS for shop styling
+    # Add custom CSS for shop styling to match the image
     st.markdown("""
     <style>
     /* Custom shop button styles */
@@ -510,44 +509,20 @@ def show_shop():
         box-shadow: none;
         transform: none;
     }
-    
-    /* Shop item cards styling */
-    .shop-item-card {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        margin: 10px 0;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-    }
-    
-    .shop-item-card:hover {
-        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-        transform: translateY(-2px);
-    }
     </style>
     """, unsafe_allow_html=True)
-    
-    # Add zen header
-    zen_header("Sklep Neurocoin 🧠")
+      # Add zen header
+    zen_header("Sklep 🛒")
     
     device_type = get_device_type()
     
-    # Shop header
-    st.markdown("""
-    <div class="shop-header">
-        <h1>🧠 Sklep Neurocoin</h1>
-        <p>Ulepszaj swoją podróż neuroliderską dzięki ekskluzywnym przedmiotom</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Get user inventory and display balance in the style shown in the image
+    # Get user inventory and display balance
     user_inventory = get_user_inventory(st.session_state.username)
     
     # Display balance in the style shown in the image
     st.markdown(f"""
     <div style="text-align: center; margin: 20px 0;">
-        <h3 style="color: #64748b; margin-bottom: 10px;">Twoje DegenCoins: 🪙 {user_inventory['neurocoin']}</h3>
+        <h3 style="color: #64748b; margin-bottom: 10px;">Twoje Neurocoin: 🪙 {user_inventory['neurocoin']}</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -575,10 +550,9 @@ def show_shop():
     st.markdown("---")
     st.markdown("""
     ### ℹ️ Informacje o sklepie
-    
-    **Jak zdobywać Neurocoin:**
+      **Jak zdobywać Neurocoin:**
     - Ukończ lekcje, aby zdobyć Neurocoin równy zdobytemu XP
-    - Twój aktualny balans Neurocoin: 🧠 """ + str(user_inventory['neurocoin']) + """
+    - Twój aktualny balans Neurocoin: 🪙 """ + str(user_inventory['neurocoin']) + """
     
     **Typy przedmiotów:**
     - **Awatary**: Personalizuj wygląd swojego profilu

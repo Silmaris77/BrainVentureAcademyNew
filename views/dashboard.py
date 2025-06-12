@@ -245,11 +245,10 @@ def show_stats_section(user_data, device_type):
     
     # Utwórz 5 kolumn
     cols = st.columns(5)
-    
-    # 5 kart statystyk - dodano Neurocoin między XP a Level
+      # 5 kart statystyk - dodano Neurocoin między XP a Level
     stats = [
         {"icon": "🏆", "value": f"{xp}", "label": "Punkty XP", "change": xp_change},
-        {"icon": "🧠", "value": f"{neurocoin}", "label": "Neurocoin", "change": neurocoin_change},
+        {"icon": "🪙", "value": f"{neurocoin}", "label": "Neurocoin", "change": neurocoin_change},
         {"icon": "⭐", "value": f"{level}", "label": "Poziom", "change": level_change},
         {"icon": "📚", "value": f"{completed_lessons}", "label": "Ukończone lekcje", "change": lessons_change},
         {"icon": "🔥", "value": f"{streak}", "label": "Aktualna passa", "change": streak_change},
@@ -796,11 +795,10 @@ def show_neurocoin_shop_widget(user_data):
     st.markdown("""
     <div class="dashboard-section">
         <div class="section-header">
-            <h3 class="section-title">🧠 Sklep Neurocoin</h3>
+            <h3 class="section-title">🛒 Sklep</h3>
         </div>
     """, unsafe_allow_html=True)
-    
-    # Display current Neurocoin balance
+      # Display current Neurocoin balance
     st.markdown(f"""
     <div style='text-align: center; padding: 15px; border-radius: 10px; 
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -809,7 +807,7 @@ def show_neurocoin_shop_widget(user_data):
             Twój balans
         </div>
         <div style='font-size: 1.8em; font-weight: bold;'>
-            🧠 {neurocoin} Neurocoin
+            🪙 {neurocoin} Neurocoin
         </div>
     </div>
     """, unsafe_allow_html=True)

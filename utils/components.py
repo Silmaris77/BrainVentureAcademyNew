@@ -254,7 +254,7 @@ def navigation_menu():
         {"id": "lesson", "name": "Lekcje", "icon": "📚"},
         {"id": "skills", "name": "Umiejętności", "icon": "🌳"},
         {"id": "inspirations", "name": "Inspiracje", "icon": "💡"},
-        {"id": "shop", "name": "Sklep Neurocoin", "icon": "🧠"},
+        {"id": "shop", "name": "Sklep", "icon": "🛒"},
         {"id": "degen_explorer", "name": "Neuroliderzy", "icon": "🧠"},
         {"id": "profile", "name": "Profil", "icon": "👤"}
     ]

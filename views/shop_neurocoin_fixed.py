@@ -357,8 +357,7 @@ def show_shop_item(category, item_id, item, user_inventory):
                 </span>
             </div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+    </div>    """, unsafe_allow_html=True)
     
     # Action buttons in columns
     col1, col2 = st.columns(2)
@@ -379,7 +378,7 @@ def show_shop_item(category, item_id, item, user_inventory):
                 else:
                     st.error(message)
         else:
-            reason = "Już posiadane" if owned and item.get('one_time_purchase', False) else "Za mało DegenCoins"
+            reason = "Już posiadane" if owned and item.get('one_time_purchase', False) else "Za mało Neurocoin"
             st.button(f"KUP ({reason})", disabled=True, key=f"buy_disabled_{category}_{item_id}", use_container_width=True)
     
     with col2:
@@ -512,9 +511,8 @@ def show_shop():
     }
     </style>
     """, unsafe_allow_html=True)
-    
-    # Add zen header
-    zen_header("Sklep Neurocoin 🧠")
+      # Add zen header
+    zen_header("Sklep 🛒")
     
     device_type = get_device_type()
     
@@ -524,7 +522,7 @@ def show_shop():
     # Display balance in the style shown in the image
     st.markdown(f"""
     <div style="text-align: center; margin: 20px 0;">
-        <h3 style="color: #64748b; margin-bottom: 10px;">Twoje DegenCoins: 🪙 {user_inventory['neurocoin']}</h3>
+        <h3 style="color: #64748b; margin-bottom: 10px;">Twoje Neurocoin: 🪙 {user_inventory['neurocoin']}</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -552,8 +550,7 @@ def show_shop():
     st.markdown("---")
     st.markdown("""
     ### ℹ️ Informacje o sklepie
-    
-    **Jak zdobywać Neurocoin:**
+      **Jak zdobywać Neurocoin:**
     - Ukończ lekcje, aby zdobyć Neurocoin równy zdobytemu XP
     - Twój aktualny balans Neurocoin: 🪙 """ + str(user_inventory['neurocoin']) + """
     
